@@ -1,4 +1,4 @@
-#Starter code for BPS Redesign project for new BPS members
+# Starter code for BPS Redesign project for new BPS members
 
 # Instructions:
 1. Clone this repository
