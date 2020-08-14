@@ -1,1 +1,1 @@
-void CANWriter(char CAN_ID[],char CAN_Message[])
+void CANWriter (int CAN_ID,int CAN_MESSAGE);
