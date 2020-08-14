@@ -6,4 +6,4 @@ while True:
         CANREADER = csv.reader(CANFILE,delimiter=",")
         for row in CANREADER:
             if len(row)==2:
-                print("ID: "+row[0]+"Message: "+row[1])
+                print("ID: "+row[0]+", Message: "+row[1])
