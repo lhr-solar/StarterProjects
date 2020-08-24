@@ -1,1 +1,2 @@
-void CANWriter (__UINT16_TYPE__ CAN_ID,int CAN_MESSAGE);
+#include <stdint.h>
+void CANWriter (uint16_t CAN_ID,int CAN_MESSAGE);
