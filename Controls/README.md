@@ -38,3 +38,4 @@ You will be provided with the link to this GitHub repository. You will need to *
 - Make sure to commit frequently. Not every time you save a file, but enough to show a good history of your work.
 - Make sure you are working on your own branch and not the master branch.
 - If you have any questions that cannot be answered by the resources above or the task instructions, feel free to ask.
+- Do good Git Stuff
