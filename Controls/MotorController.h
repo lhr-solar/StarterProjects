@@ -1,2 +1,1 @@
-#include "MotorController.c"
-void move(int id,char message);
+void move(int id,char *message);

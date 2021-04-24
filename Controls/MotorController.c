@@ -1,22 +1,17 @@
 #include "stdio.h"
-
-void move (int id, char message){
-     FILE *fp;
-    fp = fopen("/Controls/test.txt/","a");
-    fprintf(fp,"%d,%c",id,message);
-  
+#include <stdlib.h>
+#include "MotorController.h"
+void move (int id, char *message){
+    FILE *fp;
+    fp = fopen("./CAN.csv","w+");
+    if(fp == NULL)
+    {
+        exit(1);
+    }
+    fprintf(fp,"%d,%s",id,message);
+    message++;
     
     fclose(fp);
     // fscanf(fp,"%s",buff);
     // printf("1: %s/n", buff);
-}
-
-int main(void){
-  /*  FILE *file;
-    char a [50];
-    printf("Enter the CAN id and message ");
-    scanf("%c",&a);
-
-    return 0;
-    */
 }
