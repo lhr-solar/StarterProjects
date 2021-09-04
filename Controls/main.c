@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 #include "MotorController.h"
 
 void wait(int cycles){
@@ -8,9 +10,9 @@ void wait(int cycles){
 }
 
 void main(void){
-    
+    srand(time(NULL));
     while(1){
-        MotorController_SendCAN(0x221, 0x0);
+        MotorController_SendCAN(0x221, rand());
         printf("send can\n");
         wait(1000);
     }
