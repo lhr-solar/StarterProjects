@@ -1,16 +1,15 @@
 #include "MotorController.h"
-#include "stdint.h"
-#include "stdio.h"
-#include "string.h"
 
 void MotorController_SendCAN(int32_t CAN_ID, int64_t CAN_MSG){
+    
     FILE *fp;
-    fp = fopen(strcat("CAN", ".csv"), "r+");
-
+    char str[50] = "CAN.csv";
+    fp = fopen(str, "a");
+    
     fprintf(fp, "0x%x", CAN_ID);
     fprintf(fp, ", ");
-    fprintf(fp, "0x%x", CAN_MSG);
-    
+    fprintf(fp, "0x%lx\n", CAN_MSG);
     fclose(fp);
+
     return;
 }
