@@ -3,9 +3,9 @@
 #include <time.h>
 
 
-void timeDelay(int mSeconds){
-    clock_t startTime = (clock()/CLOCKS_PER_SEC)*1000; //convert to milliseconds
-    while (((clock()/CLOCKS_PER_SEC)*1000)<startTime+mSeconds)
+void timeDelay(int miliseconds){
+    clock_t time = (clock()/CLOCKS_PER_SEC)*1000; //convert to milliseconds
+    while (((clock()/CLOCKS_PER_SEC)*1000) < time + miliseconds)
     {
         ; //this makes the clock run to create a delay
     }
