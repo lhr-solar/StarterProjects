@@ -4,7 +4,7 @@
 
 
 void timeDelay(int mSeconds){
-    clock startTime = (clock()/CLOCKS_PER_SEC)*1000; //convert to milliseconds
+    clock_t startTime = (clock()/CLOCKS_PER_SEC)*1000; //convert to milliseconds
     while (((clock()/CLOCKS_PER_SEC)*1000)<startTime+mSeconds)
     {
         ; //this makes the clock run to create a delay
