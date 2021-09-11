@@ -16,6 +16,6 @@ void main()
     while(1)
     {
         timeDelay(100);
-        MotorController_Write_to_CAN(221,rand()); //send a random # as a message every time 
+        MotorController_Write_to_CAN(221,rand()); //send a random # as a message every time to the ID 221
     }
 }
