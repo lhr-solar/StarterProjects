@@ -7,7 +7,7 @@ USD_PER_EURO = 1.17
 
 def clean() -> DataFrame:
     books = pandas.read_csv("book_file.csv", encoding = "ISO-8859-1")
-    top_rated = books[(books["rating"].notnull()) & (books["rating"] != "Two") & (books["rating"] != "One") & (books["rating"] != "Zero")]
+    top_rated = books[(books["rating"].notnull()) & ((books["rating"] == "Three") | (books["rating"] == "Four") | (books["rating"] == "Five"))]
     top_rated["usd_price"] = books.price * USD_PER_EURO
     top_rated.drop(columns = "price", inplace = True)
     #print(top_rated)
