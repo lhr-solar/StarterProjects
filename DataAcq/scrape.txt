@@ -1,0 +1,73 @@
+# import modules (requests)
+import requests
+import pandas as pd  # import pandas as an alias called pd
+from bs4 import BeautifulSoup # from the bs4 module, import the Beautiful Soup function/method
+
+"""Module to scrape information from a fake bookstoor
+"""
+SITE_URL = "http://books.toscrape.com/"
+page = requests.get(SITE_URL)
+
+
+
+
+# scrape function has a double loop, outer for the pages
+# inner loop is for actually scraping
+def scrape():
+    SITE_URL = "http://books.toscrape.com/catalogue/page-xx.html"
+
+   
+    price_list_total = []
+    rating_list_total= []
+    name_list_total = []
+    stock_list_total = []
+    for i in range(1,51):
+        SITE_URL = "http://books.toscrape.com/catalogue/page-xx.html"
+        SITE_URL = SITE_URL[:-7] + str(i) + '.html'
+        page = requests.get(SITE_URL)
+
+
+        soup = BeautifulSoup(page.content, "html.parser")
+        soup.prettify()
+        book_results = soup.find_all("article", class_= 'product_pod')
+        
+        price_list = []
+        rating_list = []
+        name_list = []
+        stock_list = []
+        for book in book_results:
+            rating = book.find('p', class_ ="star-rating")
+            score = rating['class'][1]
+            rating_list.append(score)
+
+            price = book.find('p', class_ ="price_color").text
+            price_list.append(price)
+
+            name = book.find('div',class_='image_container').find('img')['alt']
+            name_list.append(name)
+
+            stock = book.find('p',class_='instock availability').text.strip()
+            stock_list.append(stock)
+        
+
+        price_list_total += price_list
+        rating_list_total += rating_list
+        name_list_total  += name_list
+        stock_list_total += stock_list
+    print(rating_list_total)
+
+    dict = {'title': name_list_total, 'rating': rating_list_total, 'price' : price_list_total, 'stock status' : stock_list_total}
+
+    df = pd.DataFrame(dict).to_csv('books.csv')
+    return 
+
+    
+
+# For testing purposes
+# If this is chosen to be a script, run the code in this section
+# if __name__ == "__main__":
+if __name__ == "__main__":
+    """TODO: Write code here to test this
+    particular module on its own
+    """
+    pass
