@@ -1,11 +1,11 @@
 """Module to visualize data from a pandas dataframe
 """
 from pandas import DataFrame
+import matplotlib.pyplot as plt
 
 def visualize(data: DataFrame, x_col: str, y_col: str):
-    """TODO: Implement this
-    """
-    pass
+    data.plot(x_col, y_col, kind='scatter')
+    plt.show()
 
 
 if __name__ == "__main__":
