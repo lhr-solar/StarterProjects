@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Save user to variable
-u="$USER"
+read -p "Username: " username
 
 # This will give you write access to the file where priority limits are stored
 sudo chmod +w /etc/security/limits.conf
@@ -10,7 +10,7 @@ sudo chmod +w /etc/security/limits.conf
 sudo groupadd realtime
 
 # Add the current user to the newly created group
-sudo usermod -a -G realtime $u
+sudo usermod -a -G realtime $username
 
 # Check if this line is already in the file. If it is not, add it.
 # This will give the user group @realtime an unlimited realtime priority limit, allowing the simulator to run.
