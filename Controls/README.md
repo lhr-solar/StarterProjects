@@ -19,6 +19,12 @@ ulimit -r
 ```
 This should return *unlimited*. If it does not, ask someone for help or try the script again.
 
+Create a branch for yourself after cloning the repository.
+```
+git checkout -b <your name>
+```
+All of your work will be on this branch.
+
 ## The Mission
 In this starter project, you will be writing a mailbox and a cafe in the simulation version of the same Real-Time Operating System (RTOS) that runs on the car: the Micrium uCOS-III.
 
@@ -43,6 +49,9 @@ The cafe consists of the menu, item costs, and revenue, as well as the register 
 	make all TEST=Cafe
 	```
 	If this does not work or if you run into any issues, try ```make clean``` (this will remove any object files you just compiled) and recompile.
+
+Once you're done testing and verifying your code, please make sure the latest copy of your code is committed and create a pull request on github linked to your branch. Request somebody to review your code.
+
 ## Tips
 - Make sure to commit frequently. Not every time you save a file, but enough to show a good history of your work.
 - Make sure you are working on your own branch and not the master branch.
