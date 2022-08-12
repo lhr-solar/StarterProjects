@@ -1,13 +1,18 @@
 #include "os.h"
+#include "../Tasks.h"
 #include <stdio.h>
+
+/**
+ * Create and test the functionality of the Customer1 and Customer2 tasks here.
+ */
 
 int main(void){
 	OS_ERR err;
 
 	OSInit(&err);	// Initialize the OS
 	OS_CPU_SysTickInit();
-	
-	// Create any semaphores/mutexes here
+
+	// Create any semaphores/mutexes and initialize any global variables here
 	
 
 	// Initialize both tasks here

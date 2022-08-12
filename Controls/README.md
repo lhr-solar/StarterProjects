@@ -25,4 +25,6 @@ Initially, the error code should be **24204**. This is because you haven't creat
 
 Our team uses the Micrium microcontroller real-time operating system. Use the [Micrium OS documentation](https://www.analog.com/media/en/dsp-documentation/software-manuals/Micrium-uCOS-III-UsersManual.pdf) as a reference for this starter project.
 
+If you want to learn about how the makefile compiles your code: [Makefile tutorial](https://makefiletutorial.com/)
+
 Feel free to research/google anything else relevant to Solar or this starter project, or ask your system lead/another member for help.

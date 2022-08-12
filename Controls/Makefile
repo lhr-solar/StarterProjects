@@ -1,65 +1,61 @@
-# where the compiled code is going
-TARGET = controls-simulator.out
+# Your target file; the file you will execute in your terminal to run your code. The result of all of your code being linked together.
+TARGET := starter.out
 
-# where the written code is coming from
-SRC = $(wildcard *.c)
+# Where all the object files (compiled c files) will go after compilation
+BUILD_DIR := Objects
 
-# add necessary OS files
-SRC += \
-$(wildcard uCOS-III-Simulator/uC-CPU/*.c) \
-$(wildcard uCOS-III-Simulator/uC-CPU/Posix/GNU/*.c) \
-$(wildcard uCOS-III-Simulator/uC-LIB/*.c) \
-$(wildcard uCOS-III-Simulator/uCOS-III/Source/*.c) \
-$(wildcard uCOS-III-Simulator/uCOS-III/Ports/POSIX/GNU/*.c)
+# Compiler
+CC = gcc
 
-# put any object files in here
-BUILD_DIR = Objects
-OBJ = $(addprefix $(BUILD_DIR)/,$(notdir $(SRC:.c=.o)))	# Create object file list from files in SRC
-vpath %.c $(sort $(dir $(SRC)))		# In case files aren't found
+# Sources: all of the files you want to compile. First, we get all files with a .c extension in the current directory. Then, we add all files with a .c extension in the uCOS-III-Simulator directory.
+SRCS := $(wildcard *.c)
+SRCS += $(shell find uCOS-III-Simulator -type f -name '*.c')
 
-# Header files to include
-INC_DIR = \
--I uCOS-III-Simulator/uC-CPU \
--I uCOS-III-Simulator/uC-CPU/Posix/GNU \
--I uCOS-III-Simulator/uC-LIB \
--I uCOS-III-Simulator/uCOS-III/Source \
--I uCOS-III-Simulator/uCOS-III/Ports/POSIX/GNU \
+# Add the test file to the sources.
+ifneq ($(TEST), none)
+TEST_FILE := Test_$(TEST).c
+SRCS += \
+$(wildcard Tests/$(TEST_FILE))
+endif
+
+# Object files (replace all .c with .o in SRCS, notdir ignores previous file path so that everything can be in BUILD_DIR)
+OBJS := $(addprefix $(BUILD_DIR)/,$(notdir $(SRCS:.c=.o)))
+vpath %.c $(sort $(dir $(SRCS)))		# In case files aren't found
+
+# Included files (all directories under the current directory)
+INCS := $(addprefix -I,$(shell find . -type d))
 
 # Standard libraries used
-LIB = -lm -lpthread
+LIB := -lm -lpthread
+# -lm -lpthread link specific libraries that we require
 
 # Compiler options
-FLAGS = -Wall -g -std=c11 $(INC_DIR)	
+FLAGS := -Wall -g -std=c11 $(INCS)
 # -Wall all warnings
 # -g debugging allowed
 # -std=c11 specify c version
-# -lm -lpthread link specific libraries that we require
+# $(INCS) include the headers
 
 # More compiler options
-DEF = -D_XOPEN_SOURCE=600 -DSIMULATOR
+DEF := -D_XOPEN_SOURCE=600 -DSIMULATOR
 # -D_XOPEN_SOURCE=600 use POSIX 6 standards
 
+# recipe for all
 all: $(TARGET)
 
-# clear all output files
+# remove objects
 clean:
-	rm -fR Objects
+	rm -fR $(BUILD_DIR)
 	rm -f *.out
 
-# run gcc on each of the provided files and link them to the output
-$(TARGET): $(OBJ) $(BUILD_DIR)
-	gcc -o $@ $(OBJ) $(FLAGS) $(LIB)
-# -o $@ output to $@ ($@ refers to TARGET)
-# $(OBJ) include these object files
-# $(FLAGS) options for compilation
-# $(LIB) link these libraries
+# link everything into output
+$(TARGET): $(OBJS) $(BUILD_DIR)
+	$(CC) -o $@ $(OBJS) $(FLAGS) $(LIB)
 
-# compile every file that hasn't been compiled yet and output each to a separate file
-$(BUILD_DIR)/%.o: %.c $(BUILD_DIR)
-	gcc -c -o $@ $< $(FLAGS) $(DEF)
-# -c compile, don't link
-# -o output to $@ ($@ refers to $(BUILD_DIR)/%.o)
-# compile $< ($< refers to %.c, any file with .c extension) 
+# compile to each object file individually
+$(BUILD_DIR)/%.o: %.c | $(BUILD_DIR)
+	$(CC) -c -o $@ $< $(FLAGS) $(DEF)
 
-$(BUILD_DIR):	# make objects directory
-	mkdir $@
+# create objects directory if not already present
+$(BUILD_DIR):
+	-mkdir $@
