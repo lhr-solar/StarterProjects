@@ -42,13 +42,13 @@ extern CPU_STK Customer_2_Stk[TASK_CUST_2_STACK_SIZE];
 extern OS_SEM MailboxFlag_Sem4;
 
 // Mailbox contents (allocated as 256 characters long, initialized to be empty)
-char mailbox[256] = {'\0'};
+extern char mailbox[256];
 
 // Register mutex, required by the customer tasks
 extern OS_MUTEX RegisterOccupied_Mutex;
 
-char* menu[4] = {"Coffee", "Hot Chocolate", "Pizza", "Donut"}; // Menu (4 items). Feel free to change the menu items.
-int costs[4] = {5, 3, 6, 2}; // Costs of the corresponding menu items. Feel free to change these.
-int revenue = 0; // Business revenue, increased by the purchasing customers.
+extern char* menu[4];
+extern int costs[4];
+extern int revenue; // Business revenue, increased by the purchasing customers.
 
 #endif

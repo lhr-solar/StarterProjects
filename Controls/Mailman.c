@@ -4,19 +4,22 @@
  * The mailman will put mail in the mailbox.
  */
 
+
 /**
- * @brief Waits on the mailbox to be signaled. Once the mailbox is signaled, call depositLetter. Once the letter is deposited, signal the semaphore (effectively putting up the flag). Loop.
+ * @brief Puts a letter in the mailbox (declared in Tasks.h). The letter must be unique every time
+ * this function is called (suggestion: include a random number!). Print "Finished!" at the end.
  */
-void Task_Mailman(void* p_arg){
+void depositLetter(void) {
+	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+}
+
+/**
+ * @brief Calls depositLetter. Once the letter is deposited, signal the semaphore (effectively putting up the flag).
+ * Delay briefly (2-3 seconds) using OSTimeDlyHMSM(). Loop.
+ */
+void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 	while(1){
 
 	}
-}
-
-/**
- * @brief Puts a letter in the mailbox (declared in Tasks.h). The letter must be unique every time this function is called (suggestion: include a random number!). Use an OSTimeDlyHMSM() to wait for THREE seconds, and print "Finished!" at the end.
- */
-void depositLetter(){
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 }
