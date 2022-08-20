@@ -1,10 +1,17 @@
 #include "os.h"
 #include "../Tasks.h"
+#include "../Mail/Mail.h"
 #include <stdio.h>
 
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
  */
+
+ // Mailbox semaphore, required by the mailman and recipient tasks
+OS_SEM MailboxFlag_Sem4;
+
+// Mailbox contents (allocated as 256 characters long, initialized to be empty)
+char mailbox[256] = {'\0'};
 
 int main(void){
 	OS_ERR err;
@@ -19,6 +26,8 @@ int main(void){
 	
 
 	OSStart(&err);	// Start the OS
+
+	printf("=========\nMail Test File\n=========\n");
 
 	if(err != OS_ERR_NONE){
 		printf("Error Code:%d\n", err);

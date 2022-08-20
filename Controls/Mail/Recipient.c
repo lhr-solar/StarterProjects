@@ -1,4 +1,4 @@
-#include "os.h"
+#include "Mail.h"
 
 /**
  * The recipient will read mail from the mailbox.

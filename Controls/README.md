@@ -29,7 +29,7 @@ All of your work will be on this branch.
 In this starter project, you will be writing a mailbox and a cafe in the simulation version of the same Real-Time Operating System (RTOS) that runs on the car: the Micrium uCOS-III.
 
 ### Mailbox
-The mailbox consists of the mailbox flag and the mailbox contents, both declared in ```Tasks.h```.
+The mailbox consists of the mailbox flag and the mailbox contents, both declared in ```Mail.h``` and defined in ```Tests/Test_Mail.h```. Relevant Mailbox files can be found in the ```Mail/``` directory.
 1. Write the Mailman task in ```Mailman.c``` to put a unique message in the mailbox. The mailbox is simply a string (character array). Use the mailbox flag semaphore to prevent simultaneous access of the mailbox.
 2. Write the Recipient task in ```Recipient.c``` to print out the unique message in the mailbox. Use the mailbox flag semaphore to prevent simultaneous access of the mailbox.
 3. Write the test file ```Tests/Test_Mail.c```. This test file should create any semaphores, tasks, or variables necessary to run both the Mailman and Recipient tasks.
@@ -40,7 +40,7 @@ The mailbox consists of the mailbox flag and the mailbox contents, both declared
 	If this does not work or if you run into any issues, try ```make clean``` (this will remove any object files you just compiled) and recompile.
 
 ### Cafe
-The cafe consists of the menu, item costs, and revenue, as well as the register occupied mutex. These are all declared in ```Tasks.h```
+The cafe consists of the menu, item costs, and revenue, as well as the register occupied mutex. These are all declared in ```Cafe.h```. Relevant Mailbox files can be found in the ```Cafe/``` directory.
 1. Write the Customer1 and Customer2 tasks in ```Customer1.c``` and ```Customer2.c``` to purchase the appropriate items on the menu, as well as increment the revenue appropriately. Take note that ```Customer1.c``` asks you to use **pointer math** to access items in arrays, while ```Customer2.c``` wants you to use **regular array indexing**.
 2. Make sure you use the register occupied mutex to prevent simultaneous usage of the register.
 3. Write the test file ```Tests/Test_Cafe.c```. This test file should create any semaphores, tasks, or variables necessary to run both Customer tasks.
@@ -64,6 +64,6 @@ Our team uses the Micrium microcontroller real-time operating system. Be sure to
 
 If you want to learn about how the makefile compiles your code: [Makefile tutorial](https://makefiletutorial.com/)
 
-Use the [Main Controls Repository](https://github.com/lhr-solar/Controls) as a reference for your code. Specifically, I suggest looking at the *Apps* and *Tests* directories.
+Use the [Main Controls Repository](https://github.com/lhr-solar/Controls) as a reference for your code. Specifically, I suggest looking at the Src files in the *Apps* directory and the test files in the *Tests* directory.
 
 Feel free to research/google anything else relevant to Solar or this starter project, or ask your system lead/another member for help.

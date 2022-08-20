@@ -38,17 +38,4 @@ extern CPU_STK Recipient_Stk[TASK_RECIPIENT_STACK_SIZE];
 extern CPU_STK Customer_1_Stk[TASK_CUST_1_STACK_SIZE];
 extern CPU_STK Customer_2_Stk[TASK_CUST_2_STACK_SIZE];
 
-// Mailbox semaphore, required by the mailman and recipient tasks
-extern OS_SEM MailboxFlag_Sem4;
-
-// Mailbox contents (allocated as 256 characters long, initialized to be empty)
-extern char mailbox[256];
-
-// Register mutex, required by the customer tasks
-extern OS_MUTEX RegisterOccupied_Mutex;
-
-extern char* menu[4];
-extern int costs[4];
-extern int revenue; // Business revenue, increased by the purchasing customers.
-
 #endif

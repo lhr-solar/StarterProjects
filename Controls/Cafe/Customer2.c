@@ -1,4 +1,4 @@
-#include "os.h"
+#include "Cafe.h"
 
 /**
  * Customer 2 wants to buy something!
@@ -6,7 +6,7 @@
 
 
 /**
- * @brief Get the FIRST item and cost on the menu (Tasks.h). Print the value of this item,
+ * @brief Get the FIRST item and cost on the menu (Cafe.h). Print the value of this item,
  * along with the corresponding cost. Add the cost to the business revenue and print the current business revenue.
  * 
  * In this method, use ARRAY INDEXING to access values in both arrays.

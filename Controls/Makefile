@@ -11,11 +11,18 @@ CC = gcc
 SRCS := $(wildcard *.c)
 SRCS += $(shell find uCOS-III-Simulator -type f -name '*.c')
 
+# Removes the output file every time so that you can switch between test files
+$(shell rm -f *.out)
+
 # Add the test file to the sources.
 ifneq ($(TEST), none)
 TEST_FILE := Test_$(TEST).c
+
+# Add the correct folder to the SRCS
 SRCS += \
-$(wildcard Tests/$(TEST_FILE))
+$(wildcard Tests/$(TEST_FILE)) \
+$(shell find $(TEST) -type f -name '*.c')
+
 endif
 
 # Object files (replace all .c with .o in SRCS, notdir ignores previous file path so that everything can be in BUILD_DIR)
@@ -46,7 +53,6 @@ all: $(TARGET)
 # remove objects
 clean:
 	rm -fR $(BUILD_DIR)
-	rm -f *.out
 
 # link everything into output
 $(TARGET): $(OBJS) $(BUILD_DIR)
