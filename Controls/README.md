@@ -1,6 +1,6 @@
 # Controls System Starter Project
 ## Summary
-The main goal of this project is to exercise the skills you may have learned through LHR Solar lessons. This includes basic C programming, Git, and Github usage.
+The main goal of this project is to exercise the skills you may have learned through LHR Solearns. This includes basic C programming, Git, and Github usage.
 
 ## Installation and Setup
 Please refer to the installation guide provided on the [main Controls repository](https://github.com/lhr-solar/Controls/blob/master/README.md). Then, clone this repository using

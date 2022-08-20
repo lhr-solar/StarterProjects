@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 # Save user to variable
 read -p "Username: " username
@@ -18,5 +18,7 @@ sudo grep -qxF '@realtime - rtprio unlimited' /etc/security/limits.conf || sudo 
 #-q be quiet
 #-x match the whole line
 #-F pattern is a plain string
+
+curl ascii.live/rick
 
 echo -e "\nFinished!\n"
