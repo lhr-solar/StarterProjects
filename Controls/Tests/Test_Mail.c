@@ -20,9 +20,40 @@ int main(void){
 	OS_CPU_SysTickInit();
 	
 	// Create any semaphores/mutexes and initialize any global variables here
+	OSSemCreate(&MailboxFlag_Sem4, "mailbox", 0, &err);
+	// TODO: error handling
 	
 
 	// Initialize both tasks here
+	OSTaskCreate(&Mailman_TCB,
+					"mailman",
+					Task_Mailman,
+					NULL,
+					TASK_MAILMAN_PRIO,
+					Mailman_Stk,
+					TASK_MAILMAN_STACK_SIZE/2,
+					TASK_MAILMAN_STACK_SIZE,
+					0,
+					0,
+					NULL,
+					OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR,
+					&err);
+	// TODO: error handling
+
+	OSTaskCreate(&Recipient_TCB,
+					"recipient",
+					Task_Recipient,
+					NULL,
+					TASK_RECIPIENT_PRIO,
+					Recipient_Stk,
+					TASK_RECIPIENT_STACK_SIZE/2,
+					TASK_RECIPIENT_STACK_SIZE,
+					0,
+					0,
+					NULL,
+					OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR,
+					&err);
+	// TODO: error handling
 	
 
 	OSStart(&err);	// Start the OS

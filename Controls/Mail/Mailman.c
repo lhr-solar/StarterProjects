@@ -1,5 +1,6 @@
 #include "Mail.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * The mailman will put mail in the mailbox.
