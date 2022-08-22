@@ -21,9 +21,40 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
+	OSMutexCreate(&RegisterOccupied_Mutex, "register", &err);
+	// TODO: error checking
 	
 
 	// Initialize both tasks here
+	OSTaskCreate(&Customer_1_TCB,
+					"customer 1",
+					Task_Customer_1,
+					NULL,
+					TASK_CUST_1_PRIO,
+					Customer_1_Stk,
+					TASK_CUST_1_STACK_SIZE/2,
+					TASK_CUST_1_STACK_SIZE,
+					0,
+					0,
+					NULL,
+					OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR,
+					&err);
+	// TODO: error handling
+
+	OSTaskCreate(&Customer_2_TCB,
+					"customer 2",
+					Task_Customer_2,
+					NULL,
+					TASK_CUST_2_PRIO,
+					Customer_2_Stk,
+					TASK_CUST_2_STACK_SIZE/2,
+					TASK_CUST_2_STACK_SIZE,
+					0,
+					0,
+					NULL,
+					OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR,
+					&err);
+	// TODO: error handling
 	
 
 	OSStart(&err);	// Start the OS

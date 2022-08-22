@@ -1,4 +1,5 @@
 #include "Cafe.h"
+#include <stdio.h>
 
 /**
  * Customer 2 wants to buy something!
@@ -35,7 +36,7 @@ void Task_Customer_2(void* p_arg) {
 	int cost;
 	while(1){
 		Customer2_checkout(&name, &cost);
-		print("Customer 2 just bought %s for $%d\n", name, cost);
+		printf("Customer 2 just bought %s for $%d\n", name, cost);
 		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);
 		// TODO: error checking
 	}
