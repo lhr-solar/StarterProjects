@@ -1,11 +1,13 @@
 """Main engine to tie all the pieces together
 """
+from scrape import scrape
+from clean import clean
+from visualize import visualize
 
 def main():
-    """TODO: Implement this
-    """
+    scrape()
+    visualize(clean(), input("Enter x-axis: "), input("Enter y-axis: "))
     pass
-
 
 if __name__ == "__main__":
     main()
