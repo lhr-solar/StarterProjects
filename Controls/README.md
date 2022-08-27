@@ -41,7 +41,7 @@ The mailbox consists of the mailbox flag and the mailbox contents, both declared
 
 ### Cafe
 The cafe consists of the menu, item costs, and revenue, as well as the register occupied mutex. These are all declared in ```Cafe.h```. Relevant Mailbox files can be found in the ```Cafe/``` directory.
-1. Write the Customer1 and Customer2 tasks in ```Customer1.c``` and ```Customer2.c``` to purchase the appropriate items on the menu, as well as increment the revenue appropriately. Take note that ```Customer1.c``` asks you to use **pointer math** to access items in arrays, while ```Customer2.c``` wants you to use **regular array indexing**.
+1. Write the Customer1 and Customer2 tasks in ```Customer1.c``` and ```Customer2.c``` to purchase the appropriate items on the menu, as well as increment the revenue appropriately.
 2. Make sure you use the register occupied mutex to prevent simultaneous usage of the register.
 3. Write the test file ```Tests/Test_Cafe.c```. This test file should create any semaphores, tasks, or variables necessary to run both Customer tasks.
 4. To run the code, first compile with:
