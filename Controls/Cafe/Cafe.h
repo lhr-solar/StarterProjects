@@ -11,7 +11,8 @@
 // Register mutex, required by the customer tasks
 extern OS_MUTEX RegisterOccupied_Mutex;
 
-// Mailbox contents (allocated as 256 characters long, initialized to be empty)
-extern char mailbox[256];
+extern char* menu[4];
+extern int costs[4];
+extern int revenue; // Business revenue, increased by the purchasing customers.
 
 #endif
