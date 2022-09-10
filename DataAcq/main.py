@@ -4,6 +4,7 @@ from clean import *
 from visualize import *
 from scrape import *
 def main():
+    scrape()
     data = clean()
     visualize(data, 'rating', 'price')
 
