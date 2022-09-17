@@ -21,9 +21,49 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
+	OS_MUTEX RegisterOccupied_Mutex;
+	CPU_CHAR *p_name;
+	*p_name="RegisterOccupied_Mutex Mutex:) mutexcreate";
+	OSMutexCreate(&RegisterOccupied_Mutex, &p_name,&err);
+	if(err!=OS_ERR_NONE){
+			printf("Error from OSMutexCreate from main");
+			return;
+		}
 	
 
+
+	
 	// Initialize both tasks here
+	OSTaskCreate(
+        (OS_TCB*)&Customer_1_TCB,
+        (CPU_CHAR*)"Task_Customer_1",
+        (OS_TASK_PTR)Task_Customer_1,
+        (void*)NULL,
+        (OS_PRIO)TASK_CUST_1_PRIO,
+        (CPU_STK*)&Customer_1_Stk,
+        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE/2,
+        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE,
+        (OS_MSG_QTY)0,
+        (OS_TICK)0,
+        (void*)NULL,
+        (OS_OPT)(OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)&err
+    );
+	OSTaskCreate(
+        (OS_TCB*)&Customer_2_TCB,
+        (CPU_CHAR*)"Task_Customer_2",
+        (OS_TASK_PTR)Task_Customer_2,
+        (void*)NULL,
+        (OS_PRIO)TASK_CUST_2_PRIO,
+        (CPU_STK*)&Customer_2_Stk,
+        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE/2,
+        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE,
+        (OS_MSG_QTY)0,
+        (OS_TICK)0,
+        (void*)NULL,
+        (OS_OPT)(OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)&err
+    );
 	
 
 	OSStart(&err);	// Start the OS

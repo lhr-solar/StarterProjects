@@ -8,7 +8,7 @@ Please refer to the installation guide provided on the [main Controls repository
 git clone --recurse-submodules https://github.com/lhr-solar/StarterProjects.git
 ```
 
-Make sure you are in the StarterProjects/Controls directory and run the *rtprio-setting.sh* file in your terminal. The script will set your realtime priority to be unlimited and allow the RTOS simulator to run:
+Make sure you are in the StarterProjects/Controls directory and run the *rtprio-setting.sh* file in your terminal. The script will set your realtcdime priority to be unlimited and allow the RTOS simulator to run:
 ```
 sudo ./rtprio-setting.sh
 ```
