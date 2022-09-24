@@ -53,6 +53,8 @@ def scrape():
     dict = {'titles': titles, 'ratings': ratings, 'price': price, 'stock': stock}
     df = pandas.DataFrame(dict)
     df.to_csv('books.csv')
+
+
 if __name__ == "__main__":
     """TODO: Write code here to test this
     particular module on its own

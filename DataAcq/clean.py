@@ -10,6 +10,7 @@ def clean() -> DataFrame:
     """TODO: Implement this
     """
     df = pd.read_csv('books.csv')
+    df = df.drop('Unnamed: 0', axis=1)
     df.drop(df.index[df['ratings'] == 1], axis=0, inplace=True)
     df.drop(df.index[df['ratings'] == 2], axis=0, inplace=True)
     c = CurrencyConverter()
@@ -23,5 +24,5 @@ if __name__ == "__main__":
     """TODO: Write code here to test this
     particular module on its own
     """
-    df = clean()
+    result_df = clean()
     pass
