@@ -2,6 +2,9 @@
 #define MAIL_H
 
 #include "os.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * Use these declarations for
@@ -13,5 +16,6 @@ extern OS_SEM MailboxFlag_Sem4;
 
 // Mailbox contents (allocated as 256 characters long, initialized to be empty)
 extern char mailbox[256];
+
 
 #endif

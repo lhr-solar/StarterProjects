@@ -3,6 +3,7 @@
 #include "../Mail/Mail.h"
 #include <stdio.h>
 
+
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
  */
@@ -15,6 +16,7 @@ OS_SEM MailboxFlag_Sem4; // Declare and allocate space for the mailbox semaphore
 char mailbox[256] = {'\0'};
 
 int main(void){
+	printf("Printing as the first line of main! to see if it's running.\n");
 	OS_ERR err;
 
 	OSInit(&err);	// Initialize the OS
@@ -42,9 +44,27 @@ int main(void){
 		(OS_ERR*)&err
 	);
 
-	OSStart(&err);	// Start the OS
+	OSTaskCreate(
+		(OS_TCB*)&Recipient_TCB, 
+		(CPU_CHAR*)"Recipient",
+		(OS_TASK_PTR)Task_Recipient,
+		(void*)NULL,
+		(OS_PRIO)TASK_RECIPIENT_PRIO,
+		(CPU_STK*)Recipient_Stk,
+		(CPU_STK_SIZE)WATERMARK_STACK_LIMIT,
+		(CPU_STK_SIZE)TASK_RECIPIENT_STACK_SIZE,
+		(OS_MSG_QTY)0,
+		(OS_TICK)0,
+		(void*)NULL,
+		(OS_OPT)(OS_OPT_TASK_STK_CLR),
+		(OS_ERR*)&err
+	);
+
 
 	printf("=========\nMail Test File\n=========\n");
+	OSStart(&err);	// Start the OS
+
+	
 
 	if(err != OS_ERR_NONE){
 		printf("Error Code:%d\n", err);

@@ -14,6 +14,7 @@ void Task_Recipient(void* p_arg);
 void Task_Customer_1(void* p_arg);
 void Task_Customer_2(void* p_arg);
 
+
 // Priorities
 #define TASK_MAILMAN_PRIO 1
 #define TASK_RECIPIENT_PRIO 2
