@@ -1,4 +1,5 @@
 #include "Cafe.h"
+#include <stdio.h>
 
 /**
  * Customer 2 wants to buy something!
@@ -10,11 +11,12 @@
  * revenue and print the current business revenue.
  */
 void Customer2_checkout(char** name, int* cost) {
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	cost=&costs[1];
-	name=&menu[1];
+	//OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	*cost=costs[1];
+	*name=menu[1];
 	revenue+=costs[1];
-	printf("Current Business Revenue: %d", revenue );
+	printf("Customer 2 Bought a %s\n",*name);
+	printf("Current Business Revenue: %d\n", revenue );
 }
 
 /**
@@ -27,7 +29,7 @@ void Task_Customer_2(void* p_arg) {
 	// Use these values as parameters for Customer1_checkout
 	char* name;
 	int cost;
-	CPU_INT16U seconds = 3000;//3000ms = 3s DELAY
+	CPU_INT16U seconds = 3;//3000ms = 3s DELAY
 	OS_OPT opt =OS_OPT_TIME_HMSM_STRICT;
 	
 	while(1){

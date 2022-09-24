@@ -21,13 +21,16 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
-	OS_MUTEX RegisterOccupied_Mutex;
-	CPU_CHAR *p_name;
-	*p_name="RegisterOccupied_Mutex Mutex:) mutexcreate";
-	OSMutexCreate(&RegisterOccupied_Mutex, &p_name,&err);
+	//OS_MUTEX RegisterOccupied_Mutex;
+	
+	OSMutexCreate(
+		(OS_MUTEX*) &RegisterOccupied_Mutex,
+		(CPU_CHAR*) "RegisterOccupied_Mutex",
+		(OS_ERR*)&err
+	);
 	if(err!=OS_ERR_NONE){
 			printf("Error from OSMutexCreate from main");
-			return;
+			return 0;
 		}
 	
 
@@ -39,9 +42,9 @@ int main(void){
         (CPU_CHAR*)"Task_Customer_1",
         (OS_TASK_PTR)Task_Customer_1,
         (void*)NULL,
-        (OS_PRIO)TASK_CUST_1_PRIO,
-        (CPU_STK*)&Customer_1_Stk,
-        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE/2,
+        (OS_PRIO)TASK_CUST_1_PRIO,//
+        (CPU_STK*)Customer_1_Stk,//
+        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE/10,//test_readswitches have /10 not /2
         (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE,
         (OS_MSG_QTY)0,
         (OS_TICK)0,
@@ -55,8 +58,8 @@ int main(void){
         (OS_TASK_PTR)Task_Customer_2,
         (void*)NULL,
         (OS_PRIO)TASK_CUST_2_PRIO,
-        (CPU_STK*)&Customer_2_Stk,
-        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE/2,
+        (CPU_STK*)Customer_2_Stk,
+        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE/10,
         (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE,
         (OS_MSG_QTY)0,
         (OS_TICK)0,
@@ -66,9 +69,9 @@ int main(void){
     );
 	
 
-	OSStart(&err);	// Start the OS
 
 	printf("=========\nCafe Test File\n=========\n");
+	OSStart(&err);	// Start the OS
 
 	if(err != OS_ERR_NONE){
 		printf("Error Code:%d\n", err);
