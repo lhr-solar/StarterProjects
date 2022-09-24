@@ -12,15 +12,15 @@
  * Print "Finished!" at the end.
  */
 void depositLetter(void) {
-	printf("Depositing Letter\n");
+	//printf("Depositing Letter\n");
 	// You should definitely uncomment and actually use this OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 	int randomNum = rand(); // Generate and store a random number
 	//char letter[256] = randomNum; // Write the random number in the letter
 	//printf(*letter); // See if anything actually worked
-	printf("%d\n", randomNum);
-	snprintf(mailbox, 256, "%d", randomNum);
+	//printf("%d\n", randomNum);
+	snprintf(mailbox, 256, "You have %d notifications from Duolingo", randomNum);
 	//strcpy(mailbox, letter); // Put the letter in the mailbox
-	printf("(The mailbox letter is %d)\n", *mailbox);
+	//printf("(The mailbox letter is %s)\n", mailbox);
 }
 
 /**
@@ -39,7 +39,7 @@ void Task_Mailman(void* p_arg) {
 		//OSSemPend(&MailboxFlag_Sem4, 0, OS_OPT_PEND_BLOCKING, &ticks, &err); //Wait for Mailbox to be free
 		//printf("The mailman has the mailbox!");
 		depositLetter(); // Write to letter
-		printf("Letter has been deposited\n");
+		//printf("Letter has been deposited\n");
 		OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err); // Attempt to post/release mailbox...
 		if(err != OS_ERR_NONE){
 		printf("Error Code:%d\n", err);
