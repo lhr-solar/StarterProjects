@@ -13,6 +13,10 @@
  */
 void depositLetter(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	char letter[256] = rand(); // Initialize letter with a random number
+	printf(letter); // See if anything actually worked
+	strcopy(mailbox, letter); // Put the letter in the mailbox
+	printf("Finished?"); 
 }
 
 /**
@@ -21,7 +25,12 @@ void depositLetter(void) {
  */
 void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
+	CPU_TS ticks;
 	while(1){
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, err);
+		OSSemPend(&MailboxFlag_Sem4, 0, OS_OPT_PEND_BLOCKING, &ticks, &err); //Wait for Mailbox to be free
+		depositLetter(); // Write to letter
+		OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err); // Attempt to post/release mailbox...
 
 	}
 }
