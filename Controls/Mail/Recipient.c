@@ -31,6 +31,6 @@ void Task_Recipient(void* p_arg) {
 		}
 		printf("You just got a letter! I wonder what it says?\n\n");
 		readMail(); // Read and print Mailbox contents
-		//OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err); // release Mailbox
+		
 	}
 }
