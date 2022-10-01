@@ -29,13 +29,13 @@ void Task_Customer_1(void* p_arg) {
 	// Use these values as parameters for Customer1_checkout
 	char* name;
 	int cost;
-	CPU_INT16U seconds = 4;//4000ms = 4s DELAY
-	OS_OPT opt =OS_OPT_TIME_HMSM_STRICT;
+	//CPU_INT16U seconds = 4;//4000ms = 4s DELAY
 	
 	while(1){
 		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ts, &err);//pendblocking , pendnonblocking doesnt wait, just goes through codes
 		if(err!=OS_ERR_NONE){
-			printf("Error from OSMutexPend Customer 1");
+			//printf("Error from OSMutexPend Customer 1");
+			printf("%x;Error from OSMutexPend Customer 1",err);
 			return;
 		}
 		Customer1_checkout(&name,&cost);
@@ -44,7 +44,14 @@ void Task_Customer_1(void* p_arg) {
 			printf("Error from OSMutexPost Customer 1");
 			return;
 		}
-		OSTimeDlyHMSM(0,0,seconds,0, opt,&err);
+		OSTimeDlyHMSM(
+					0,
+					0,
+					(CPU_INT16U)4,
+					0,
+					(OS_OPT)OS_OPT_TIME_HMSM_STRICT,
+					&err
+					);
 		if(err!=OS_ERR_NONE){
 			printf("Error from OSTimeDlyHMSM Customer 1");
 			return;

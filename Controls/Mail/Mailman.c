@@ -19,9 +19,9 @@ void depositLetter(void) {
 	//int i;
 	//char max=random()%255;//different lengths at diff times
 	for(int i=0;i<255;i++){
-		mailbox[i]=64+rand()%63;
+		mailbox[i]='A'+rand()%63;
 	}
-	mailbox[256]=0;//null at end
+	mailbox[255]=0;//null at end
 	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_NONE, &err);//post +1 mail in box
 		if(err!=OS_ERR_NONE){
 			printf("Error from OSSemPost Mailman, depositLetter");
