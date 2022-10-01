@@ -26,14 +26,10 @@ void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 	while(1){
 		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for three seconds
-		if(err != OS_ERR_NONE){
-		printf("Error Code:%d\n", err);
-		}
+		checkError(err);
 		depositLetter(); // Write and deposit the letter in the mailbox
-		OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err); // Post flag - sem incremented to 1
-		if(err != OS_ERR_NONE){
-		printf("Error Code:%d\n", err);
-		}
+		OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err); // Post flag to alert recipient
+		checkError(err);
 	}
 
 

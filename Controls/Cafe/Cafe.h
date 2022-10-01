@@ -8,6 +8,9 @@
  * your cafe challenge in Tests/Test_Cafe.c
  */
 
+// Function for checking error and printing if not NONE
+void checkError(OS_ERR err);
+
 // Register mutex, required by the customer tasks
 extern OS_MUTEX RegisterOccupied_Mutex;
 

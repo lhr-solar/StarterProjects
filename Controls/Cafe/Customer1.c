@@ -11,9 +11,9 @@
  * revenue and print the current business revenue.
  */
 void Customer1_checkout(char** name, int* cost) {
-	*name = menu[3]; // Set value of name to menu[3], 
-	*cost = costs[3]; // Set location of "cost" to costs[3]
-	printf("Current business revenue: $%d\n", revenue);
+	*name = menu[3]; // Set value of name to fourth menu item
+	*cost = costs[3]; // Set value of cost to fourth item cost
+	printf("\nCurrent business revenue: $%d\n", revenue); // Print revenue before purchase
 	revenue += *cost; // Add value of cost to revenue
 	
 }
@@ -30,16 +30,12 @@ void Task_Customer_1(void* p_arg) {
 	char* name;
 	int cost;
 	while(1){
-		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_POST_NONE, &ticks, &err);
-		if(err != OS_ERR_NONE){
-			printf("Error Code:%d\n", err);
-		}
+		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_POST_NONE, &ticks, &err); // Wait for register
+		checkError(err);
 		Customer1_checkout(&name, &cost); // Pass location of name and cost to checkout
-		printf("\nCustomer 1 order: %s - $%d\n", name, cost);
-		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
-		OSTimeDlyHMSM(0, 0, 4, 0, OS_OPT_TIME_HMSM_STRICT, &err);
-		if(err != OS_ERR_NONE){
-			printf("Error Code:%d\n", err);
-		}
+		printf("\nCustomer 1 order: %s, $%d\n", name, cost); // Print order
+		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err); // Release register
+		OSTimeDlyHMSM(0, 0, 4, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay 4 sec before looping
+		checkError(err);
 	}
 }

@@ -11,6 +11,9 @@
  * your mail challenge in Tests/Test_Mail.c
  */
 
+// Function for checking error and printing if not NONE
+void checkError(OS_ERR err);
+
 // Mailbox semaphore, required by the mailman and recipient tasks
 extern OS_SEM MailboxFlag_Sem4;
 
