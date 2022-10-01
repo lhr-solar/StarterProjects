@@ -1,4 +1,5 @@
 #include "Cafe.h"
+#include <stdio.h>
 
 /**
  * Customer 2 wants to buy something!
@@ -10,11 +11,11 @@
  * revenue and print the current business revenue.
  */
 void Customer2_checkout(char** name, int* cost) {
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	name = &menu[0];
-	cost = &costs[0];
+	*name = menu[0];
+	*cost = costs[0];
+	printf("\nCurrent business revenue: $%d\n", revenue);
 	revenue += *cost;
-	printf("Current business revenue: $%d\n");
+	
 }
 
 /**
@@ -30,9 +31,15 @@ void Task_Customer_2(void* p_arg) {
 	int cost;
 	while(1){
 		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_NONE, &ticks, &err);
+		if(err != OS_ERR_NONE){
+			printf("Error Code:%d\n", err);
+		}
 		Customer2_checkout(&name, &cost);
-		printf("Customer 2 order: %s, $%d\n", *name, *cost);
+		printf("Customer 2 order: %s - $%d\n", name, cost);
 		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
+		if(err != OS_ERR_NONE){
+			printf("Error Code:%d\n", err);
+		}
 		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);
 	}
 }
