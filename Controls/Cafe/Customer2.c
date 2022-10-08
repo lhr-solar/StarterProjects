@@ -43,11 +43,16 @@ void Customer2_checkout(char** name, int* cost) {
 			(OS_OPT		 )OS_OPT_POST_NONE,
 			(OS_ERR		*)&err);
 	
-	//Print order and revenue
+	//Print order. item cost, and revenue
 	printf("\nCustomer 2 ordered: 	");
 	printf("%s",	*name);
 
+	printf("\nItem Cost:		");
+	printf("$");
+	printf("%d",	*cost);
+
 	printf("\nBusiness Revenue: 	");
+	printf("$");
 	printf("%d\n", revenue);
 
 	
