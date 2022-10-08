@@ -28,11 +28,20 @@ void Customer1_checkout(char** name, int* cost) {
 			(OS_ERR		*)&err);
 
 	if (err != OS_ERR_NONE){
-			printf("Error at Task1");
+			printf("Error from OSMutexPend Customer 1");
 		}
 
 	//4 second delay
-	OSTimeDlyHMSM(0, 0, 4, 0, OS_OPT_TIME_HMSM_STRICT, &err );
+	OSTimeDlyHMSM(	(CPU_INT16U)	0, 
+					(CPU_INT16U)	0, 
+					(CPU_INT16U)	4,
+					(CPU_INT32U)	0,
+					(OS_OPT)		OS_OPT_TIME_HMSM_STRICT, 
+					&err );
+	
+	if (err != OS_ERR_NONE){
+			printf("Error from OSTimeDlyHMSM Customer 1");
+		}
 
 	//Update total revenue with Customer 1's order
 	revenue += *cost;
@@ -42,18 +51,20 @@ void Customer1_checkout(char** name, int* cost) {
 			(OS_MUTEX	*)&RegisterOccupied_Mutex,
 			(OS_OPT		 )OS_OPT_POST_NONE,
 			(OS_ERR		*)&err);
+
+	if (err != OS_ERR_NONE){
+			printf("Error from OSMutexPost Customer 1");
+		}
 	
 	//Print order and revenue
-	printf("\nCustomer 1 ordered: 	");
+	printf("\nCustomer 2 ordered: 	");
 	printf("%s",	*name);
 
 	printf("\nItem Cost:		");
-	printf("$");
-	printf("%d",	*cost);
+	printf("$%d",	*cost);
 
 	printf("\nBusiness Revenue: 	");
-	printf("$");
-	printf("%d\n", revenue);
+	printf("$%d\n", revenue);
 
 
 	

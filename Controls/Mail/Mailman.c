@@ -26,7 +26,17 @@ void depositLetter(void) {
 	}
 
 	//Delay for 3 seconds
-	OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err );
+	OSTimeDlyHMSM(	(CPU_INT16U)	0, 
+					(CPU_INT16U)	0, 
+					(CPU_INT16U)	3,
+					(CPU_INT32U)	0,
+					(OS_OPT)		OS_OPT_TIME_HMSM_STRICT, 
+					&err );
+	
+	if (err != OS_ERR_NONE){
+			printf("Error from OSTimeDlyHMSM Mailman");
+		}
+
 }
 
 /**
@@ -47,8 +57,11 @@ void Task_Mailman(void* p_arg) {
 				&MailboxFlag_Sem4,
 				OS_OPT_POST_1,
 				&err);
-
 		
+		if (err != OS_ERR_NONE){
+			printf("Error from OSSemPost Mailman");
+		}
+
 		printf("Finished!\n");
 	}
 }

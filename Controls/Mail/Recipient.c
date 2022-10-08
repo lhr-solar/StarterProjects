@@ -17,7 +17,17 @@ void readMail(void) {
 	printf("New Mail: ");
 	printf("%s\n\n\n",mailbox);		//mailbox set to random letter
 	
-	OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err );
+	OSTimeDlyHMSM(	(CPU_INT16U)	0, 
+					(CPU_INT16U)	0, 
+					(CPU_INT16U)	2,
+					(CPU_INT32U)	0,
+					(OS_OPT)		OS_OPT_TIME_HMSM_STRICT, 
+					&err );
+	
+	if (err != OS_ERR_NONE){
+			printf("Error from OSTimeDlyHMSM Recipient");
+		}
+
 }
 
 /**
@@ -38,13 +48,12 @@ void Task_Recipient(void* p_arg) {
 			&ts, 
 			&err);
 
+		if (err != OS_ERR_NONE){
+			printf("Error from OSSemPend Recipient");
+		}
+
 		//reads mail
 		readMail();
-
-		//Check for Errors
-		if (err != OS_ERR_NONE){
-			printf("Error at readMail");
-		}
 		
 	}
 }

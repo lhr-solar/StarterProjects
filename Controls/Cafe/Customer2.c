@@ -2,11 +2,11 @@
 #include <stdio.h>
 
 /**
- * Customer 1 wants to buy something!
+ * Customer 2 wants to buy something!
  */
 
 /**
- * @brief Get the FOURTH item and cost on the menu (Cafe.h). Return the name and cost
+ * @brief Get the FIRST item and cost on the menu (Cafe.h). Return the name and cost
  * of the item to the pointers passed into the function. Add the cost to the business 
  * revenue and print the current business revenue.
  */
@@ -26,13 +26,22 @@ void Customer2_checkout(char** name, int* cost) {
 			(OS_OPT		 )OS_OPT_PEND_BLOCKING,
 			(CPU_TS		*)&ts,
 			(OS_ERR		*)&err);
-
+	
 	if (err != OS_ERR_NONE){
-			printf("Error at Task2");
+			printf("Error from OSMutexPend Customer 2");
 		}
 
 	//4 second delay
-	OSTimeDlyHMSM(0, 0, 4, 0, OS_OPT_TIME_HMSM_STRICT, &err );
+	OSTimeDlyHMSM(	(CPU_INT16U)	0, 
+					(CPU_INT16U)	0, 
+					(CPU_INT16U)	4,
+					(CPU_INT32U)	0,
+					(OS_OPT)		OS_OPT_TIME_HMSM_STRICT, 
+					&err );
+	
+	if (err != OS_ERR_NONE){
+			printf("Error from OSTimeDlyHMSM Customer 2");
+		}
 
 	//Update total revenue with Customer 2's order
 	revenue +=*cost;
@@ -42,18 +51,21 @@ void Customer2_checkout(char** name, int* cost) {
 			(OS_MUTEX	*)&RegisterOccupied_Mutex,
 			(OS_OPT		 )OS_OPT_POST_NONE,
 			(OS_ERR		*)&err);
+
+	if (err != OS_ERR_NONE){
+			printf("Error from OSMutexPost Customer 2");
+		}
+		
 	
 	//Print order. item cost, and revenue
 	printf("\nCustomer 2 ordered: 	");
 	printf("%s",	*name);
 
 	printf("\nItem Cost:		");
-	printf("$");
-	printf("%d",	*cost);
+	printf("$%d",	*cost);
 
 	printf("\nBusiness Revenue: 	");
-	printf("$");
-	printf("%d\n", revenue);
+	printf("$%d\n", revenue);
 
 	
 }
