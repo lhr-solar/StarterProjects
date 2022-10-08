@@ -19,13 +19,13 @@ void depositLetter(void) {
 	char randNum; //random number generator
 
 
-	for(int i = 0; i < (10); i++){
+	for(int i = 0; i < (5); i++){
 		
-		randNum = rand()%10 + '0';
-		mailbox[i] = randNum;//mailbox set to random letter
+		randNum = rand()%10 + '0'; //char concatenated to set randNum as chars
+		mailbox[i] = randNum; //mailbox contents set to five random 0-9 numbers
 	}
 
-	
+	//Delay for 3 seconds
 	OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err );
 }
 
@@ -35,15 +35,20 @@ void depositLetter(void) {
  */
 void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
-//	CPU_TS ts;
+
 	srand(time(NULL)); 
 
 	while(1){
+		//deposits letter
 		depositLetter();
+
+		//Posts MailboxFlag
 		OSSemPost(
 				&MailboxFlag_Sem4,
 				OS_OPT_POST_1,
 				&err);
-		printf("Finished! \n\n\n");
+
+		
+		printf("Finished!\n");
 	}
 }
