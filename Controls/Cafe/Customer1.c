@@ -13,6 +13,9 @@
  * @param cost pointer to store the cost of the purchased item
  */
 void Customer1_checkout(char** item_name, int* cost) {
+	OS_ERR err;
+	CPU_TS ticks;
+
 	*item_name = menu[3]; // Set value of name to fourth menu item
 	*cost = costs[3]; // Set value of cost to fourth item cost
 	printf("\nCurrent business revenue: $%d\n", revenue); // Print revenue before purchase
@@ -28,7 +31,7 @@ void Customer1_checkout(char** item_name, int* cost) {
  */
 void Task_Customer_1(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
-	CPU_TS ticks;
+	
 	
 	// Use these values as parameters for Customer1_checkout
 	char* name;
