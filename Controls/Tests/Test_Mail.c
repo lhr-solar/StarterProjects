@@ -25,7 +25,8 @@ int main(void){
 	// Creates Semaphor - the 1 signifies that there is only one task waiting at a time
 	OSSemCreate(&MailboxFlag_Sem4, "Mailbox Flag", 1, &err);
 
-	srand(time(NULL)); // Set a random seed
+	// Set a random seed for the random function
+	srand(time(NULL));
 
 
 	// Initialize both tasks here

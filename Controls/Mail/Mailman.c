@@ -25,7 +25,7 @@ void depositLetter(void) {
 
 	// Generate Random Number
 	char randomNumberString[4];
-	sprintf(randomNumberString, "%d", rand() % 9999);
+	sprintf(randomNumberString, "%d", rand() % 9999 + 1);
 
 	// Concatenate message to mailbox
 	strcpy(mailbox, "Get your own free pizza at ");
