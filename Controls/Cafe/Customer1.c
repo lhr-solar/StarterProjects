@@ -15,11 +15,13 @@ void Customer1_checkout(char** name, int* cost) {
 
 	// Get name and cost of the item
 	*name = menu[3];
-	// cost = costs[3];
 	*cost = costs[3];
 
 	// Add to revenue
 	revenue += *cost;
+
+	// Print current revenue
+	printf("Total revenue is now $%d\n", revenue);
 }
 
 /**
@@ -43,8 +45,7 @@ void Task_Customer_1(void* p_arg) {
 		Customer1_checkout(&name, &cost);
 
 		// Print name and cost of item
-		printf("Customer 1 ordered: %s $%d\n", name, cost);
-		printf("Total revenue is now $%d\n\n", revenue);
+		printf("Customer 1 ordered: %s $%d\n\n", name, cost);
 
 		// Release Register
 		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_1, &err);

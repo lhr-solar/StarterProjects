@@ -19,6 +19,9 @@ void Customer2_checkout(char** name, int* cost) {
 
 	// Add to revenue
 	revenue += *cost;
+
+	// Print current revenue
+	printf("Total revenue is now $%d\n", revenue);
 }
 
 /**
@@ -42,8 +45,7 @@ void Task_Customer_2(void* p_arg) {
 		Customer2_checkout(&name, &cost);
 
 		// Print name and cost of item
-		printf("Customer 2 ordered: %s $%d\n", name, cost);
-		printf("Total revenue is now $%d\n\n", revenue);
+		printf("Customer 2 ordered: %s $%d\n\n", name, cost);
 
 		// Release Register
 		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_1, &err);
