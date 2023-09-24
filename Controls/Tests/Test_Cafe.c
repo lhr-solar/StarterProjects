@@ -22,6 +22,11 @@ int main(void){
 
 	// Create any semaphores/mutexes and initialize any global variables here
 	OSMutexCreate(&RegisterOccupied_Mutex, "Register Mutex", &err);
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Mutex Creation Error: %d\n", err);
+	}
 	
 
 	// Initialize both tasks here
@@ -40,6 +45,11 @@ int main(void){
 		(OS_OPT)(OS_OPT_TASK_STK_CLR), 
 		(OS_ERR*)&err
 		);
+	
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Customer 1 Task Creation Error: %d\n", err);
+	}
 
 
 	OSTaskCreate(
@@ -58,7 +68,17 @@ int main(void){
 		(OS_ERR*)&err
 		);
 
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Customer 2 Task Creation Error: %d\n", err);
+	}
+
 	OSStart(&err);	// Start the OS
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("OS Start Error: %d\n", err);
+	}
 
 	printf("=========\nCafe Test File\n=========\n");
 
