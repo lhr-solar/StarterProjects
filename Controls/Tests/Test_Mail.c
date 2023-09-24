@@ -22,8 +22,13 @@ int main(void){
 	
 	// Create any semaphores/mutexes and initialize any global variables here
 
-	// Creates Semaphor - the 1 signifies that there is only one task waiting at a time
-	OSSemCreate(&MailboxFlag_Sem4, "Mailbox Flag", 1, &err);
+	// Creates Semaphor
+	OSSemCreate(&MailboxFlag_Sem4, "Mailbox Flag", 0, &err);
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Semaphor Creation Error: %d\n", err);
+	}
 
 	// Set a random seed for the random function
 	srand(time(NULL));
@@ -46,6 +51,11 @@ int main(void){
 		(OS_ERR*)&err
 		);
 
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Mailman Task Create Error: %d\n", err);
+	}
+
 
 	OSTaskCreate(
 		(OS_TCB*)&Recipient_TCB, 
@@ -63,7 +73,17 @@ int main(void){
 		(OS_ERR*)&err
 		);
 	
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Mailman Task Create Error: %d\n", err);
+	}
+	
 	OSStart(&err);	// Start the OS
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("OS Start Error: %d\n", err);
+	}
 
 	// Check for errors and print if present
 
