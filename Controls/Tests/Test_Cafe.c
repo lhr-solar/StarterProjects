@@ -21,12 +21,64 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
+	OSMutexCreate(&RegisterOccupied_Mutex, "Register Mutex", &err);
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Mutex Creation Error: %d\n", err);
+	}
 	
 
 	// Initialize both tasks here
+	OSTaskCreate(
+		(OS_TCB*)&Customer_1_TCB, 
+		(CPU_CHAR*)"Customer 1 Task", 
+		(OS_TASK_PTR)Task_Customer_1, 
+		(void*)NULL, 
+		(OS_PRIO)TASK_CUST_1_PRIO, 
+		(CPU_STK*)&Customer_1_Stk, 
+		(CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE / 2, 
+		(CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE, 
+		(OS_MSG_QTY)0, 
+		(OS_TICK)0, 
+		(void*)NULL, 
+		(OS_OPT)(OS_OPT_TASK_STK_CLR), 
+		(OS_ERR*)&err
+		);
 	
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Customer 1 Task Creation Error: %d\n", err);
+	}
+
+
+	OSTaskCreate(
+		(OS_TCB*)&Customer_2_TCB, 
+		(CPU_CHAR*)"Customer 2 Task", 
+		(OS_TASK_PTR)Task_Customer_2, 
+		(void*)NULL, 
+		(OS_PRIO)TASK_CUST_2_PRIO, 
+		(CPU_STK*)&Customer_2_Stk, 
+		(CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE / 2, 
+		(CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE, 
+		(OS_MSG_QTY)0, 
+		(OS_TICK)0, 
+		(void*)NULL, 
+		(OS_OPT)(OS_OPT_TASK_STK_CLR), 
+		(OS_ERR*)&err
+		);
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("Customer 2 Task Creation Error: %d\n", err);
+	}
 
 	OSStart(&err);	// Start the OS
+
+	// Check for errors and print if present
+	if(err != OS_ERR_NONE) {
+		printf("OS Start Error: %d\n", err);
+	}
 
 	printf("=========\nCafe Test File\n=========\n");
 
