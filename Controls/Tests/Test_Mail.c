@@ -75,7 +75,7 @@ int main(void){
 	
 	// Check for errors and print if present
 	if(err != OS_ERR_NONE) {
-		printf("Mailman Task Create Error: %d\n", err);
+		printf("Recipient Task Create Error: %d\n", err);
 	}
 	
 	OSStart(&err);	// Start the OS

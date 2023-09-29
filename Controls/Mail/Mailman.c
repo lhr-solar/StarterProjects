@@ -43,12 +43,12 @@ void Task_Mailman(void* p_arg) {
 		// Deposit the letter
 		depositLetter();
 
-		// Delay for 3 seconds
-		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);
-
 		// Check for errors and print if present
 		if(err != OS_ERR_NONE) {
 			printf("Task_Mailman Error: %d", err);
 		}
+
+		// Delay for 3 seconds
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);
 	}
 }

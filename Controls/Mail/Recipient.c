@@ -38,11 +38,11 @@ void Task_Recipient(void* p_arg) {
 		// Wait for mailman to post a message to the mailbox
 		OSSemPend(&MailboxFlag_Sem4, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 
-		// Check the mailbox
-		readMail();
-
 		if(err != OS_ERR_NONE) {
 			printf("Task_Recipient Error: %d\n", err);
 		}
+
+		// Check the mailbox
+		readMail();
 	}
 }
