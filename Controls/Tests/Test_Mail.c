@@ -3,6 +3,7 @@
 #include "../Mail/Mail.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 
 /**
@@ -27,10 +28,51 @@ int main(void) {
 				0, 
 				&err);
 
+	if (errReport("Sem4", err)) {
+		return 0;
+	}
+/*
+	if (err != OS_ERR_NONE) {
+		printf("Sem4 Error: %d\n", err);
+		return 0;
+	}
+*/
 	// Initialize both tasks here
-	Task_Mailman();
-	Task_Recipient();
+	OSTaskCreate((OS_TCB*)&Mailman_TCB, 
+				 (CPU_CHAR*)"Mailman Task", 
+				 (OS_TASK_PTR)Task_Mailman, 
+				 (void*)NULL, 
+				 (OS_PRIO)TASK_MAILMAN_PRIO, 
+				 (CPU_STK*)&Mailman_Stk, 
+				 (CPU_STK_SIZE)TASK_MAILMAN_STACK_SIZE / 2, 
+				 (CPU_STK_SIZE)TASK_MAILMAN_STACK_SIZE, 
+				 (OS_MSG_QTY)0, 
+				 (OS_TICK)0, 
+				 (void*)NULL, 
+				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
+				 (OS_ERR*)&err);
 
+	// Check for errors and print if present
+	if (err != OS_ERR_NONE) {
+		printf("Mailman Task Create Error: %d\n", err);
+		return 0;
+	}
+
+
+	OSTaskCreate((OS_TCB*)&Recipient_TCB, 
+				 (CPU_CHAR*)"Recipient Task", 
+				 (OS_TASK_PTR)Task_Recipient, 
+				 (void*)NULL, 
+				 (OS_PRIO)TASK_RECIPIENT_PRIO, 
+				 (CPU_STK*)&Recipient_Stk, 
+				 (CPU_STK_SIZE)TASK_RECIPIENT_STACK_SIZE / 2, 
+				 (CPU_STK_SIZE)TASK_RECIPIENT_STACK_SIZE, 
+				 (OS_MSG_QTY)0, 
+				 (OS_TICK)0, 
+				 (void*)NULL, 
+				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
+				 (OS_ERR*)&err);
+	
 	OSStart(&err);	// Start the OS
 
 	printf("=========\nMail Test File\n=========\n");
@@ -38,14 +80,27 @@ int main(void) {
 	if (err != OS_ERR_NONE) {
 		printf("Error Code:%d\n", err);
 		return 0;
-	} else {
-		printf("Success! Running simulator...\n");
 	}
 
-	while (true) {
-		
-	}	// Infinite loop
+	printf("Success! Running simulator...\n");
 
+	// Infinite loop so tasks keep alternating and main() does not terminate
+	while (true) {}	
 
 	return 0;
 }
+
+/**
+ * Print out the error if one exists. Returns true if there is an error, false otherwise.
+ * @param str is the error code string
+ * @param err is the error code
+ */
+bool errReport(char str[], OS_ERR err) {
+	if (err != OS_ERR_NONE) {
+		printf("Error: %s", str);
+		printf(" Code:%d\n", err);
+		return true;
+	}
+
+	return false;
+} 
