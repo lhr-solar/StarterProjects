@@ -28,15 +28,12 @@ int main(void) {
 				0, 
 				&err);
 
-	if (errReport("Sem4", err)) {
-		return 0;
-	}
-/*
 	if (err != OS_ERR_NONE) {
-		printf("Sem4 Error: %d\n", err);
+		printf("Sem4 Create Error: %d\n", err);
 		return 0;
 	}
-*/
+
+	printf("\nCreated sem4\n");
 	
 	// Initialize both tasks here
 	OSTaskCreate((OS_TCB*)&Mailman_TCB, 
@@ -58,7 +55,7 @@ int main(void) {
 		return 0;
 	}
 
-	printf("Created mailman task");
+	printf("Created mailman task\n");
 
 	OSTaskCreate((OS_TCB*)&Recipient_TCB, 
 				 (CPU_CHAR*)"Recipient Task", 
@@ -74,8 +71,12 @@ int main(void) {
 				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
 				 (OS_ERR*)&err);
 
-	printf("Created recipient task");
+	if (err != OS_ERR_NONE) {
+		printf("Recipient Task Create Error: %d\n", err);
+		return 0;
+	}
 
+	printf("Created recipient task\n");
 	
 	OSStart(&err);	// Start the OS
 
@@ -86,25 +87,10 @@ int main(void) {
 		return 0;
 	}
 
-	printf("Success! Running simulator...\n");
+	printf("Success! Running simulator...\n\n");
 
 	// Infinite loop so tasks keep alternating and main() does not terminate
 	while (1) {}	
 
 	return 0;
 }
-
-/**
- * Print out the error if one exists. Returns true if there is an error, false otherwise.
- * @param str is the error code string
- * @param err is the error code
- */
-int errReport(char str[], OS_ERR err) {
-	if (err != OS_ERR_NONE) {
-		printf("Error: %s", str);
-		printf(" Code:%d\n", err);
-		return 1;
-	}
-
-	return 0;
-} 
