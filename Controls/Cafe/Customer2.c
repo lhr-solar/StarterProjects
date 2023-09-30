@@ -34,6 +34,10 @@ void Customer2_checkout(char** name, int* cost) {
  * After checking out, release the register. Delay for THREE seconds. Loop.
  */
 void Task_Customer_2(void* p_arg) {
+	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
+	err = OS_ERR_NONE; 
+	CPU_TS ts;
+
 	//lock the register for use 
 	OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 
