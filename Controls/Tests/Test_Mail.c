@@ -2,6 +2,9 @@
 #include "../Tasks.h"
 #include "../Mail/Mail.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
@@ -13,30 +16,81 @@ OS_SEM MailboxFlag_Sem4;
 // Mailbox contents (allocated as 256 characters long, initialized to be empty)
 char mailbox[256] = {'\0'};
 
-int main(void){
+int main(void) {
 	OS_ERR err;
 
 	OSInit(&err);	// Initialize the OS
 	OS_CPU_SysTickInit();
 	
 	// Create any semaphores/mutexes and initialize any global variables here
-	
+	OSSemCreate(&MailboxFlag_Sem4, 
+				"Mailbox Sem4", 
+				0, 
+				&err);
 
+	if (err != OS_ERR_NONE) {
+		printf("Sem4 Create Error: %d\n", err);
+		return 0;
+	}
+
+	printf("\nCreated sem4\n");
+	
 	// Initialize both tasks here
-	
+	OSTaskCreate((OS_TCB*)&Mailman_TCB, 
+				 (CPU_CHAR*)"Mailman Task", 
+				 (OS_TASK_PTR)Task_Mailman, 
+				 (void*)NULL, 
+				 (OS_PRIO)TASK_MAILMAN_PRIO, 
+				 (CPU_STK*)&Mailman_Stk, 
+				 (CPU_STK_SIZE)TASK_MAILMAN_STACK_SIZE / 2, 
+				 (CPU_STK_SIZE)TASK_MAILMAN_STACK_SIZE, 
+				 (OS_MSG_QTY)0, 
+				 (OS_TICK)0, 
+				 (void*)NULL, 
+				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
+				 (OS_ERR*)&err);
 
+	if (err != OS_ERR_NONE) {
+		printf("Mailman Task Create Error: %d\n", err);
+		return 0;
+	}
+
+	printf("Created mailman task\n");
+
+	OSTaskCreate((OS_TCB*)&Recipient_TCB, 
+				 (CPU_CHAR*)"Recipient Task", 
+				 (OS_TASK_PTR)Task_Recipient, 
+				 (void*)NULL, 
+				 (OS_PRIO)TASK_RECIPIENT_PRIO, 
+				 (CPU_STK*)&Recipient_Stk, 
+				 (CPU_STK_SIZE)TASK_RECIPIENT_STACK_SIZE / 2, 
+				 (CPU_STK_SIZE)TASK_RECIPIENT_STACK_SIZE, 
+				 (OS_MSG_QTY)0, 
+				 (OS_TICK)0, 
+				 (void*)NULL, 
+				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
+				 (OS_ERR*)&err);
+
+	if (err != OS_ERR_NONE) {
+		printf("Recipient Task Create Error: %d\n", err);
+		return 0;
+	}
+
+	printf("Created recipient task\n");
+	
 	OSStart(&err);	// Start the OS
 
 	printf("=========\nMail Test File\n=========\n");
 
-	if(err != OS_ERR_NONE){
+	if (err != OS_ERR_NONE) {
 		printf("Error Code:%d\n", err);
 		return 0;
 	}
-	else{
-		printf("Success! Running simulator...\n");
-	}
 
-	while(1){}	// Infinite loop
+	printf("Success! Running simulator...\n\n");
+
+	// Infinite loop so tasks keep alternating and main() does not terminate
+	while (1) {}	
+
 	return 0;
 }
