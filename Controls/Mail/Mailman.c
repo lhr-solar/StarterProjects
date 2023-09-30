@@ -44,7 +44,7 @@ void depositLetter(void) {
 void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	while (true) {
+	while (1) {
 		if (err != OS_ERR_NONE) {
 			printf("[Mailman Task_Mailman()] Error Code:%d\n", err);
 			return;

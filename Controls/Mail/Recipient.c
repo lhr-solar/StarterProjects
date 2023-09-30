@@ -31,7 +31,7 @@ void readMail(void) {
 void Task_Recipient(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	while (true) {
+	while (1) {
 		// Check for message in mailbox
 		OSSemPend(&MailboxFlag_Sem4,
 				  0,
@@ -45,7 +45,7 @@ void Task_Recipient(void* p_arg) {
 			return;
 		} 
 		
-		printf("Success! Running Task_Mailman...\n");
+		printf("Success! Running Task_Recipient...\n");
 		readMail();
 	}
 }

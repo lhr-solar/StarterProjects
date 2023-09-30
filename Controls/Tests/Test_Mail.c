@@ -17,7 +17,7 @@ OS_SEM MailboxFlag_Sem4;
 char mailbox[256] = {'\0'};
 
 int main(void) {
-	OS_ERR err;
+	OS_ERR err = OS_ERR_NONE;
 
 	OSInit(&err);	// Initialize the OS
 	OS_CPU_SysTickInit();
@@ -85,7 +85,7 @@ int main(void) {
 	printf("Success! Running simulator...\n");
 
 	// Infinite loop so tasks keep alternating and main() does not terminate
-	while (true) {}	
+	while (1) {}	
 
 	return 0;
 }
@@ -95,12 +95,12 @@ int main(void) {
  * @param str is the error code string
  * @param err is the error code
  */
-bool errReport(char str[], OS_ERR err) {
+int errReport(char str[], OS_ERR err) {
 	if (err != OS_ERR_NONE) {
 		printf("Error: %s", str);
 		printf(" Code:%d\n", err);
-		return true;
+		return 1;
 	}
 
-	return false;
+	return 0;
 } 
