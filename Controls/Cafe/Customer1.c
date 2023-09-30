@@ -12,10 +12,6 @@
 void Customer1_checkout(char** name, int* cost) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	// If no error, OS_ERR_NONE = 0
-	if (err)
-		printf("Error code (Customer1_checkout): %d\n", err);
-
 	// Get the 4th item -- assign name and cost to the pointers passed
 	*name = menu[3];
 	*cost = costs[3];

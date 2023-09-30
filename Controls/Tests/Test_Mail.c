@@ -78,6 +78,9 @@ int main(void){
 
 	OSStart(&err);	// Start the OS
 
+    if (err)
+		printf("Error code (OSStart): %d\n", err);
+
 	printf("=========\nMail Test File\n=========\n");
 
 	if(err != OS_ERR_NONE){

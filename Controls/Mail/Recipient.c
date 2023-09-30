@@ -11,12 +11,12 @@
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	// If no error, OS_ERR_NONE = 0
+	// Task: Read letter
+	OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err);	// Delay
+
 	if (err)
 		printf("Error code (readMail): %d\n", err);
 
-	// Task: Read letter
-	OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err);	// Delay
 	printf("%s", mailbox);
 }
 

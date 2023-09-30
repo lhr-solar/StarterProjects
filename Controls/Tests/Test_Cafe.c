@@ -64,7 +64,7 @@ int main(void){
         (OS_TASK_PTR)Task_Customer_2,
         (void*)NULL,
         (OS_PRIO)TASK_CUS2_PRIO,
-        (CPU_STK*)Cus1Stk,
+        (CPU_STK*)Cus2Stk,
         (CPU_STK_SIZE)WATERMARK_STACK_LIMIT,
         (CPU_STK_SIZE)TASK_MAIL_STACK_SIZE,
         (OS_MSG_QTY)0,
@@ -79,6 +79,10 @@ int main(void){
 		printf("Error code (Customer2-task): %d\n", err);
 
 	OSStart(&err);	// Start the OS
+
+    // If no error, OS_ERR_NONE = 0
+	if (err)
+		printf("Error code (OSStart): %d\n", err);
 
 	printf("=========\nCafe Test File\n=========\n");
 

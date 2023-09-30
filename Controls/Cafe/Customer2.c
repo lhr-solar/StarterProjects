@@ -11,11 +11,8 @@
  */
 void Customer2_checkout(char** name, int* cost) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	
-	if (err)
-		printf("Error code (Customer2_checkout): %d\n", err);
 
-	// Get the 4th item -- assign name and cost to the pointers passed
+	// Get the 1st item -- assign name and cost to the pointers passed
 	*name = menu[0];
 	*cost = costs[0];
 
@@ -43,7 +40,7 @@ void Task_Customer_2(void* p_arg) {
 		if (err)
 			printf("Error code (Cus2 MutexPend): %d\n", err);
 
-		Customer1_checkout(&name, &cost);	// Call checkout
+		Customer2_checkout(&name, &cost);	// Call checkout
 		printf("Customer2 ordered %s. Cost: %d\n", name, cost);	// Print name and cost of item
 
 		// Release register
