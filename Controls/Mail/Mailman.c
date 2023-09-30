@@ -16,7 +16,7 @@ void depositLetter(void) {
 	//goal is to print out value in mailbox address
 	
 	int i;
-	//a loop to print out the 
+	//a loop to deposit code into mailbox array
 	for(i = 0; i<5; i++){
 		int num = i;
 		mailbox[i] = num;
@@ -30,18 +30,15 @@ void depositLetter(void) {
 				  OS_OPT_TIME_HMSM_STRICT, 
 				  &err);
 
-	//to print first 5 addresses in the mailbox. or what the letter is
-	for(i = 0; i<5; i++){
-		printf(mailbox[i]);
-	}
-
 	//signal the semaphore 
+	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
 
-	
-	//finished!
+	//print out finished 
 	printf("Finished!");
 
-
+	if(err != OS_ERR_NONE){
+			printf("Error: %d", err);
+		}
 }
 
 /**
@@ -60,5 +57,8 @@ void Task_Mailman(void* p_arg) {
 					  OS_OPT_TIME_HMSM_STRICT, 
 					  &err);
 
+		if(err != OS_ERR_NONE){
+			printf("Error: %d", err);
+		}
 	}
 }
