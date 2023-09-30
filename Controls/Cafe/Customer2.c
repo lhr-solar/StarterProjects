@@ -11,6 +11,19 @@
  */
 void Customer2_checkout(char** name, int* cost) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	
+	if (err)
+		printf("Error code (Customer2_checkout): %d\n", err);
+
+	// Get the 4th item -- assign name and cost to the pointers passed
+	*name = menu[0];
+	*cost = costs[0];
+
+	// Add the cost to revenue
+	revenue += costs[0];
+
+	// Print current business revenue
+	printf("Current business revenue: %d\n", revenue);
 }
 
 /**
@@ -19,11 +32,25 @@ void Customer2_checkout(char** name, int* cost) {
  */
 void Task_Customer_2(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
+	CPU_TS ticks;
 
 	// Return the name and cost into these values from Customer2_checkout
 	char* name;
 	int cost;
 	while(1){
+		// Acquire register
+		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ticks, &err);
+		if (err)
+			printf("Error code (Cus2 MutexPend): %d\n", err);
 
+		Customer1_checkout(&name, &cost);	// Call checkout
+		printf("Customer2 ordered %s. Cost: %d\n", name, cost);	// Print name and cost of item
+
+		// Release register
+		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
+		if (err)
+			printf("Error code (Cus2 MutexPost): %d\n", err);
+			
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);	// Delay
 	}
 }
