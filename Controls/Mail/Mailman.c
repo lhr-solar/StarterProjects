@@ -19,26 +19,22 @@ void depositLetter(void) {
 	if (err != OS_ERR_NONE) {
 		printf("[Mailman  depositLetter()] Error Code:%d\n", err);
 		return;
-	} else {
-		OSSemPend(&MailboxFlag_Sem4, 
-				  0, 
-				  OS_OPT_PEND_BLOCKING, 
-				  NULL, 
-				  &err);
+	} 
 
-		for (int i = 0; i < 256; i++) {
-			mailbox[i] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random() % 26];
-			// Shamelessly taken from https://stackoverflow.com/questions/19724346/generate-random-characters-in-c 
-		}
-		
-		mailbox[256] = '\0';
+	OSSemPost(&MailboxFlag_Sem4, 
+			  OS_OPT_POST_1, 
+			  &err);
 
-		printf("Finished!\n");
-		
-		OSSemPost(&MailboxFlag_Sem4, 
-				  OS_OPT_POST_ALL, 
-				  &err);
+	// Populate the mailbox
+	for (int i = 0; i < 256; i++) {
+		mailbox[i] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random() % 26];
 	}
+	mailbox[256] = '\0';
+
+	printf("Finished!\n");
+	
+
+	
 }
 
 /**
@@ -50,13 +46,13 @@ void Task_Mailman(void* p_arg) {
 
 	while (true) {
 		if (err != OS_ERR_NONE) {
-			printf("[Mailman  Task_Mailman()] Error Code:%d\n", err);
+			printf("[Mailman Task_Mailman()] Error Code:%d\n", err);
 			return;
-		} else {
-			printf("Success! Running Task_Mailman...\n");
 		}
 
-		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec.
+		printf("Success! Running Task_Mailman...\n");
+		
 		depositLetter();
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec.
 	}
 }

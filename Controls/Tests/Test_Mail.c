@@ -2,6 +2,8 @@
 #include "../Tasks.h"
 #include "../Mail/Mail.h"
 #include <stdio.h>
+#include <stdlib.h>
+
 
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
