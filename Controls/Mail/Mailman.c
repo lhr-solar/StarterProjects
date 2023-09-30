@@ -13,6 +13,17 @@
  */
 void depositLetter(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+
+	// Desposit letter
+	sprintf(mailbox, "Letter %d\n", (rand() % 100));
+
+	// Signal the semaphore
+	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
+	printf("Finished!\n");
+
+	// If no error, OS_ERR_NONE = 0
+	if (err)
+		printf("Error code (depositLetter): %d\n", err);
 }
 
 /**
@@ -21,7 +32,14 @@ void depositLetter(void) {
  */
 void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
-	while(1){
 
+	while(1) {
+		// If no error, OS_ERR_NONE = 0
+		if (err)
+			printf("Error code (Task_Mailman): %d\n", err);
+
+		// Task: Desposit letter
+		depositLetter();
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err);	// Delay
 	}
 }
