@@ -1,4 +1,5 @@
 #include "Mail.h"
+#include <stdio.h>
 
 /**
  * The recipient will read mail from the mailbox.
@@ -10,10 +11,12 @@
  */
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	err = OS_ERR_NONE;
+	int i;
 	
 	//to print first 5 addresses in the mailbox. or what the letter is
 	for(i = 0; i<5; i++){
-		printf(mailbox[i]);
+		printf("%c", mailbox[i]);
 	}
 
 	//2 second delay
@@ -35,14 +38,19 @@ void readMail(void) {
  */
 void Task_Recipient(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
-	while(1){
-		//if(semaphore signaled)
-		OSSemPend(&MailboxFlag_Sem4, 0, OS_OPT_PEND_BLOCKING, &ticks, &err);
+	err = OS_ERR_NONE;
+	CPU_TS ts;
 
-		readMail();
+	while(1){
+		//sem4 waiting to be signaled 
+		OSSemPend(&MailboxFlag_Sem4, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 		
+		//error check
 		if(err != OS_ERR_NONE){
 			printf("Error Code:%d\n", err);
 		}
+
+		//function call once waiting sem4 is signaled
+		readMail();
 	}
 }

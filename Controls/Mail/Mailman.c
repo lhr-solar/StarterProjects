@@ -1,4 +1,5 @@
 #include "Mail.h"
+#include <stdio.h>
 
 /**
  * The mailman will put mail in the mailbox.
@@ -13,9 +14,10 @@
  */
 void depositLetter(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	//goal is to print out value in mailbox address
-	
+	err = OS_ERR_NONE;
+
 	int i;
+
 	//a loop to deposit code into mailbox array
 	for(i = 0; i<5; i++){
 		int num = i;
@@ -37,7 +39,7 @@ void depositLetter(void) {
 	printf("Finished!");
 
 	if(err != OS_ERR_NONE){
-			printf("Error: %d", err);
+			printf("Error Code:%d\n", err);
 		}
 }
 
@@ -47,9 +49,13 @@ void depositLetter(void) {
  */
 void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
+	err = OS_ERR_NONE;
+
 	while(1){
+		//function call
 		depositLetter();
 
+		//3 second delay
 		OSTimeDlyHMSM(0, 
 					  0, 
 					  3, 
@@ -57,8 +63,9 @@ void Task_Mailman(void* p_arg) {
 					  OS_OPT_TIME_HMSM_STRICT, 
 					  &err);
 
+		//error check
 		if(err != OS_ERR_NONE){
-			printf("Error: %d", err);
+			printf("Error Code:%d\n", err);
 		}
 	}
 }

@@ -6,7 +6,6 @@
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
  */
-static OS_TCB Mailman_TCB;
 CPU_STK TaskMailman_Stk[TASK_MAILMAN_STACK_SIZE];
 CPU_STK TaskRecipient_Stk[TASK_RECIPIENT_STACK_SIZE];
 
@@ -18,6 +17,7 @@ char mailbox[256] = {'\0'};
 
 int main(void){
 	OS_ERR err;
+	err = OS_ERR_NONE;
 
 	OSInit(&err);	// Initialize the OS
 	OS_CPU_SysTickInit();
