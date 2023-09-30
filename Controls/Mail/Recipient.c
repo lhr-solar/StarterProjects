@@ -16,13 +16,13 @@ void readMail(void) {
 	OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 2 sec.
 
 	if (err != OS_ERR_NONE) {
-		printf("[Recipient  readMail()] Error Code:%d\n", err);
+		printf("[Recipient readMail()] Error Code:%d\n", err);
 		return;
 	}
 
 	printf("Mail contents: ");
 	printf("%s\n", mailbox);
-	printf("\nFinished!\n");	
+	printf("\nFinished!\n\n");	
 }
 
 /**
@@ -41,7 +41,7 @@ void Task_Recipient(void* p_arg) {
 
 
 		if (err != OS_ERR_NONE) {
-			printf("[Recipient  Task_Recipient()] Error Code:%d\n", err);
+			printf("[Recipient Task_Recipient()] Error Code:%d\n", err);
 			return;
 		} 
 		

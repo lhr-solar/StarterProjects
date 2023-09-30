@@ -16,11 +16,6 @@
 void depositLetter(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	if (err != OS_ERR_NONE) {
-		printf("[Mailman  depositLetter()] Error Code:%d\n", err);
-		return;
-	} 
-
 	OSSemPost(&MailboxFlag_Sem4, 
 			  OS_OPT_POST_1, 
 			  &err);
@@ -31,10 +26,12 @@ void depositLetter(void) {
 	}
 	mailbox[256] = '\0';
 
-	printf("Finished!\n");
-	
+	if (err != OS_ERR_NONE) {
+		printf("[Mailman depositLetter()] Error Code:%d\n", err);
+		return;
+	} 
 
-	
+	printf("Finished!\n\n");
 }
 
 /**
@@ -45,14 +42,14 @@ void Task_Mailman(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 
 	while (1) {
-		if (err != OS_ERR_NONE) {
-			printf("[Mailman Task_Mailman()] Error Code:%d\n", err);
-			return;
-		}
-
 		printf("Success! Running Task_Mailman...\n");
 		
 		depositLetter();
 		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec.
+
+		if (err != OS_ERR_NONE) {
+			printf("[Mailman Task_Mailman()] Error Code: %d\n", err);
+			return;
+		}
 	}
 }

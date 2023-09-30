@@ -17,7 +17,7 @@ OS_SEM MailboxFlag_Sem4;
 char mailbox[256] = {'\0'};
 
 int main(void) {
-	OS_ERR err = OS_ERR_NONE;
+	OS_ERR err;
 
 	OSInit(&err);	// Initialize the OS
 	OS_CPU_SysTickInit();
@@ -37,6 +37,7 @@ int main(void) {
 		return 0;
 	}
 */
+	
 	// Initialize both tasks here
 	OSTaskCreate((OS_TCB*)&Mailman_TCB, 
 				 (CPU_CHAR*)"Mailman Task", 
@@ -52,12 +53,12 @@ int main(void) {
 				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
 				 (OS_ERR*)&err);
 
-	// Check for errors and print if present
 	if (err != OS_ERR_NONE) {
 		printf("Mailman Task Create Error: %d\n", err);
 		return 0;
 	}
 
+	printf("Created mailman task");
 
 	OSTaskCreate((OS_TCB*)&Recipient_TCB, 
 				 (CPU_CHAR*)"Recipient Task", 
@@ -72,6 +73,9 @@ int main(void) {
 				 (void*)NULL, 
 				 (OS_OPT)OS_OPT_TASK_STK_CLR, 
 				 (OS_ERR*)&err);
+
+	printf("Created recipient task");
+
 	
 	OSStart(&err);	// Start the OS
 
