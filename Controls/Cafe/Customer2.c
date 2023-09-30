@@ -37,6 +37,8 @@ void Task_Customer_2(void* p_arg) {
 	int cost;
 
 	while (1) {
+		printf("Success! Running Task_Customer_2...\n");
+
 		OSMutexPend((OS_MUTEX*)&RegisterOccupied_Mutex,
 					(OS_TICK)0,
 					(OS_OPT)OS_OPT_PEND_BLOCKING,
@@ -48,15 +50,18 @@ void Task_Customer_2(void* p_arg) {
 			return;
 		}
 
-		printf("Success! Running Task_Customer_2...\n");
-
 		Customer2_checkout(&name, &cost);
-
-		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec.
 
 		OSMutexPost((OS_MUTEX*)&RegisterOccupied_Mutex,
 					(OS_OPT)OS_OPT_POST_NONE,
 					(OS_ERR*)&err);
+
+		if (err != OS_ERR_NONE) {
+			printf("[Task_Customer_2()] Error Code: %d\n", err);
+			return;
+		}
+
+		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec.
 
 		if (err != OS_ERR_NONE) {
 			printf("[Task_Customer_2()] Error Code: %d\n", err);
