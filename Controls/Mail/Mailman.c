@@ -1,5 +1,8 @@
 #include "Mail.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
 
 /**
  * The mailman will put mail in the mailbox.
@@ -15,14 +18,15 @@
 void depositLetter(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 	err = OS_ERR_NONE;
-
-	int i;
+	int i = 0;
 
 	//a loop to deposit code into mailbox array
 	for(i = 0; i<5; i++){
-		int num = i;
-		mailbox[i] = num;
+		mailbox[i] = rand() % 9 + '0';
 	}
+	
+	//null terminator for string 
+	mailbox[5] = 0;
 
 	//1 sec delay
 	OSTimeDlyHMSM(0, 
@@ -36,7 +40,7 @@ void depositLetter(void) {
 	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
 
 	//print out finished 
-	printf("Finished!");
+	printf("Finished!\n");
 
 	if(err != OS_ERR_NONE){
 			printf("Error Code:%d\n", err);

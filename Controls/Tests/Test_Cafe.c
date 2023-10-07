@@ -24,7 +24,7 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
-	OSMutexCreate(&RegisterOccupied_Mutex, "register mutex", 0, &err);
+	OSMutexCreate(&RegisterOccupied_Mutex, "register mutex", &err);
 
 	// Initialize both customer 1 task
 	OSTaskCreate(

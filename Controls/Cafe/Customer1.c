@@ -1,4 +1,6 @@
 #include "Cafe.h"
+#include <stdio.h>
+
 
 /**
  * Customer 1 wants to buy something!
@@ -14,14 +16,14 @@ void Customer1_checkout(char** name, int* cost) {
 	err = OS_ERR_NONE;
 
 	//assigning values to pointers in function
-	name = menu[3];
-	cost = costs[3];
+	*name = menu[3];
+	*cost = costs[3];
 
 	//adding cost of the menu item to business revenue 
 	revenue = revenue + costs[3];
 
 	// printing out new business revenue 
-	printf("Business revenue: $%d", revenue);
+	printf("Business revenue: $%d\n", revenue);
 
 	//error check 
 	if(err != OS_ERR_NONE){
@@ -46,10 +48,10 @@ void Task_Customer_1(void* p_arg) {
 		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 
 		//calling the checkout function
-		Customer1_checkout(name, cost);
+		Customer1_checkout(&name, &cost); 
 
 		//printing out the customer receipt
-		printf("Customer name: %c, Cost: %d", name, cost);
+		printf("Order item: %s, Cost: $%d\n", name, cost);
 
 		//release the register 
 		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);

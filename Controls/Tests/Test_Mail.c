@@ -2,6 +2,9 @@
 #include "../Tasks.h"
 #include "../Mail/Mail.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 /**
  * Create and test the functionality of the Mailman and Recipient tasks here.
@@ -25,6 +28,9 @@ int main(void){
 	// Create any semaphores/mutexes and initialize any global variables here
 	OSSemCreate(&MailboxFlag_Sem4, "mailbox flag", 0, &err);
 
+	//seed random int
+    srand(time(NULL));
+
 	// Initializing mailman task
 	OSTaskCreate(
 		(OS_TCB*)&Mailman_TCB, 
@@ -46,6 +52,7 @@ int main(void){
 	if(err != OS_ERR_NONE){
 		printf("Error Code:%d\n", err);
 	}
+	
 	//Inititializing recipient task
 	OSTaskCreate(
 		(OS_TCB*)&Recipient_TCB, 
