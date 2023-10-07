@@ -10,7 +10,7 @@
  */
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	printf("%s", mailbox);
+	printf("%s\n", mailbox);
 	OSTimeDlyHMSM(0,
 				0,
 				2,

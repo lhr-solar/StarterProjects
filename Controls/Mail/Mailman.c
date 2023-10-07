@@ -21,7 +21,7 @@ void depositLetter(void) {
 	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
 
 	if(err == OS_ERR_NONE){
-		printf("Finished!");
+		printf("Finished!\n");
 	}
 	else {
 		printf("Value of errno: %d\n", err); 
