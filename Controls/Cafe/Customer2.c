@@ -10,7 +10,10 @@
  * revenue and print the current business revenue.
  */
 void Customer2_checkout(char** name, int* cost) {
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	*name = menu[0];
+	*cost = costs[0];
+	revenue += *cost;
+	printf("%d\n", revenue);
 }
 
 /**

@@ -21,7 +21,7 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
-	
+	OSMutexCreate(&RegisterOccupied_Mutex, "Register mutex", &err);
 
 	// Initialize both tasks here
 	
