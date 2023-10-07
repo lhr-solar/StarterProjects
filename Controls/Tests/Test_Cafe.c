@@ -25,6 +25,39 @@ int main(void){
 
 	// Initialize both tasks here
 	
+	//Initialize Customer 1
+	OSTaskCreate(
+        (OS_TCB*)&Customer_1_TCB,
+        (CPU_CHAR*)"Customer1",
+        (OS_TASK_PTR)Task_Customer_1,
+        (void*)NULL,
+        (OS_PRIO)TASK_CUST_1_PRIO,
+        (CPU_STK*)Customer_1_Stk,
+        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE/2,
+        (CPU_STK_SIZE)TASK_CUST_1_STACK_SIZE,
+        (OS_MSG_QTY)0,
+        (OS_TICK)0,
+        (void*)NULL,
+        (OS_OPT)(OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)&err
+    );
+
+	//Initialize Customer 2
+	OSTaskCreate(
+        (OS_TCB*)&Customer_2_TCB,
+        (CPU_CHAR*)"Customer2",
+        (OS_TASK_PTR)Task_Customer_2,
+        (void*)NULL,
+        (OS_PRIO)TASK_CUST_2_PRIO,
+        (CPU_STK*)Customer_2_Stk,
+        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE/2,
+        (CPU_STK_SIZE)TASK_CUST_2_STACK_SIZE,
+        (OS_MSG_QTY)0,
+        (OS_TICK)0,
+        (void*)NULL,
+        (OS_OPT)(OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)&err
+    );
 
 	OSStart(&err);	// Start the OS
 
