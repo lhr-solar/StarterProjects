@@ -25,17 +25,16 @@ void Task_Customer_1(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 	CPU_TS ticks;
 
-	OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_ALL, &err);
-
 	// Use these values as parameters for Customer1_checkout
 	char* name;
 	int cost;
-	Customer1_checkout(&name, &cost);
 
 	while(1){
+		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ticks, &err);
+		Customer1_checkout(&name, &cost);
 		printf("item: %s\n", name);
 		printf("cost: %d\n", cost);
-		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ticks, &err);
+		OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_ALL, &err);
 		OSTimeDlyHMSM(0,
                       0,
                       4,
