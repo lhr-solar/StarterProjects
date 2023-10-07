@@ -18,8 +18,9 @@ void depositLetter(void) {
 	sprintf(mailbox, "letter %d", count);
 	count++;
 	
+	OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
+
 	if(err == OS_ERR_NONE){
-		OSSemPost(&MailboxFlag_Sem4, OS_OPT_POST_1, &err);
 		printf("Finished!");
 	}
 	else {
