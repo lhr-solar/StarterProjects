@@ -1,4 +1,5 @@
 #include "Cafe.h"
+#include <stdio.h>
 
 /**
  * Customer 1 wants to buy something!
@@ -10,14 +11,10 @@
  * revenue and print the current business revenue.
  */
 void Customer1_checkout(char** name, int* cost) {
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 	*name = menu[3];
 	*cost = costs[3];
 	revenue += *cost;
-	printf("%d\n" revenue);
-	if(err != OS_ERR_NONE){
-		printf("Value of errno: %d\n", err); 
-	}
+	printf("%d\n", revenue);
 }
 
 /**
@@ -26,11 +23,24 @@ void Customer1_checkout(char** name, int* cost) {
  */
 void Task_Customer_1(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
-	
+	CPU_TS ticks;
+
+	OSMutexPost(&RegisterOccupied_Mutex, OS_OPT_POST_ALL, &err);
+
 	// Use these values as parameters for Customer1_checkout
 	char* name;
 	int cost;
+	Customer1_checkout(&name, &cost);
+
 	while(1){
-		
+		printf("item: %s\n", name);
+		printf("cost: %d\n", cost);
+		OSMutexPend(&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, &ticks, &err);
+		OSTimeDlyHMSM(0,
+                      0,
+                      4,
+                      0,
+                      OS_OPT_TIME_HMSM_STRICT,
+                      &err); 
 	}
 }
