@@ -1,7 +1,5 @@
 #include "Mail.h"
-
-char mailbox[256];
-OS_SEM MailboxFlag_Sem4;
+#include <stdio.h>
 
 /**
  * The mailman will put mail in the mailbox.
