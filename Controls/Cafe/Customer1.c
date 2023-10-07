@@ -11,6 +11,13 @@
  */
 void Customer1_checkout(char** name, int* cost) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	*name = menu[3];
+	*cost = costs[3];
+	revenue += *cost;
+	printf("%d\n" revenue);
+	if(err != OS_ERR_NONE){
+		printf("Value of errno: %d\n", err); 
+	}
 }
 
 /**
