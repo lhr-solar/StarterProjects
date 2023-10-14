@@ -39,6 +39,13 @@ The mailbox consists of the mailbox flag and the mailbox contents, both declared
 	```
 	If this does not work or if you run into any issues, try ```make clean``` (this will remove any object files you just compiled) and recompile.
 
+
+
+
+
+
+
+
 ### Cafe
 The cafe consists of the menu, item costs, and revenue, as well as the register occupied mutex. These are all declared in ```Cafe.h```. Relevant Mailbox files can be found in the ```Cafe/``` directory.
 1. Write the Customer1 and Customer2 tasks in ```Customer1.c``` and ```Customer2.c``` to purchase the appropriate items on the menu, as well as increment the revenue appropriately.

@@ -1,4 +1,7 @@
 #include "Mail.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * The mailman will put mail in the mailbox.
@@ -22,11 +25,12 @@ void depositLetter(void)
 
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 
-	for(int i = 0; i < 255; ++i)
-	{
-		mailbox[i] = (char) (rand() % (max_number + 1 - min_number) + min_number);
-	}
-	mailbox[255] = '\0';
+	// for(int i = 0; i < 255; ++i)
+	// {
+	// 	mailbox[i] = (char) (rand() % (max_number + 1 - min_number) + min_number);
+	// }
+	// mailbox[255] = '\0';
+	strcpy(mailbox, "message, message, message, message");
 
 	OSSemPost(&MailboxFlag_Sem4,  //
 			  OS_OPT_POST_1, 
@@ -34,6 +38,7 @@ void depositLetter(void)
 
 	if(err != OS_ERR_NONE)
 	{
+		
 		printf("Error Code:%d\n", err);
 		return 0;
 	}

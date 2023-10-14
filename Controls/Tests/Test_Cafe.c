@@ -21,12 +21,58 @@ int main(void){
 	OS_CPU_SysTickInit();
 
 	// Create any semaphores/mutexes and initialize any global variables here
+	OSMutexCreate(
+		(OS_MUTEX*) &RegisterOccupied_Mutex, 
+		(CPU_CHAR*) "Register Mutex", 
+		(OS_ERR*) &err);
+
+
+	OS_TCB Customer1_TCB;
+	OS_TCB Customer2_TCB;
+
+	CPU_STK	Customer1Stk[256];
+	CPU_STK Customer2Stk[256];
+	// Initialize both tasks here
+
+	OSTaskCreate
+	(
+        (OS_TCB*)     &Customer1_TCB,
+        (CPU_CHAR*)   "Customer 1",
+        (OS_TASK_PTR) Task_Customer_1,
+        (void*)       NULL,
+        (OS_PRIO)     2,
+        (CPU_STK*)    Customer1Stk,
+        (CPU_STK_SIZE)128/10,
+        (CPU_STK_SIZE)256,
+        (OS_MSG_QTY)  0,
+        (OS_TICK)     0,
+        (void*)       NULL,
+        (OS_OPT)      (OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)     &err
+    );
+
+	OSTaskCreate
+	(
+        (OS_TCB*)     &Customer2_TCB,
+        (CPU_CHAR*)   "Customer 2",
+        (OS_TASK_PTR) Task_Customer_2,
+        (void*)       NULL,
+        (OS_PRIO)     2,
+        (CPU_STK*)    Customer2Stk,
+        (CPU_STK_SIZE)128/10,
+        (CPU_STK_SIZE)256,
+        (OS_MSG_QTY)  0,
+        (OS_TICK)     0,
+        (void*)       NULL,
+        (OS_OPT)      (OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)     &err
+    );
 	
 
-	// Initialize both tasks here
 	
 
 	OSStart(&err);	// Start the OS
+	printf("got here\n");
 
 	printf("=========\nCafe Test File\n=========\n");
 
