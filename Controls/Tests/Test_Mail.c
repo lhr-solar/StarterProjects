@@ -20,9 +20,54 @@ int main(void){
 	OS_CPU_SysTickInit();
 	
 	// Create any semaphores/mutexes and initialize any global variables here
-	
+	OSSemCreate(&MailboxFlag_Sem4, 
+				"mailboxSemaphore",
+				1, 
+				&err);
+
+	OS_TCB MailMan_TCB;
+	OS_TCB Recipient_TCB;
+
+	CPU_STK MailmanStk[256];
+	CPU_STK RecipientStk[256];
+
 
 	// Initialize both tasks here
+
+
+	OSTaskCreate
+	(
+        (OS_TCB*)     &MailMan_TCB,
+        (CPU_CHAR*)   "MailMan",
+        (OS_TASK_PTR) Task_Mailman,
+        (void*)       NULL,
+        (OS_PRIO)     2,
+        (CPU_STK*)    MailmanStk,
+        (CPU_STK_SIZE)128/10,
+        (CPU_STK_SIZE)256,
+        (OS_MSG_QTY)  0,
+        (OS_TICK)     0,
+        (void*)       NULL,
+        (OS_OPT)      (OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)     &err
+    );
+
+	OSTaskCreate
+	(
+        (OS_TCB*)     &Recipient_TCB,
+        (CPU_CHAR*)   "Recipient",
+        (OS_TASK_PTR) Task_Recipient,
+        (void*)       NULL,
+        (OS_PRIO)     2,
+        (CPU_STK*)    RecipientStk,
+        (CPU_STK_SIZE)128/10,
+        (CPU_STK_SIZE)256,
+        (OS_MSG_QTY)  0,
+        (OS_TICK)     0,
+        (void*)       NULL,
+        (OS_OPT)      (OS_OPT_TASK_STK_CLR),
+        (OS_ERR*)     &err
+    );
 	
 
 	OSStart(&err);	// Start the OS
