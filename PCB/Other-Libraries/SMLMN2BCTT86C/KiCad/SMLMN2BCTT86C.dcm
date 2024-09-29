@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP SMLMN2BCTT86C
+D Blue 470nm LED Indication - Discrete 2.9V 0805 (2012 Metric)
+K
+F https://fscdn.rohm.com/en/products/databook/datasheet/opto/led/chip_mono/smlmn2bctt86(c)-e.pdf
+$ENDCMP
+#
+#End Doc Library
