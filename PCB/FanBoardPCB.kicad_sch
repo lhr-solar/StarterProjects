@@ -704,6 +704,175 @@
 				)
 			)
 		)
+		(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Device:R"
 			(pin_numbers hide)
 			(pin_names
@@ -1618,6 +1787,12 @@
 		(uuid "73b8e15c-853b-4a86-8c38-7f808ecf377f")
 	)
 	(junction
+		(at 140.97 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7c080db9-5d25-4d67-ac84-245ff4af7fd5")
+	)
+	(junction
 		(at 96.52 62.23)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1682,6 +1857,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e73e4618-3fb3-4d1c-bac5-21ef8b7e1621")
+	)
+	(junction
+		(at 116.84 69.85)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed856b15-64a5-4b03-b421-c67fccadb762")
 	)
 	(wire
 		(pts
@@ -1855,7 +2036,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 35.56) (xy 151.13 45.72)
+			(xy 151.13 36.83) (xy 151.13 45.72)
 		)
 		(stroke
 			(width 0)
@@ -1965,7 +2146,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 69.85) (xy 120.65 69.85)
+			(xy 110.49 69.85) (xy 116.84 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2135,6 +2316,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 33.02) (xy 125.73 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fb7fb62-b077-413e-8169-c58decf35245")
+	)
+	(wire
+		(pts
 			(xy 168.91 67.31) (xy 168.91 68.58)
 		)
 		(stroke
@@ -2152,6 +2343,16 @@
 			(type default)
 		)
 		(uuid "8793f685-afe6-40f6-80d9-4d71b1376ad9")
+	)
+	(wire
+		(pts
+			(xy 140.97 33.02) (xy 140.97 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a1aa7e3-be64-4f29-bb1c-7235f4a7ff5a")
 	)
 	(wire
 		(pts
@@ -2245,7 +2446,7 @@
 	)
 	(wire
 		(pts
-			(xy 113.03 66.04) (xy 113.03 69.85)
+			(xy 110.49 36.83) (xy 110.49 69.85)
 		)
 		(stroke
 			(width 0)
@@ -2355,6 +2556,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 43.18) (xy 116.84 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb07b061-c8ea-4b15-a741-9417e867259f")
+	)
+	(wire
+		(pts
 			(xy 107.95 92.71) (xy 107.95 97.79)
 		)
 		(stroke
@@ -2375,6 +2586,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 69.85) (xy 120.65 69.85)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfbb4b24-47b6-411f-bced-4591227d4822")
+	)
+	(wire
+		(pts
 			(xy 60.96 57.15) (xy 60.96 69.85)
 		)
 		(stroke
@@ -2392,6 +2613,16 @@
 			(type default)
 		)
 		(uuid "d484209a-869a-41f3-ace1-66f631b85782")
+	)
+	(wire
+		(pts
+			(xy 133.35 33.02) (xy 140.97 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d587b0cc-ba3f-491d-a639-36b2fb55ee00")
 	)
 	(wire
 		(pts
@@ -2492,6 +2723,16 @@
 			(type default)
 		)
 		(uuid "e1e397e4-e0bd-4ecd-89ca-984b6447c070")
+	)
+	(wire
+		(pts
+			(xy 116.84 35.56) (xy 116.84 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2a9ad9e-22e8-4eae-aa98-4c03090baa74")
 	)
 	(wire
 		(pts
@@ -2705,7 +2946,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 106.172 88.9 90)
 			(effects
 				(font
@@ -2775,7 +3016,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 58.42 40.64 0)
 			(effects
 				(font
@@ -2921,7 +3162,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 217.17 109.22 0)
 			(effects
 				(font
@@ -2983,7 +3224,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 162.56 54.61 0)
 			(effects
 				(font
@@ -3045,7 +3286,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 113.03 66.04 0)
+		(at 110.49 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3054,7 +3295,7 @@
 		(fields_autoplaced yes)
 		(uuid "36cc07a9-374d-4135-856f-638b18c55651")
 		(property "Reference" "#PWR01"
-			(at 113.03 69.85 0)
+			(at 110.49 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3063,7 +3304,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 113.03 60.96 0)
+			(at 110.49 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3071,7 +3312,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 113.03 66.04 0)
+			(at 110.49 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3080,7 +3321,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 113.03 66.04 0)
+			(at 110.49 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3089,7 +3330,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 113.03 66.04 0)
+			(at 110.49 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3135,7 +3376,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 54.61 78.74 0)
 			(effects
 				(font
@@ -3223,7 +3464,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 217.17 124.46 0)
 			(effects
 				(font
@@ -3285,7 +3526,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 153.67 76.708 90)
 			(effects
 				(font
@@ -3494,7 +3735,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.35 44.7548 0)
 			(effects
 				(font
@@ -3760,7 +4001,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 133.35 57.4548 0)
 			(effects
 				(font
@@ -4092,7 +4333,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 105.41 78.232 90)
 			(effects
 				(font
@@ -4129,6 +4370,74 @@
 			(project "FanBoardPCB"
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
 					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 129.54 33.02 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "80f8db22-47a9-4932-b2ea-479b2e49417a")
+		(property "Reference" "D5"
+			(at 131.1275 25.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR LED"
+			(at 131.1275 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 129.54 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "17fe4704-9f66-44d7-88d9-a3456fff8ae4")
+		)
+		(pin "1"
+			(uuid "318707c6-8134-4558-b393-7bf37b9161d4")
+		)
+		(instances
+			(project ""
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -4278,7 +4587,7 @@
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 151.13 35.56 0)
+		(at 151.13 36.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4287,7 +4596,7 @@
 		(fields_autoplaced yes)
 		(uuid "99f1f252-e245-437c-a42b-7a6577f1f5d3")
 		(property "Reference" "#PWR011"
-			(at 151.13 39.37 0)
+			(at 151.13 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4296,7 +4605,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 151.13 30.48 0)
+			(at 151.13 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4304,7 +4613,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 151.13 35.56 0)
+			(at 151.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4313,7 +4622,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 151.13 35.56 0)
+			(at 151.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4322,7 +4631,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 151.13 35.56 0)
+			(at 151.13 36.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4370,7 +4679,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 217.17 101.6 0)
 			(effects
 				(font
@@ -4407,6 +4716,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 116.84 39.37 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a09c9fdd-24f2-4a65-a9f5-1577a27ae993")
+		(property "Reference" "R9"
+			(at 119.38 38.0999 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "220"
+			(at 119.38 40.6399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 118.618 39.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 116.84 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 116.84 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "0575d79b-0855-4624-bbad-50d1955a5cde")
+		)
+		(pin "1"
+			(uuid "a7d2b4a3-c84f-4298-b221-d475f74c8c2c")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:D")
 		(at 54.61 57.15 0)
 		(unit 1)
@@ -4432,7 +4811,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 54.61 57.15 0)
 			(effects
 				(font
@@ -4520,7 +4899,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 207.01 68.58 0)
 			(effects
 				(font
@@ -4590,7 +4969,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 145.542 87.63 90)
 			(effects
 				(font
@@ -4658,7 +5037,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 101.6 64.008 90)
 			(effects
 				(font
@@ -4794,7 +5173,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 94.742 88.9 90)
 			(effects
 				(font
@@ -4862,7 +5241,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 43.18 72.39 0)
 			(effects
 				(font
@@ -4932,7 +5311,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 193.04 66.04 0)
 			(effects
 				(font
@@ -5095,7 +5474,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "MountingHole:MountingHole_3mm"
 			(at 217.17 116.84 0)
 			(effects
 				(font
@@ -5157,7 +5536,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 153.67 64.008 90)
 			(effects
 				(font
@@ -5227,7 +5606,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
 			(at 166.37 39.37 0)
 			(effects
 				(font
@@ -5297,7 +5676,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 155.702 87.63 90)
 			(effects
 				(font
@@ -5497,7 +5876,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical"
 			(at 128.27 72.39 0)
 			(effects
 				(font
