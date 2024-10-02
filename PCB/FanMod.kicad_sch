@@ -1139,7 +1139,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "02b9ddf3-fa34-4288-97fd-5e7d2675ca9d")
-		(property "Reference" "#PWR012"
+		(property "Reference" "#PWR018"
 			(at 143.51 91.44 0)
 			(effects
 				(font
@@ -1192,6 +1192,10 @@
 					(reference "#PWR018")
 					(unit 1)
 				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/577f8a55-9002-4f4f-a791-a795000d5de3"
+					(reference "#PWR0101")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/70bcff54-f2ae-4d7a-b800-33993bb0f361"
 					(reference "#PWR015")
 					(unit 1)
@@ -1213,7 +1217,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "43ecc268-a22d-4945-879b-9e9b2f8a443f")
-		(property "Reference" "D5"
+		(property "Reference" "D3"
 			(at 137.16 62.2299 90)
 			(effects
 				(font
@@ -1231,7 +1235,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric"
 			(at 139.7 63.5 0)
 			(effects
 				(font
@@ -1314,7 +1318,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5a0cfb28-1af7-49ba-98d5-be3d41fe7f4c")
-		(property "Reference" "R3"
+		(property "Reference" "R9"
 			(at 130.81 71.12 90)
 			(effects
 				(font
@@ -1394,7 +1398,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "630c44e0-e684-4a7c-80db-73c2fabf38a4")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR017"
 			(at 143.51 55.88 0)
 			(effects
 				(font
@@ -1472,7 +1476,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "769a9b24-3d31-46fb-88fc-73079261bd0e")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR016"
 			(at 124.46 91.44 0)
 			(effects
 				(font
@@ -1549,7 +1553,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "7710653e-99fb-4584-883a-ae523bc7354f")
-		(property "Reference" "R2"
+		(property "Reference" "R8"
 			(at 121.92 80.0099 0)
 			(effects
 				(font
@@ -1631,7 +1635,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "99a3f1f2-6f52-4602-823b-01bd47c3f97b")
-		(property "Reference" "J6"
+		(property "Reference" "J4"
 			(at 151.13 62.2299 0)
 			(effects
 				(font
@@ -1713,7 +1717,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c1a67928-aec9-4215-9349-ba16d5456323")
-		(property "Reference" "Q5"
+		(property "Reference" "Q3"
 			(at 147.32 76.1999 0)
 			(effects
 				(font
