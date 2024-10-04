@@ -1,0 +1,325 @@
+Info: Processing symbol 'C1:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'J1:Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical'.
+Info: Processing symbol 'H3:MountingHole:MountingHole_3mm'.
+Info: Processing symbol 'D5:LED_SMD:LED_0805_2012Metric'.
+Info: Processing symbol 'J2:UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical'.
+Info: Processing symbol 'J3:UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical'.
+Info: Processing symbol 'H1:MountingHole:MountingHole_3mm'.
+Info: Processing symbol 'J4:UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical'.
+Info: Processing symbol 'H2:MountingHole:MountingHole_3mm'.
+Info: Processing symbol 'D2:Diode_SMD:D_0805_2012Metric'.
+Info: Processing symbol 'D1:Diode_SMD:D_0805_2012Metric'.
+Info: Processing symbol 'D3:Diode_SMD:D_0805_2012Metric'.
+Info: Processing symbol 'H4:MountingHole:MountingHole_3mm'.
+Info: Processing symbol 'C2:Capacitor_SMD:C_0805_2012Metric'.
+Info: Processing symbol 'D4:Diode_SMD:D_0805_2012Metric'.
+Info: Processing symbol 'J5:UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical'.
+Info: Processing symbol 'R1:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R2:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R3:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'R4:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Rpd1:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Rpd2:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Rpd3:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'Rpd4:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'SWITCH1:Package_TO_SOT_SMD:SOT-23'.
+Info: Processing symbol 'SWITCH2:Package_TO_SOT_SMD:SOT-23'.
+Info: Processing symbol 'SWITCH3:Package_TO_SOT_SMD:SOT-23'.
+Info: Processing symbol 'SWITCH4:Package_TO_SOT_SMD:SOT-23'.
+Changed REF** reference designator to C2.
+Changed C2 value from C_0805_2012Metric to 100u.
+Updated C2 symbol association from  to /e1b91e1b-2831-49fb-8242-dd8334c7b55d.
+Updated C2 fields.
+Updated C2 sheetname to 'Root'.
+Updated C2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated C2 footprint filters to 'C_*'.
+Connected C2 pin 2 to GNDPWR.
+Connected C2 pin 1 to +12V.
+Added D1 (footprint 'Diode_SMD:D_0805_2012Metric').
+Changed REF** reference designator to D1.
+Changed D1 value from D_0805_2012Metric to D.
+Updated D1 symbol association from  to /e5ff15bc-fbe9-49ce-bb09-b5da565dee99.
+Updated D1 fields.
+Updated D1 sheetname to 'Root'.
+Updated D1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated D1 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D1 pin 2 to GNDPWR.
+Add net Net-(D1-K).
+Connected D1 pin 1 to Net-(D1-K).
+Added D2 (footprint 'Diode_SMD:D_0805_2012Metric').
+Changed REF** reference designator to D2.
+Changed D2 value from D_0805_2012Metric to D.
+Updated D2 symbol association from  to /08860378-55c2-43e3-a57b-e0b59b15fdf8.
+Updated D2 fields.
+Updated D2 sheetname to 'Root'.
+Updated D2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated D2 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D2 pin 2 to GNDPWR.
+Add net Net-(D2-K).
+Connected D2 pin 1 to Net-(D2-K).
+Added D3 (footprint 'Diode_SMD:D_0805_2012Metric').
+Changed REF** reference designator to D3.
+Changed D3 value from D_0805_2012Metric to D.
+Updated D3 symbol association from  to /4c603fe3-8a53-4f04-86a9-20498d6e0757.
+Updated D3 fields.
+Updated D3 sheetname to 'Root'.
+Updated D3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated D3 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net Net-(D3-K).
+Connected D3 pin 1 to Net-(D3-K).
+Connected D3 pin 2 to GNDPWR.
+Added D4 (footprint 'Diode_SMD:D_0805_2012Metric').
+Changed REF** reference designator to D4.
+Changed D4 value from D_0805_2012Metric to D.
+Updated D4 symbol association from  to /95d4efe9-c613-41d6-91ac-b0f7e7825651.
+Updated D4 fields.
+Updated D4 sheetname to 'Root'.
+Updated D4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated D4 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Connected D4 pin 2 to GNDPWR.
+Add net Net-(D4-K).
+Connected D4 pin 1 to Net-(D4-K).
+Added D5 (footprint 'LED_SMD:LED_0805_2012Metric').
+Changed REF** reference designator to D5.
+Changed D5 value from LED_0805_2012Metric to LED.
+Updated D5 symbol association from  to /779d815b-5edd-4428-a216-3e8a31ed919d.
+Updated D5 fields.
+Updated D5 sheetname to 'Root'.
+Updated D5 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated D5 footprint filters to 'LED* LED_SMD:* LED_THT:*'.
+Connected D5 pin 2 to +12V.
+Connected D5 pin 1 to GNDPWR.
+Added H1 (footprint 'MountingHole:MountingHole_3mm').
+Changed REF** reference designator to H1.
+Changed H1 value from MountingHole_3mm to MountingHole.
+Updated H1 symbol association from  to /89dfb4cf-3481-45d2-9675-c16e4cdf66ab.
+Updated H1 fields.
+Updated H1 sheetname to 'Root'.
+Updated H1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated H1 footprint filters to 'MountingHole*'.
+Added H2 (footprint 'MountingHole:MountingHole_3mm').
+Changed REF** reference designator to H2.
+Changed H2 value from MountingHole_3mm to MountingHole.
+Updated H2 symbol association from  to /2382c26d-aef2-4d95-926f-b2d5341ba28b.
+Updated H2 fields.
+Updated H2 sheetname to 'Root'.
+Updated H2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated H2 footprint filters to 'MountingHole*'.
+Added H3 (footprint 'MountingHole:MountingHole_3mm').
+Changed REF** reference designator to H3.
+Changed H3 value from MountingHole_3mm to MountingHole.
+Updated H3 symbol association from  to /fcfb4855-1ac6-4c9f-8b2b-9a4c06ef5077.
+Updated H3 fields.
+Updated H3 sheetname to 'Root'.
+Updated H3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated H3 footprint filters to 'MountingHole*'.
+Added H4 (footprint 'MountingHole:MountingHole_3mm').
+Changed REF** reference designator to H4.
+Changed H4 value from MountingHole_3mm to MountingHole.
+Updated H4 symbol association from  to /81b55d8b-50c6-4f11-a5e3-017141016254.
+Updated H4 fields.
+Updated H4 sheetname to 'Root'.
+Updated H4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated H4 footprint filters to 'MountingHole*'.
+Added J1 (footprint 'Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical').
+Changed REF** reference designator to J1.
+Changed J1 value from Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical to FanBrdConn.
+Updated J1 symbol association from  to /430d4eb3-87a4-44c5-89c0-c1dca2429624.
+Updated J1 fields.
+Updated J1 sheetname to 'Root'.
+Updated J1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated J1 footprint filters to 'Connector*:*_2x??_*'.
+Add net /FAN4.
+Connected J1 pin 6 to /FAN4.
+Add net /FAN2.
+Connected J1 pin 3 to /FAN2.
+Add net /FAN1.
+Connected J1 pin 2 to /FAN1.
+Connected J1 pin 1 to +12V.
+Add net /FAN3.
+Connected J1 pin 5 to /FAN3.
+Connected J1 pin 4 to GNDPWR.
+Added J2 (footprint 'UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical').
+Changed REF** reference designator to J2.
+Changed J2 value from Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical to FAN1.
+Updated J2 symbol association from  to /02f96265-dd5a-4ed5-8dd5-ec05426ca6e6.
+Updated J2 fields.
+Updated J2 sheetname to 'Root'.
+Updated J2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated J2 footprint filters to 'Connector*:*_1x??_*'.
+Connected J2 pin 1 to Net-(D1-K).
+Connected J2 pin 2 to GNDPWR.
+Added J3 (footprint 'UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical').
+Changed REF** reference designator to J3.
+Changed J3 value from Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical to FAN2.
+Updated J3 symbol association from  to /d75f69a2-f83e-4449-9230-2ca3eab3f767.
+Updated J3 fields.
+Updated J3 sheetname to 'Root'.
+Updated J3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated J3 footprint filters to 'Connector*:*_1x??_*'.
+Connected J3 pin 1 to Net-(D2-K).
+Connected J3 pin 2 to GNDPWR.
+Added J4 (footprint 'UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical').
+Changed REF** reference designator to J4.
+Changed J4 value from Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical to FAN3.
+Updated J4 symbol association from  to /20d52641-ea93-4c75-be03-29406da48fbb.
+Updated J4 fields.
+Updated J4 sheetname to 'Root'.
+Updated J4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated J4 footprint filters to 'Connector*:*_1x??_*'.
+Connected J4 pin 1 to Net-(D3-K).
+Connected J4 pin 2 to GNDPWR.
+Added C1 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added J5 (footprint 'UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical').
+Changed REF** reference designator to J5.
+Changed J5 value from Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical to FAN4.
+Updated J5 symbol association from  to /0fb64b91-0aff-43bf-885f-ad03d10174b4.
+Updated J5 fields.
+Updated J5 sheetname to 'Root'.
+Updated J5 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated J5 footprint filters to 'Connector*:*_1x??_*'.
+Connected J5 pin 1 to Net-(D4-K).
+Connected J5 pin 2 to GNDPWR.
+Changed REF** reference designator to C1.
+Added R1 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R1.
+Changed R1 value from R_0805_2012Metric to 100k.
+Updated R1 symbol association from  to /60918e95-4bda-4a8a-b458-f7b5bfc71153.
+Updated R1 fields.
+Updated R1 sheetname to 'Root'.
+Updated R1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated R1 footprint filters to 'R_*'.
+Connected R1 pin 1 to /FAN1.
+Add net Net-(SWITCH1-G).
+Connected R1 pin 2 to Net-(SWITCH1-G).
+Changed C1 value from C_0805_2012Metric to 100u.
+Added R2 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R2.
+Changed R2 value from R_0805_2012Metric to 100k.
+Updated R2 symbol association from  to /b1bfc966-f4d4-4078-a66f-6a3b01c0b376.
+Updated R2 fields.
+Updated R2 sheetname to 'Root'.
+Updated R2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated R2 footprint filters to 'R_*'.
+Connected R2 pin 1 to /FAN2.
+Add net Net-(SWITCH2-G).
+Connected R2 pin 2 to Net-(SWITCH2-G).
+Updated C1 symbol association from  to /0a0b7220-094a-4252-9369-8defd581e96c.
+Added R3 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R3.
+Changed R3 value from R_0805_2012Metric to 100k.
+Updated R3 symbol association from  to /fd3a545b-6318-423a-b02b-3dc102edefe6.
+Updated R3 fields.
+Updated R3 sheetname to 'Root'.
+Updated R3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated R3 footprint filters to 'R_*'.
+Add net Net-(SWITCH3-G).
+Connected R3 pin 2 to Net-(SWITCH3-G).
+Connected R3 pin 1 to /FAN3.
+Updated C1 fields.
+Added R4 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to R4.
+Changed R4 value from R_0805_2012Metric to 100k.
+Updated R4 symbol association from  to /85a525e8-0294-4777-8928-e0dd8b736996.
+Updated R4 fields.
+Updated R4 sheetname to 'Root'.
+Updated R4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated R4 footprint filters to 'R_*'.
+Connected R4 pin 1 to /FAN4.
+Add net Net-(SWITCH4-G).
+Connected R4 pin 2 to Net-(SWITCH4-G).
+Updated C1 sheetname to 'Root'.
+Added Rpd1 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to Rpd1.
+Changed Rpd1 value from R_0805_2012Metric to 100k.
+Updated Rpd1 symbol association from  to /93100a3c-322d-46f8-8989-128b6331a022.
+Updated Rpd1 fields.
+Updated Rpd1 sheetname to 'Root'.
+Updated Rpd1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated Rpd1 footprint filters to 'R_*'.
+Connected Rpd1 pin 2 to GNDPWR.
+Connected Rpd1 pin 1 to /FAN1.
+Updated C1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Added Rpd2 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to Rpd2.
+Changed Rpd2 value from R_0805_2012Metric to 100k.
+Updated Rpd2 symbol association from  to /42f3bc8a-5303-4804-af92-7b694601956a.
+Updated Rpd2 fields.
+Updated Rpd2 sheetname to 'Root'.
+Updated Rpd2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated Rpd2 footprint filters to 'R_*'.
+Connected Rpd2 pin 1 to /FAN2.
+Connected Rpd2 pin 2 to GNDPWR.
+Updated C1 footprint filters to 'C_*'.
+Added Rpd3 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to Rpd3.
+Changed Rpd3 value from R_0805_2012Metric to 100k.
+Updated Rpd3 symbol association from  to /ff046dff-1337-46cc-96be-1c0de4fc230e.
+Updated Rpd3 fields.
+Updated Rpd3 sheetname to 'Root'.
+Updated Rpd3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated Rpd3 footprint filters to 'R_*'.
+Connected Rpd3 pin 1 to /FAN3.
+Connected Rpd3 pin 2 to GNDPWR.
+Add net +12V.
+Added Rpd4 (footprint 'Resistor_SMD:R_0805_2012Metric').
+Changed REF** reference designator to Rpd4.
+Changed Rpd4 value from R_0805_2012Metric to 100k.
+Updated Rpd4 symbol association from  to /e9eefbac-5ff1-43ad-81a3-21c3d8b58ff3.
+Updated Rpd4 fields.
+Updated Rpd4 sheetname to 'Root'.
+Updated Rpd4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated Rpd4 footprint filters to 'R_*'.
+Connected Rpd4 pin 1 to /FAN4.
+Connected Rpd4 pin 2 to GNDPWR.
+Connected C1 pin 1 to +12V.
+Added SWITCH1 (footprint 'Package_TO_SOT_SMD:SOT-23').
+Changed REF** reference designator to SWITCH1.
+Changed SWITCH1 value from SOT-23 to IRLML0030.
+Updated SWITCH1 symbol association from  to /1b59b4c1-994f-4ca3-ae08-3ef221e64489.
+Updated SWITCH1 fields.
+Updated SWITCH1 sheetname to 'Root'.
+Updated SWITCH1 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated SWITCH1 footprint filters to 'SOT?23*'.
+Connected SWITCH1 pin 1 to Net-(SWITCH1-G).
+Connected SWITCH1 pin 2 to Net-(D1-K).
+Connected SWITCH1 pin 3 to +12V.
+Add net GNDPWR.
+Added SWITCH2 (footprint 'Package_TO_SOT_SMD:SOT-23').
+Changed REF** reference designator to SWITCH2.
+Changed SWITCH2 value from SOT-23 to IRLML0030.
+Updated SWITCH2 symbol association from  to /5b4a8d73-1cb0-4c70-8fb9-8d03bf2ec2f5.
+Updated SWITCH2 fields.
+Updated SWITCH2 sheetname to 'Root'.
+Updated SWITCH2 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated SWITCH2 footprint filters to 'SOT?23*'.
+Connected SWITCH2 pin 2 to Net-(D2-K).
+Connected SWITCH2 pin 1 to Net-(SWITCH2-G).
+Connected SWITCH2 pin 3 to +12V.
+Connected C1 pin 2 to GNDPWR.
+Added SWITCH3 (footprint 'Package_TO_SOT_SMD:SOT-23').
+Changed REF** reference designator to SWITCH3.
+Changed SWITCH3 value from SOT-23 to IRLML0030.
+Updated SWITCH3 symbol association from  to /bddb3198-39f2-43d2-a172-b4d9d5d9770a.
+Updated SWITCH3 fields.
+Updated SWITCH3 sheetname to 'Root'.
+Updated SWITCH3 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated SWITCH3 footprint filters to 'SOT?23*'.
+Connected SWITCH3 pin 1 to Net-(SWITCH3-G).
+Connected SWITCH3 pin 2 to Net-(D3-K).
+Connected SWITCH3 pin 3 to +12V.
+Added C2 (footprint 'Capacitor_SMD:C_0805_2012Metric').
+Added SWITCH4 (footprint 'Package_TO_SOT_SMD:SOT-23').
+Changed REF** reference designator to SWITCH4.
+Changed SWITCH4 value from SOT-23 to IRLML0030.
+Updated SWITCH4 symbol association from  to /4dd3953f-68a0-4714-a790-88e6e356a21c.
+Updated SWITCH4 fields.
+Updated SWITCH4 sheetname to 'Root'.
+Updated SWITCH4 sheetfile to 'FanBoardPCB.kicad_sch'.
+Updated SWITCH4 footprint filters to 'SOT?23*'.
+Connected SWITCH4 pin 1 to Net-(SWITCH4-G).
+Connected SWITCH4 pin 2 to Net-(D4-K).
+Connected SWITCH4 pin 3 to +12V.
+
+
+Info: Total warnings: 0, errors: 0.
