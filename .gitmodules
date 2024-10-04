@@ -1,3 +1,6 @@
 [submodule "Controls/uCOS-III-Simulator"]
 	path = Controls/uCOS-III-Simulator
 	url = https://github.com/lhr-solar/uCOS-III-Simulator.git
+[submodule "UTSVT-KiCadLibraries"]
+	path = UTSVT-KiCadLibraries
+	url = https://github.com/lhr-solar/UTSVT-KiCadLibraries.git
