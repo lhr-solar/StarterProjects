@@ -38,3 +38,6 @@ Production/
 
 # Backups
 FanBoardPCB-backups/*
+
+#KiCad Lib
+UTSVT-KiCadLibraries/*
