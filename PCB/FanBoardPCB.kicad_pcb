@@ -528,7 +528,7 @@
 		(uuid "1f920287-0ac5-4768-9cf2-fa03ff732662")
 		(at 155.5 46.95)
 		(property "Reference" "J4"
-			(at 1.75 3.04 360)
+			(at 1.75 3.04 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "758372a1-e05e-468b-81ea-18f7380d447b")
@@ -540,7 +540,7 @@
 			)
 		)
 		(property "Value" "FAN1"
-			(at 1.5 4 360)
+			(at 1.5 4 0)
 			(layer "F.Fab")
 			(uuid "d85d5f0b-5fa9-46fd-aba8-62b7f74eb647")
 			(effects
@@ -551,7 +551,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "3491cde8-a4ed-491b-b487-42920b638806")
@@ -563,7 +563,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "886045ec-4fae-40e4-9b78-b84e09cb8197")
@@ -575,7 +575,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "37507909-4ac0-4a6c-8a36-56967cdbb96f")
@@ -1935,7 +1935,7 @@
 		(uuid "6617cd26-11e0-424e-8e27-1efaf851ca83")
 		(at 158.5 64.5 180)
 		(property "Reference" "J6"
-			(at 1.5 3.29 360)
+			(at 1.5 3.29 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "a05a522f-559f-4b25-ab81-32b8e9d46364")
@@ -1947,7 +1947,7 @@
 			)
 		)
 		(property "Value" "FAN1"
-			(at 1.5 4 360)
+			(at 1.5 4 0)
 			(layer "F.Fab")
 			(uuid "c7852f34-f32c-4f8c-9d5f-eda79f7aacac")
 			(effects
@@ -1958,7 +1958,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a1c35527-e980-4eee-bfc7-7ca277e6ef4c")
@@ -1970,7 +1970,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "679b82be-dccb-4c72-8a63-5d47e0c636e4")
@@ -1982,7 +1982,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c40119a8-67a0-4544-96db-85b88e929381")
@@ -2860,7 +2860,7 @@
 		(uuid "88b3b1a7-cae2-4906-8872-912556b1944a")
 		(at 143 46.95)
 		(property "Reference" "J3"
-			(at 1.5 3.04 360)
+			(at 1.5 3.04 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "02550955-b56c-4a0d-a9ed-c8a4a500b4c6")
@@ -2872,7 +2872,7 @@
 			)
 		)
 		(property "Value" "FAN1"
-			(at 1.5 4 360)
+			(at 1.5 4 0)
 			(layer "F.Fab")
 			(uuid "a89d56e6-6ac2-4799-ad2b-83cdfd034b86")
 			(effects
@@ -2883,7 +2883,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "79d2bb6c-9290-45ed-9220-833c16960a53")
@@ -2895,7 +2895,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "29a2633c-c306-49ff-aa31-0b5b608b2954")
@@ -2907,7 +2907,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "2fa66917-13da-4183-853a-c3998e6ddbbe")
@@ -5502,7 +5502,7 @@
 		(uuid "d340928c-a890-4b30-8615-d11ce8b703b6")
 		(at 145.75 64.5 180)
 		(property "Reference" "J2"
-			(at 1.5 3.29 360)
+			(at 1.5 3.29 0)
 			(layer "F.SilkS")
 			(hide yes)
 			(uuid "bbb511ae-b7d5-452c-b099-d300f328d2bf")
@@ -5514,7 +5514,7 @@
 			)
 		)
 		(property "Value" "FAN1"
-			(at 1.5 4 360)
+			(at 1.5 4 0)
 			(layer "F.Fab")
 			(uuid "22a7cb5d-c912-47a1-89d4-6317fea9d35f")
 			(effects
@@ -5525,7 +5525,7 @@
 			)
 		)
 		(property "Footprint" "UTSVT_Connectors:Molex_MicroFit3.0_1x2xP3.00mm_PolarizingPeg_Vertical"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "ff45e990-f465-4200-8e01-d82e408511df")
@@ -5537,7 +5537,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "a4d02fe1-441c-4b53-9a24-2ddb9e72558c")
@@ -5549,7 +5549,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "48807205-ab70-4a5a-b327-87d2c9752ff8")
