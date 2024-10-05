@@ -1,0 +1,17 @@
+Given that the voltage stays the same, and the current increases when the cells get hotter. What circuit component must be changing due to the heat (not the current).
+The resistance must be decreasing.
+
+Why do I need to use {KIPRJMOD}?
+This makes your project portable (doesn’t lead to errors where it is looking at the file structure of the wrong user)
+
+Why don’t I just download the UTSVT-KiCAD Libraries as a zip and then copy and paste it into the repo?
+Using submodules instead is cleaner/more organized, and it makes updating the library way faster and easier, especially if it’s used by multiple projects
+
+Look up the equation for current through a capacitor, given that equation why does switching the mosfet on and off induce high instantaneous current (assume capacitance is staying constant).
+I = C*dV/dt. The MOSFET is turned on and off by voltage, and these changes in voltage lead to high instantaneous current.
+
+You only need a pullup or a pulldown, why did you choose one
+I used a pulldown because it’s more intuitive to me, as it uses positive logic.
+
+Diodes are directional, what direction should you place the diode in and what would happen if the diode were placed in the wrong orientation 
+The diode should be placed w/ cathode closer to voltage source & anode closer to ground → see image below. If placed in the wrong direction, the diode could act like a short circuit that draws too much current while in normal operation (and thus also interferes with the desired operation of the inductor), and when the switch is off, it could be damaged, as the current might possibly exceed the reverse current threshold
