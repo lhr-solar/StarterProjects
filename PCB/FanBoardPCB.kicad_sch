@@ -3883,7 +3883,6 @@
 	(symbol
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 138.43 73.66 0)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3891,15 +3890,6 @@
 		(dnp no)
 		(uuid "770862be-9bad-4a66-bf08-4d0804e2f74f")
 		(property "Reference" "Q2"
-			(at 144.272 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
 			(at 144.272 72.39 0)
 			(effects
 				(font
@@ -3908,8 +3898,17 @@
 				(justify left)
 			)
 		)
+		(property "Value" "NMOS"
+			(at 144.272 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 143.51 71.755 0)
+			(at 143.51 75.565 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3920,7 +3919,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
-			(at 143.51 69.85 0)
+			(at 143.51 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4862,7 +4861,6 @@
 	(symbol
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 248.92 74.93 0)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4870,15 +4868,6 @@
 		(dnp no)
 		(uuid "a604bee2-5f1a-4432-ba4c-3300f9069030")
 		(property "Reference" "Q4"
-			(at 254.762 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
 			(at 254.762 73.66 0)
 			(effects
 				(font
@@ -4887,8 +4876,17 @@
 				(justify left)
 			)
 		)
+		(property "Value" "NMOS"
+			(at 254.762 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 254 73.025 0)
+			(at 254 76.835 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4899,7 +4897,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
-			(at 254 71.12 0)
+			(at 254 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5200,7 +5198,6 @@
 	(symbol
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 87.63 72.39 0)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5208,15 +5205,6 @@
 		(dnp no)
 		(uuid "c4358f86-a25c-4863-8f9c-b08ee43ee308")
 		(property "Reference" "Q1"
-			(at 93.472 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
 			(at 93.472 71.12 0)
 			(effects
 				(font
@@ -5225,8 +5213,17 @@
 				(justify left)
 			)
 		)
+		(property "Value" "NMOS"
+			(at 93.472 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 92.71 70.485 0)
+			(at 92.71 74.295 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5237,7 +5234,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
-			(at 92.71 68.58 0)
+			(at 92.71 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5565,7 +5562,6 @@
 	(symbol
 		(lib_id "Transistor_FET:IRLML0030")
 		(at 195.58 73.66 0)
-		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5573,15 +5569,6 @@
 		(dnp no)
 		(uuid "e368db70-a9a2-4cbe-811a-94f1ac5d9b96")
 		(property "Reference" "Q3"
-			(at 201.422 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NMOS"
 			(at 201.422 72.39 0)
 			(effects
 				(font
@@ -5590,8 +5577,17 @@
 				(justify left)
 			)
 		)
+		(property "Value" "NMOS"
+			(at 201.422 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
-			(at 200.66 71.755 0)
+			(at 200.66 75.565 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5602,7 +5598,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.infineon.com/dgdl/irlml0030pbf.pdf?fileId=5546d462533600a401535664773825df"
-			(at 200.66 69.85 0)
+			(at 200.66 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
