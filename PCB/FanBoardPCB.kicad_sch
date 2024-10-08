@@ -3028,7 +3028,7 @@
 				)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 88.9 99.06 90)
 			(effects
 				(font
@@ -3317,7 +3317,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R1k"
+		(property "Value" "1k"
 			(at 74.93 123.1899 0)
 			(effects
 				(font
@@ -3687,7 +3687,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 133.35 110.4899 0)
 			(effects
 				(font
@@ -3756,7 +3756,7 @@
 				)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 137.16 99.06 90)
 			(effects
 				(font
@@ -4359,7 +4359,7 @@
 				)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 88.9 48.26 90)
 			(effects
 				(font
@@ -4637,7 +4637,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 85.09 59.6899 0)
 			(effects
 				(font
@@ -4839,7 +4839,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 85.09 110.4899 0)
 			(effects
 				(font
@@ -4979,7 +4979,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 133.35 59.6899 0)
 			(effects
 				(font
@@ -5478,7 +5478,7 @@
 				)
 			)
 		)
-		(property "Value" "R100k"
+		(property "Value" "100k"
 			(at 137.16 48.26 90)
 			(effects
 				(font
