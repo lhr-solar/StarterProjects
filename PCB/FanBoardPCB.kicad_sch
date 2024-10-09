@@ -1071,16 +1071,6 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 124.46) (xy 59.69 125.73)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07984935-ef39-4008-a9b8-93d9d26563f8")
-	)
-	(wire
-		(pts
 			(xy 101.6 77.47) (xy 104.14 77.47)
 		)
 		(stroke
@@ -1088,16 +1078,6 @@
 			(type default)
 		)
 		(uuid "2df828b7-2c8f-4e0b-89fe-f82e56f2439d")
-	)
-	(wire
-		(pts
-			(xy 59.69 133.35) (xy 59.69 134.62)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "305d6bee-7f18-4585-bba7-657dce0b4706")
 	)
 	(wire
 		(pts
@@ -1191,6 +1171,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 124.46) (xy 59.69 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "718d2afb-5ff5-44f6-a924-2d8e2f6df2d3")
+	)
+	(wire
+		(pts
 			(xy 50.8 83.82) (xy 50.8 88.9)
 		)
 		(stroke
@@ -1231,13 +1221,13 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 142.24) (xy 59.69 143.51)
+			(xy 59.69 133.35) (xy 59.69 134.62)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c33d2bc5-89c9-4e54-9d7e-2d475c26b93f")
+		(uuid "c611cd62-2fcc-410a-ac79-c9e2a012d807")
 	)
 	(wire
 		(pts
@@ -1278,6 +1268,16 @@
 			(type default)
 		)
 		(uuid "dbadcf1f-3cae-48e8-b052-8179fd800ea0")
+	)
+	(wire
+		(pts
+			(xy 59.69 142.24) (xy 59.69 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "efc97f93-0dc8-4732-b7b0-b2fff249544d")
 	)
 	(global_label "FAN1"
 		(shape input)
@@ -1523,7 +1523,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 59.69 129.54 0)
+		(at 59.69 138.43 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1532,7 +1532,7 @@
 		(fields_autoplaced yes)
 		(uuid "318edd5b-4924-479e-a977-2809e743f0d9")
 		(property "Reference" "R9"
-			(at 62.23 128.2699 0)
+			(at 62.23 137.1599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1541,7 +1541,7 @@
 			)
 		)
 		(property "Value" "2k"
-			(at 62.23 130.8099 0)
+			(at 62.23 139.6999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1550,7 +1550,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 57.912 129.54 90)
+			(at 57.912 138.43 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1559,7 +1559,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 59.69 129.54 0)
+			(at 59.69 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1568,7 +1568,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 59.69 129.54 0)
+			(at 59.69 138.43 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1659,7 +1659,7 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 59.69 138.43 90)
+		(at 59.69 129.54 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1668,7 +1668,7 @@
 		(fields_autoplaced yes)
 		(uuid "45bdb346-9086-4162-97c2-9df3167dcdc3")
 		(property "Reference" "LED1"
-			(at 63.5 138.7474 90)
+			(at 63.5 129.8574 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1677,7 +1677,7 @@
 			)
 		)
 		(property "Value" "SMLMN2BCTT86C"
-			(at 63.5 141.2874 90)
+			(at 63.5 132.3974 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1686,7 +1686,7 @@
 			)
 		)
 		(property "Footprint" "blue_led:LEDM2012X100N"
-			(at 59.69 138.43 0)
+			(at 59.69 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1695,7 +1695,7 @@
 			)
 		)
 		(property "Datasheet" "https://fscdn.rohm.com/en/products/databook/datasheet/opto/led/chip_mono/smlmn2bctt86(c)-e.pdf"
-			(at 59.69 138.43 0)
+			(at 59.69 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1704,7 +1704,7 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
-			(at 59.69 138.43 0)
+			(at 59.69 129.54 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1713,7 +1713,7 @@
 			)
 		)
 		(property "mouser part" "755-SMLMN2BCTT86C"
-			(at 59.69 138.43 90)
+			(at 59.69 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
