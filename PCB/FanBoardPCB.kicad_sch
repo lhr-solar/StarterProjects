@@ -1081,6 +1081,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 77.47) (xy 104.14 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2df828b7-2c8f-4e0b-89fe-f82e56f2439d")
+	)
+	(wire
+		(pts
 			(xy 59.69 133.35) (xy 59.69 134.62)
 		)
 		(stroke
@@ -1101,6 +1111,16 @@
 	)
 	(wire
 		(pts
+			(xy 101.6 93.98) (xy 104.14 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b547748-3c0d-4e24-a38e-3be7aa263bd0")
+	)
+	(wire
+		(pts
 			(xy 55.88 63.5) (xy 66.04 63.5)
 		)
 		(stroke
@@ -1108,6 +1128,16 @@
 			(type default)
 		)
 		(uuid "40ae39f0-aa74-4779-9dc1-a7ff0b882b64")
+	)
+	(wire
+		(pts
+			(xy 101.6 110.49) (xy 104.14 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46c44d44-eebb-4aa6-99c5-f33399c81644")
 	)
 	(wire
 		(pts
@@ -1295,6 +1325,28 @@
 	)
 	(global_label "FAN4"
 		(shape input)
+		(at 104.14 110.49 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c21183b9-c640-4400-b5da-6691242b4098")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 111.8424 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FAN4"
+		(shape input)
 		(at 66.04 63.5 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1339,6 +1391,28 @@
 	)
 	(global_label "FAN3"
 		(shape input)
+		(at 104.14 93.98 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "eb2de85a-86bc-4a2b-aff2-4edc02027a0d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 111.8424 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FAN3"
+		(shape input)
 		(at 66.04 60.96 0)
 		(fields_autoplaced yes)
 		(effects
@@ -1350,6 +1424,28 @@
 		(uuid "eb581673-ebaf-4cfa-8c87-f808c8e573b8")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 73.7424 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "FAN2"
+		(shape input)
+		(at 104.14 77.47 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "ec460597-2124-4a9f-bbe6-fa0b9118244b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 111.8424 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2381,6 +2477,153 @@
 		)
 	)
 	(sheet
+		(at 80.01 90.17)
+		(size 21.59 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 255 173 47 1)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2396bd4d-750d-423e-8b59-f3a28a126db1")
+		(property "Sheetname" "Fan_Sheet3"
+			(at 80.01 89.4584 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Fan_Sheet.kicad_sch"
+			(at 80.01 100.9146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FAN_PWM" input
+			(at 101.6 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "73bfbfda-3404-4013-9902-2d1a9f4b6c51")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 80.01 106.68)
+		(size 21.59 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 255 173 47 1)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "91d8127b-7259-495e-91e7-88701c1347bf")
+		(property "Sheetname" "Fan_Sheet4"
+			(at 80.01 105.9684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Fan_Sheet.kicad_sch"
+			(at 80.01 117.4246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FAN_PWM" input
+			(at 101.6 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7d24840a-e25d-42c6-8a31-7c81a249b81c")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 80.01 73.66)
+		(size 21.59 10.16)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+			(color 255 173 47 1)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b5e4a49e-a135-4b9b-8bee-2a538cffbed3")
+		(property "Sheetname" "Fan_Sheet2"
+			(at 80.01 72.9484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Fan_Sheet.kicad_sch"
+			(at 80.01 84.4046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "FAN_PWM" input
+			(at 101.6 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "def1cd7d-e0bf-452b-9e57-02137d4fa1c8")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
 		(at 80.01 57.15)
 		(size 21.59 10.16)
 		(fields_autoplaced yes)
@@ -2393,7 +2636,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "de4c2e45-7910-487f-8ebe-da7a90036f0a")
-		(property "Sheetname" "Fan_Sheet"
+		(property "Sheetname" "Fan_Sheet1"
 			(at 80.01 56.4384 0)
 			(effects
 				(font

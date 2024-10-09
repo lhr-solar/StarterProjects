@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "9ff2eace-52af-4e71-a9da-04238ade7cc2")
+	(uuid "4f0f4632-4250-4869-be64-87f1f199f8ed")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector:Conn_01x02_Pin"
@@ -1257,10 +1257,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "7be7687a-bdf1-4cef-aa99-524d3a656db7")
+			(uuid "708871c2-2b4a-45ed-8528-3d883f949648")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "#PWR011")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "#PWR014")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "#PWR08")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "#PWR01")
 					(unit 1)
@@ -1327,16 +1339,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "a2fafc55-fe6d-48c3-9ef2-032624ba22f3")
+			(uuid "4d83743a-7ab2-41fe-a4ed-33995d096deb")
 		)
 		(pin "3"
-			(uuid "cc1a4b7c-9cd5-4ec3-80ef-a6559f550005")
+			(uuid "b983c03c-47ce-4b05-bb79-0d87b9dbf8d7")
 		)
 		(pin "2"
-			(uuid "13370c94-1386-4ef7-a6f5-2c5dd19b4072")
+			(uuid "f5784cd1-a6dc-4ce4-971d-51918b923e02")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "Q3")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "Q4")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "Q2")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "Q1")
 					(unit 1)
@@ -1399,10 +1423,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "6bef37bf-0b12-4ec0-b09c-54419e28287d")
+			(uuid "9f793a94-ffb9-45d3-82ab-eb73d884e551")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "#PWR012")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "#PWR015")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "#PWR09")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "#PWR04")
 					(unit 1)
@@ -1464,13 +1500,25 @@
 			)
 		)
 		(pin "1"
-			(uuid "caec7d52-103e-45b3-864c-2309e4cd54e6")
+			(uuid "59e3070e-8507-41a4-acf2-4c2f0df304cb")
 		)
 		(pin "2"
-			(uuid "745aed6f-5e49-464c-9904-65e78105c0f8")
+			(uuid "4ea5b1ed-47e6-4035-9614-cec43ee6c3d4")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "J3")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "J4")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "J2")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "J1")
 					(unit 1)
@@ -1534,13 +1582,25 @@
 			)
 		)
 		(pin "2"
-			(uuid "e7f93f2a-5592-4c78-a8df-61715f676e88")
+			(uuid "5d07dca6-3671-47ff-b72c-b0b57178e3ef")
 		)
 		(pin "1"
-			(uuid "9f2f9659-e1c7-45d0-8104-08bc84cee867")
+			(uuid "d30651c5-7edb-4dc2-8001-522af6de04d1")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "R5")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "R7")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "R3")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "R1")
 					(unit 1)
@@ -1622,13 +1682,25 @@
 			)
 		)
 		(pin "1"
-			(uuid "d8a06b73-503f-4b04-a592-fa2449553907")
+			(uuid "336cd882-220b-41c9-a35c-bf4226e28387")
 		)
 		(pin "2"
-			(uuid "d8badece-b0f1-46b7-b142-a7bdc15fb7dd")
+			(uuid "0d0b639c-5c4b-43c1-84fd-e07ba2de1bd6")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "D3")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "D4")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "D2")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "D1")
 					(unit 1)
@@ -1690,13 +1762,25 @@
 			)
 		)
 		(pin "2"
-			(uuid "27469e82-a8e0-45bd-a433-64bb4c6865da")
+			(uuid "b670e3e5-5928-4578-aaa8-5c7d1f8cdc88")
 		)
 		(pin "1"
-			(uuid "fcd2da0b-4da6-4ad1-9984-ff98c83cc320")
+			(uuid "e372c33c-efbf-4d4f-ac05-b9801e3ba6da")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "R6")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "R8")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "R4")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "R2")
 					(unit 1)
@@ -1758,10 +1842,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "7da0dbd2-9feb-44ab-b747-817a304745e2")
+			(uuid "5ba1b0dd-540a-4fcc-a9d6-b42df8f5a920")
 		)
 		(instances
 			(project "FanBoardPCB"
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/2396bd4d-750d-423e-8b59-f3a28a126db1"
+					(reference "#PWR013")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/91d8127b-7259-495e-91e7-88701c1347bf"
+					(reference "#PWR016")
+					(unit 1)
+				)
+				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/b5e4a49e-a135-4b9b-8bee-2a538cffbed3"
+					(reference "#PWR010")
+					(unit 1)
+				)
 				(path "/1aabcb47-8889-428a-a945-776d6a97cab7/de4c2e45-7910-487f-8ebe-da7a90036f0a"
 					(reference "#PWR07")
 					(unit 1)
