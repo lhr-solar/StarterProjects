@@ -1,0 +1,8 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "usvt-chips")(type "KiCad")(uri "${KIPRJMOD}/../UTSVT-KiCadLibraries/utsvt-chips.kicad_sym")(options "")(descr ""))
+  (lib (name "usvt-connectors")(type "KiCad")(uri "${KIPRJMOD}/../UTSVT-KiCadLibraries/utsvt-connectors.kicad_sym")(options "")(descr ""))
+  (lib (name "usvt-microcontrollers")(type "KiCad")(uri "${KIPRJMOD}/../UTSVT-KiCadLibraries/utsvt-microcontrollers.kicad_sym")(options "")(descr ""))
+  (lib (name "usvt-misc")(type "KiCad")(uri "${KIPRJMOD}/../UTSVT-KiCadLibraries/utsvt-misc.kicad_sym")(options "")(descr ""))
+  (lib (name "usvt-power-regulators")(type "KiCad")(uri "${KIPRJMOD}/../UTSVT-KiCadLibraries/utsvt-power-regulators.kicad_sym")(options "")(descr ""))
+)

@@ -124,7 +124,7 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
-        "min_silk_clearance": 0.15,
+        "min_silk_clearance": 0.0,
         "min_text_height": 1.0,
         "min_text_thickness": 0.153,
         "min_through_hole_diameter": 0.3,
@@ -179,7 +179,8 @@
       ],
       "track_widths": [
         0.0,
-        0.75
+        0.25,
+        0.7
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -590,23 +591,23 @@
   },
   "sheets": [
     [
-      "1aabcb47-8889-428a-a945-776d6a97cab7",
+      "905a21dd-eb0e-471c-b5fd-da06828c0225",
       "Root"
     ],
     [
-      "ce425abc-a543-4d5e-9da7-320774baf4c1",
+      "cec9242a-42a7-4f39-86a7-e904b2dcb647",
       "Fan1"
     ],
     [
-      "312eb1b7-0eb2-4c75-966e-5ba869b3ca67",
+      "f45af32f-4ab4-40a8-b885-f602705b3ba9",
       "Fan2"
     ],
     [
-      "ff197cab-4c08-4d2e-a403-e2b39fc54665",
+      "0ee1381a-8277-4f19-8c97-accba5f5940c",
       "Fan3"
     ],
     [
-      "2574f7c0-1308-4240-9a6e-511590c5e8ee",
+      "949865cc-5834-49b3-80da-e2707ba0347e",
       "Fan4"
     ]
   ],
