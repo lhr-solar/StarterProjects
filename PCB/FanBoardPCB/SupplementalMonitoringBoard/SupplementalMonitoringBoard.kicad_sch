@@ -1,0 +1,192 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "aa0415d0-3287-4bc4-9a8e-766ada9ace2f")
+	(paper "A4")
+	(lib_symbols)
+	(text "ADC "
+		(exclude_from_sim no)
+		(at 164.084 84.836 0)
+		(effects
+			(font
+				(size 0.001 0.001)
+				(thickness 3.175)
+			)
+		)
+		(uuid "2a6cf044-f014-4431-83d2-ebe792c7c517")
+	)
+	(text "ADC"
+		(exclude_from_sim no)
+		(at 140.97 86.106 0)
+		(effects
+			(font
+				(size 7.62 7.62)
+				(thickness 1.524)
+				(bold yes)
+			)
+		)
+		(uuid "8e1937fc-86e3-4c74-bd47-f25a9228c76a")
+	)
+	(text "Supplemental Monitoring Board"
+		(exclude_from_sim no)
+		(at 203.962 189.992 0)
+		(effects
+			(font
+				(size 1.397 1.397)
+				(thickness 0.1588)
+				(color 132 0 0 1)
+			)
+		)
+		(uuid "e1e55102-9a89-4f8d-bc06-a153424de937")
+	)
+	(sheet
+		(at 85.09 81.28)
+		(size 20.32 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "1e74c2bc-637a-422a-831e-fab1291cbb0a")
+		(property "Sheetname" "Current"
+			(at 85.09 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "current.kicad_sch"
+			(at 85.09 89.4846 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Current" input
+			(at 105.41 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f86fa4a7-5fc7-4ea5-a960-7f7cc869dc65")
+		)
+		(instances
+			(project "SupplementalMonitoringBoard"
+				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85.09 68.58)
+		(size 20.32 6.35)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c3517b11-42d4-41ac-8608-60dda8052ca3")
+		(property "Sheetname" "Voltage"
+			(at 85.09 67.8684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "voltage.kicad_sch"
+			(at 85.09 75.5146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Voltage" input
+			(at 105.41 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "df404bf8-bed4-4709-aca0-b9ccde8ee5b2")
+		)
+		(instances
+			(project "SupplementalMonitoringBoard"
+				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 85.09 96.52)
+		(size 20.32 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cde5a840-cd97-4154-b488-bad27326129c")
+		(property "Sheetname" "Temperature"
+			(at 85.09 95.8084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "temperature.kicad_sch"
+			(at 85.09 104.7246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Temperature" input
+			(at 105.41 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "389e24f8-1d76-45d7-910e-4a24588a3c01")
+		)
+		(instances
+			(project "SupplementalMonitoringBoard"
+				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)

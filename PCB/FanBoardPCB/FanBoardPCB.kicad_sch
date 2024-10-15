@@ -2,7 +2,7 @@
 	(version 20231120)
 	(generator "eeschema")
 	(generator_version "8.0")
-	(uuid "1aabcb47-8889-428a-a945-776d6a97cab7")
+	(uuid "905a21dd-eb0e-471c-b5fd-da06828c0225")
 	(paper "A4")
 	(lib_symbols
 		(symbol "Connector_Generic:Conn_02x03_Counter_Clockwise"
@@ -1057,263 +1057,243 @@
 		)
 	)
 	(junction
-		(at 109.22 102.87)
+		(at 129.54 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ddc07ba3-1388-472a-9d61-5f20f367d121")
+		(uuid "9015549a-6256-4337-8c48-70123536666c")
 	)
 	(wire
 		(pts
-			(xy 111.76 148.59) (xy 119.38 148.59)
+			(xy 170.18 58.42) (xy 170.18 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0c8e24a7-a7e8-449a-93c3-49819ad49ff1")
+		(uuid "230a3c49-41a3-4f0d-8226-bc465e8ce4e1")
 	)
 	(wire
 		(pts
-			(xy 119.38 148.59) (xy 119.38 149.86)
+			(xy 123.19 58.42) (xy 123.19 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "0d5ba04c-f1d9-475f-b0bf-d93ee5b7c1da")
+		(uuid "287c545f-299c-4608-b6ac-aace32d1671b")
 	)
 	(wire
 		(pts
-			(xy 109.22 102.87) (xy 109.22 95.25)
+			(xy 133.35 92.71) (xy 133.35 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "1bc20a25-e4bc-4954-9b90-30631a99dc82")
+		(uuid "2cc9bc68-4bbf-47f5-b3a4-134db03f1a60")
 	)
 	(wire
 		(pts
-			(xy 113.03 107.95) (xy 91.44 107.95)
+			(xy 147.32 44.45) (xy 147.32 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "213b62a6-a468-4dcd-96ab-56a93dfb32fd")
+		(uuid "332a194f-e9c4-42b1-bd5a-1442ebe18101")
 	)
 	(wire
 		(pts
-			(xy 102.87 105.41) (xy 113.03 105.41)
+			(xy 140.97 100.33) (xy 140.97 101.6)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "23b83118-c635-4975-b5f3-c1b10fccfd21")
+		(uuid "3cd8bc34-0eb1-4f89-bb82-0e49f2c89070")
 	)
 	(wire
 		(pts
-			(xy 109.22 95.25) (xy 111.76 95.25)
+			(xy 137.16 57.15) (xy 139.7 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3acd7c66-eb8c-45e9-baf0-255cd3aac238")
+		(uuid "486b8479-3943-4214-80c9-5441410bce83")
 	)
 	(wire
 		(pts
-			(xy 91.44 107.95) (xy 91.44 109.22)
+			(xy 127 60.96) (xy 127 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "4f433f0a-9c7c-44e4-9a5d-3e50601f250d")
+		(uuid "48a699a4-f8f0-42f5-92cf-6149b57498d6")
 	)
 	(wire
 		(pts
-			(xy 111.76 140.97) (xy 111.76 148.59)
+			(xy 129.54 64.77) (xy 129.54 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "6636a37e-83b4-45e9-a7a0-ae47be0724d9")
+		(uuid "545e41be-76fa-4778-a279-ebbeaf0b4782")
 	)
 	(wire
 		(pts
-			(xy 149.86 105.41) (xy 125.73 105.41)
+			(xy 170.18 67.31) (xy 146.05 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "8910c4d7-1c2d-43e9-ae93-6219b83f3f12")
+		(uuid "59f014bb-9b14-4658-9da5-00e3dc871a29")
 	)
 	(wire
 		(pts
-			(xy 109.22 82.55) (xy 102.87 82.55)
+			(xy 107.95 69.85) (xy 133.35 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "93228ff7-d936-46ce-8f22-1402729a7acc")
+		(uuid "5ee54d01-15d9-419b-a842-a35a46776081")
 	)
 	(wire
 		(pts
-			(xy 116.84 95.25) (xy 119.38 95.25)
+			(xy 140.97 109.22) (xy 140.97 106.68)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "94387233-88bd-48f0-ae4b-353435501121")
+		(uuid "62f24b23-cf6e-4515-a397-124203764112")
 	)
 	(wire
 		(pts
-			(xy 125.73 102.87) (xy 127 102.87)
+			(xy 127 64.77) (xy 129.54 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "99916c79-cf25-4f36-85b6-1524c52e6d98")
+		(uuid "654c252d-d77b-445d-8c98-7f822e49f8ad")
 	)
 	(wire
 		(pts
-			(xy 119.38 157.48) (xy 119.38 154.94)
+			(xy 129.54 57.15) (xy 132.08 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "a17a0171-a8e9-4205-ab57-a7326258cd1e")
+		(uuid "6cff4143-2912-42d9-8628-9d229c2522d2")
 	)
 	(wire
 		(pts
-			(xy 157.48 96.52) (xy 149.86 96.52)
+			(xy 123.19 67.31) (xy 133.35 67.31)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "aa62ca96-f26b-4bb9-8c5b-e8d87ea59dba")
+		(uuid "72e0a6c0-6a74-40f8-9462-8d491896b68e")
 	)
 	(wire
 		(pts
-			(xy 149.86 96.52) (xy 149.86 105.41)
+			(xy 129.54 64.77) (xy 133.35 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "c156e44f-76d1-4c86-9cfe-84de8bef8cbc")
+		(uuid "937de3c4-fe1f-4805-ae47-1eb133b4e2a7")
 	)
 	(wire
 		(pts
-			(xy 106.68 102.87) (xy 109.22 102.87)
+			(xy 146.05 64.77) (xy 147.32 64.77)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "cbea82d8-b83c-471e-9f70-a59169734986")
+		(uuid "9685754c-1212-45c5-acd5-5e95fe95d88d")
 	)
 	(wire
 		(pts
-			(xy 106.68 99.06) (xy 106.68 102.87)
+			(xy 105.41 58.42) (xy 123.19 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "d98de426-1682-4c08-b74f-f57b1c03f328")
+		(uuid "c1323ceb-0cb0-4327-896e-2ce68e9b0502")
 	)
 	(wire
 		(pts
-			(xy 85.09 96.52) (xy 102.87 96.52)
+			(xy 177.8 58.42) (xy 170.18 58.42)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "dd1faaa2-e61a-43fd-b5b6-d4161ad190e6")
+		(uuid "d1381926-dbb7-4020-bb47-442e0e8d8cc0")
 	)
 	(wire
 		(pts
-			(xy 125.73 107.95) (xy 157.48 107.95)
+			(xy 129.54 44.45) (xy 123.19 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e0109fbf-c9d4-4108-a458-6a896a2a1d2f")
+		(uuid "d718c63f-6fa1-4264-a5ac-4717c2eff39a")
 	)
 	(wire
 		(pts
-			(xy 109.22 102.87) (xy 113.03 102.87)
+			(xy 133.35 100.33) (xy 140.97 100.33)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "e8509c5e-4f02-4449-a7ca-f6e02fa16f4d")
+		(uuid "e1ba5332-796f-4a34-8979-bfa86a2c0e20")
 	)
 	(wire
 		(pts
-			(xy 127 82.55) (xy 127 102.87)
+			(xy 146.05 69.85) (xy 177.8 69.85)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f318ce66-20dc-4ba0-b47e-f8615ca81345")
+		(uuid "e5a095c7-ccf6-484c-8506-6bde77981920")
 	)
 	(wire
 		(pts
-			(xy 124.46 82.55) (xy 127 82.55)
+			(xy 139.7 55.88) (xy 139.7 57.15)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f529dab5-487e-42ff-a0e9-0c14d90fc667")
+		(uuid "ee13934f-1868-44eb-bbf8-914bbbd20541")
 	)
 	(wire
 		(pts
-			(xy 119.38 93.98) (xy 119.38 95.25)
+			(xy 144.78 44.45) (xy 147.32 44.45)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "f65b9abc-d042-4a0d-8760-e66492a330ca")
-	)
-	(wire
-		(pts
-			(xy 102.87 96.52) (xy 102.87 105.41)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f7e5521a-cdf4-4840-93bf-508a4d16ad38")
-	)
-	(wire
-		(pts
-			(xy 91.44 109.22) (xy 85.09 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe4cab20-4b7d-41b6-80f8-f12cadfbfaf5")
+		(uuid "eef1844e-39da-48f5-b36b-3fcbcabfe13e")
 	)
 	(label "+12V"
-		(at 109.22 102.87 0)
+		(at 129.54 64.77 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1321,10 +1301,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c2dca5bc-85ea-443e-8e82-e70435f18c32")
+		(uuid "3cf3a9e8-f713-4b87-b075-8e50717dfdf1")
 	)
 	(label "+12V"
-		(at 102.87 82.55 0)
+		(at 123.19 44.45 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1332,10 +1312,10 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "d7cad12b-3aaa-46f2-b6e7-546599d1cbb7")
+		(uuid "7d93462e-ce91-4ef4-8ac3-1098a34ed555")
 	)
 	(label "+12V"
-		(at 119.38 157.48 0)
+		(at 140.97 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1343,499 +1323,20 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "ed73435b-e6e5-4f03-9f8d-94094df913c6")
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x03_Counter_Clockwise")
-		(at 118.11 105.41 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "027597a5-ec61-4d09-991b-d17f918f4a09")
-		(property "Reference" "J5"
-			(at 119.38 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "Fan Board"
-			(at 119.38 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical"
-			(at 118.11 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 118.11 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 118.11 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e8433c94-17fb-4a50-920e-1996b26d165b")
-		)
-		(pin "4"
-			(uuid "bbc404ab-413c-4885-985b-2db06c88a282")
-		)
-		(pin "3"
-			(uuid "1ac04f92-b6d8-409b-b028-7e4cdb82a6a1")
-		)
-		(pin "6"
-			(uuid "f88ad02d-5e6d-4a72-bf60-f22e6bcb042e")
-		)
-		(pin "1"
-			(uuid "9555c4a1-cfd9-4925-9f8e-137357fe3ace")
-		)
-		(pin "5"
-			(uuid "ab31c009-d455-4dce-9625-41cca642383a")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "J5")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 57.15 73.66 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "09cd70dc-184c-4bdc-bf4e-501b251302ce")
-		(property "Reference" "H1"
-			(at 59.69 72.3899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 59.69 74.9299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3mm"
-			(at 57.15 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 57.15 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 57.15 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "H1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 60.96 135.89 0)
-		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "3fad66d6-d8a7-4647-8c5c-129c84eab8d9")
-		(property "Reference" "H2"
-			(at 63.5 134.6199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "MountingHole"
-			(at 63.5 137.1599 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "MountingHole:MountingHole_3mm"
-			(at 60.96 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Mounting Hole without connection"
-			(at 60.96 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "H2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDPWR")
-		(at 119.38 93.98 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "89fd9561-206f-45df-b01b-c94a8cdf79a9")
-		(property "Reference" "#PWR02"
-			(at 119.38 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDPWR"
-			(at 119.507 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 119.38 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1a43a749-31e5-43b9-9d4f-8c3b189e9ca1")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "#PWR02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Small")
-		(at 119.38 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ab6f0659-5e06-4262-a90c-ccf9288aee5b")
-		(property "Reference" "C4"
-			(at 121.92 151.1362 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100 uF"
-			(at 121.92 153.6762 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 119.38 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 119.38 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 119.38 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1607f948-d5c5-4f8a-97a8-9a5224ac6175")
-		)
-		(pin "1"
-			(uuid "97c2542f-6a22-474c-b805-51f785394e7a")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 113.03 82.55 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b240e0d4-21ca-4643-8f14-309e6ff56d68")
-		(property "Reference" "R9"
-			(at 113.03 76.2 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "100k"
-			(at 113.03 78.74 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 113.03 84.328 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 113.03 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 113.03 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e971c1b5-4226-4975-9c4d-09a6f07f762a")
-		)
-		(pin "2"
-			(uuid "1dd2f241-1555-46d2-b6b7-25d358bb52c9")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "R9")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GNDPWR")
-		(at 111.76 140.97 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "b54c1e43-60d9-4647-8380-2a975a9696f4")
-		(property "Reference" "#PWR016"
-			(at 111.76 135.89 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GNDPWR"
-			(at 111.887 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 111.76 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 111.76 139.7 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
-			(at 111.76 140.97 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "acde44f1-2daa-4fde-8b97-7ba7896a3d6d")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "a261a3d8-8267-4a2c-be64-2c2e1a5a06bd")
 	)
 	(symbol
 		(lib_id "power:+12V")
-		(at 106.68 99.06 0)
+		(at 127 60.96 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "bbc420f2-1c32-499d-9eda-c848603c3ee6")
+		(uuid "1f1b12fb-df59-4a4f-8fe2-9c1866025c8b")
 		(property "Reference" "#PWR01"
-			(at 106.68 102.87 0)
+			(at 127 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1844,7 +1345,7 @@
 			)
 		)
 		(property "Value" "+12V"
-			(at 106.68 93.98 0)
+			(at 127 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1852,7 +1353,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 106.68 99.06 0)
+			(at 127 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1861,7 +1362,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 106.68 99.06 0)
+			(at 127 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1870,7 +1371,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 106.68 99.06 0)
+			(at 127 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1879,11 +1380,11 @@
 			)
 		)
 		(pin "1"
-			(uuid "867864cc-6a8f-4b9e-8f77-a10b7460b07f")
+			(uuid "1aab8001-f0f7-4a3d-bc4b-c5d16c99d7ca")
 		)
 		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+			(project ""
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
 					(reference "#PWR01")
 					(unit 1)
 				)
@@ -1891,33 +1392,17 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:LED")
-		(at 120.65 82.55 0)
+		(lib_id "power:GNDPWR")
+		(at 133.35 92.71 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "db44df5f-6e75-42b4-8512-1e11ed13a2ed")
-		(property "Reference" "D5"
-			(at 119.0625 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "LED"
-			(at 119.0625 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 120.65 82.55 0)
+		(uuid "390de03e-7a32-4a9c-ae71-39a331a13005")
+		(property "Reference" "#PWR010"
+			(at 133.35 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1925,8 +1410,16 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
-			(at 120.65 82.55 0)
+		(property "Value" "GNDPWR"
+			(at 133.477 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1934,8 +1427,17 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Light emitting diode"
-			(at 120.65 82.55 0)
+		(property "Datasheet" ""
+			(at 133.35 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 133.35 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1944,48 +1446,45 @@
 			)
 		)
 		(pin "1"
-			(uuid "27500b66-be8c-4333-a661-3336478fc8b0")
-		)
-		(pin "2"
-			(uuid "de8d465f-8675-4d57-9c1e-204024541960")
+			(uuid "8f719723-fc4a-43dc-997d-144fed6e8be6")
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "D5")
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Small")
-		(at 114.3 95.25 90)
+		(lib_id "Device:R")
+		(at 133.35 44.45 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "de1f3317-26c4-43bd-96da-d92a0cc765f1")
-		(property "Reference" "C1"
-			(at 114.3063 88.9 90)
+		(uuid "4ff80d4f-15c9-4659-9ec7-6cc7cbe2f37f")
+		(property "Reference" "R9"
+			(at 133.35 38.1 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "100 uF"
-			(at 114.3063 91.44 90)
+		(property "Value" "100k"
+			(at 133.35 40.64 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 114.3 95.25 0)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 133.35 46.228 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1994,7 +1493,141 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 114.3 95.25 0)
+			(at 133.35 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 133.35 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba7854d2-3b8e-4e71-9266-47533514a124")
+		)
+		(pin "2"
+			(uuid "f33061fd-43c6-4f01-815b-887e9e7c1420")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "R9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 82.55 44.45 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "545e3d8a-34df-4495-8250-ab43989ca2e1")
+		(property "Reference" "H1"
+			(at 85.09 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 85.09 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3mm"
+			(at 82.55 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 82.55 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 82.55 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(instances
+			(project ""
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 140.97 104.14 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "58df1208-f10d-4ae1-99d0-6b49a8319645")
+		(property "Reference" "C4"
+			(at 143.51 102.8762 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100 uF"
+			(at 143.51 105.4162 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 140.97 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2003,7 +1636,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 114.3 95.25 0)
+			(at 140.97 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2012,15 +1645,81 @@
 			)
 		)
 		(pin "2"
-			(uuid "cd77327d-4621-482f-9073-23937ab64ac3")
+			(uuid "d8de6ea0-60e9-4d8b-80ab-bf9f03f7cf00")
 		)
 		(pin "1"
-			(uuid "84ca0d28-a481-4124-8b77-89b359b74bda")
+			(uuid "acfaedec-6612-4a05-be32-ba7ecfb222da")
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(reference "C1")
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GNDPWR")
+		(at 139.7 55.88 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "60504843-b410-46b1-bdcb-d7441b1329ee")
+		(property "Reference" "#PWR04"
+			(at 139.7 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GNDPWR"
+			(at 139.827 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GNDPWR\" , global ground"
+			(at 139.7 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77f2d2c8-b4bd-493e-92f6-eed7428ee137")
+		)
+		(instances
+			(project ""
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -2028,16 +1727,16 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 179.07 137.16 0)
+		(at 201.93 35.56 0)
 		(unit 1)
 		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "df5eb700-414a-4f82-8f8c-20bddd7239fc")
+		(uuid "60893e78-e9b0-4d9b-998a-1183bb21ff6c")
 		(property "Reference" "H4"
-			(at 181.61 135.8899 0)
+			(at 204.47 34.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2046,7 +1745,7 @@
 			)
 		)
 		(property "Value" "MountingHole"
-			(at 181.61 138.4299 0)
+			(at 204.47 36.8299 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2055,7 +1754,7 @@
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3mm"
-			(at 179.07 137.16 0)
+			(at 201.93 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2064,7 +1763,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 179.07 137.16 0)
+			(at 201.93 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2073,7 +1772,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 179.07 137.16 0)
+			(at 201.93 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2083,7 +1782,7 @@
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
 					(reference "H4")
 					(unit 1)
 				)
@@ -2091,35 +1790,34 @@
 		)
 	)
 	(symbol
-		(lib_id "Mechanical:MountingHole")
-		(at 182.88 69.85 0)
+		(lib_id "Connector_Generic:Conn_02x03_Counter_Clockwise")
+		(at 138.43 67.31 0)
 		(unit 1)
-		(exclude_from_sim yes)
-		(in_bom no)
+		(exclude_from_sim no)
+		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "fd13801f-e88c-460c-964e-fbc746d9d941")
-		(property "Reference" "H3"
-			(at 185.42 68.5799 0)
+		(uuid "6c92b521-82ef-41c2-b247-00f706074fee")
+		(property "Reference" "J5"
+			(at 139.7 58.42 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "MountingHole"
-			(at 185.42 71.1199 0)
+		(property "Value" "Fan Board"
+			(at 139.7 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3mm"
-			(at 182.88 69.85 0)
+		(property "Footprint" "Connector_Molex:Molex_Micro-Fit_3.0_43045-0612_2x03_P3.00mm_Vertical"
+			(at 138.43 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2128,7 +1826,157 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 182.88 69.85 0)
+			(at 138.43 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, double row, 02x03, counter clockwise pin numbering scheme (similar to DIP package numbering), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 138.43 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "661647b6-ee2f-481d-8215-4a0a1db7382f")
+		)
+		(pin "4"
+			(uuid "bb22264f-52fa-429e-9122-52a7e24acbbc")
+		)
+		(pin "3"
+			(uuid "fbeda366-d3e8-43f0-a2bb-76328b9b0d3f")
+		)
+		(pin "6"
+			(uuid "b557d951-0270-4e2a-ba36-190e485d17a2")
+		)
+		(pin "1"
+			(uuid "c0acab88-ecbe-4719-90db-f63ec93f17d2")
+		)
+		(pin "5"
+			(uuid "b91d578f-b41f-4c2f-a8d8-536dc46cc883")
+		)
+		(instances
+			(project ""
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "J5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 140.97 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "702ee634-88da-40a0-9b0b-6dab1e1b0d08")
+		(property "Reference" "D6"
+			(at 139.3825 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 139.3825 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
+			(at 140.97 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 140.97 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Light emitting diode"
+			(at 140.97 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "46ff7cda-3979-4075-a0ad-1404b4eb4c2f")
+		)
+		(pin "2"
+			(uuid "6f2535a8-9f74-46bf-aed6-b97a16daec88")
+		)
+		(instances
+			(project ""
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 205.74 76.2 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0cc3ac5-bf16-44a6-80be-17ce5806dff5")
+		(property "Reference" "H3"
+			(at 208.28 74.9299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MountingHole"
+			(at 208.28 77.4699 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3mm"
+			(at 205.74 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 205.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2137,7 +1985,7 @@
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 182.88 69.85 0)
+			(at 205.74 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2147,64 +1995,148 @@
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
 					(reference "H3")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(sheet
-		(at 157.48 105.41)
-		(size 12.7 3.81)
+	(symbol
+		(lib_id "Mechanical:MountingHole")
+		(at 83.82 77.47 0)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
 		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "2574f7c0-1308-4240-9a6e-511590c5e8ee")
-		(property "Sheetname" "Fan4"
-			(at 157.48 104.6984 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "fan4.kicad_sch"
-			(at 157.48 109.8046 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "Fan 4" input
-			(at 157.48 107.95 180)
+		(uuid "b5fd3749-c43d-4b00-b535-5d1f15d1598e")
+		(property "Reference" "H2"
+			(at 86.36 76.1999 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "a33c423e-7c6b-4056-9bce-48d070ec755e")
+		)
+		(property "Value" "MountingHole"
+			(at 86.36 78.7399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3mm"
+			(at 83.82 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole without connection"
+			(at 83.82 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(page "5")
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "H2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
+		(at 134.62 57.15 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d866159b-6b25-432c-83f8-26ba9d18154a")
+		(property "Reference" "C3"
+			(at 134.6263 50.8 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100 uF"
+			(at 134.6263 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 134.62 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 134.62 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "c20e1e4e-0e4c-4792-9955-a4c5b4c7606c")
+		)
+		(pin "1"
+			(uuid "abab03d5-a291-413a-a483-92ba244d6fd1")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(reference "C3")
+					(unit 1)
 				)
 			)
 		)
 	)
 	(sheet
-		(at 67.31 106.68)
-		(size 17.78 3.81)
+		(at 177.8 67.31)
+		(size 13.97 5.08)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -2213,105 +2145,9 @@
 		(fill
 			(color 0 0 0 0.0000)
 		)
-		(uuid "312eb1b7-0eb2-4c75-966e-5ba869b3ca67")
-		(property "Sheetname" "Fan2"
-			(at 67.31 105.9684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Fan2.kicad_sch"
-			(at 67.31 111.0746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "Fan2" input
-			(at 85.09 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "cb36a7e1-46e8-46db-b129-7773334b6e79")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(page "3")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 67.31 93.98)
-		(size 17.78 3.81)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "ce425abc-a543-4d5e-9da7-320774baf4c1")
-		(property "Sheetname" "Fan1"
-			(at 67.31 93.2684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "untitled.kicad_sch"
-			(at 67.31 98.3746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "Fan1" input
-			(at 85.09 96.52 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-			(uuid "12525f35-60ba-481c-9cac-e98a969b0eca")
-		)
-		(instances
-			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
-					(page "2")
-				)
-			)
-		)
-	)
-	(sheet
-		(at 157.48 93.98)
-		(size 12.7 3.81)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "ff197cab-4c08-4d2e-a403-e2b39fc54665")
+		(uuid "0ee1381a-8277-4f19-8c97-accba5f5940c")
 		(property "Sheetname" "Fan3"
-			(at 157.48 93.2684 0)
+			(at 177.8 66.5984 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2319,8 +2155,8 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "Fan3.kicad_sch"
-			(at 157.48 98.3746 0)
+		(property "Sheetfile" "fan3.kicad_sch"
+			(at 177.8 72.9746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2329,19 +2165,163 @@
 			)
 		)
 		(pin "Fan3" input
-			(at 157.48 96.52 180)
+			(at 177.8 69.85 180)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
-			(uuid "721caaa9-c2ac-48b9-a035-436e4f930b66")
+			(uuid "de071abd-b277-47e9-a5a4-1aa9d18742e2")
 		)
 		(instances
 			(project "FanBoardPCB"
-				(path "/1aabcb47-8889-428a-a945-776d6a97cab7"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 177.8 57.15)
+		(size 15.24 3.81)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "949865cc-5834-49b3-80da-e2707ba0347e")
+		(property "Sheetname" "Fan4"
+			(at 177.8 56.4384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Fan4.kicad_sch"
+			(at 177.8 61.5446 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Fan4" input
+			(at 177.8 58.42 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "ac6c89df-494f-4ebd-a885-d87ad165e70b")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 92.71 54.61)
+		(size 12.7 7.62)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "cec9242a-42a7-4f39-86a7-e904b2dcb647")
+		(property "Sheetname" "Fan1"
+			(at 92.71 53.8984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "fan1.kicad_sch"
+			(at 92.71 62.8146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "poop" input
+			(at 105.41 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "3bd79e8d-a657-4d56-a2a7-5f40211707ef")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 91.44 67.31)
+		(size 16.51 5.08)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f45af32f-4ab4-40a8-b885-f602705b3ba9")
+		(property "Sheetname" "Fan2"
+			(at 91.44 66.5984 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "untitled.kicad_sch"
+			(at 91.44 72.9746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "Fan2" input
+			(at 107.95 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "8f900ed9-f0e5-4457-8f1e-185454e2b91e")
+		)
+		(instances
+			(project "FanBoardPCB"
+				(path "/905a21dd-eb0e-471c-b5fd-da06828c0225"
+					(page "3")
 				)
 			)
 		)
