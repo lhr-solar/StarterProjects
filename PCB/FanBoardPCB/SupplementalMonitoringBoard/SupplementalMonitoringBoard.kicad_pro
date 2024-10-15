@@ -386,6 +386,18 @@
     [
       "aa0415d0-3287-4bc4-9a8e-766ada9ace2f",
       "Root"
+    ],
+    [
+      "c3517b11-42d4-41ac-8608-60dda8052ca3",
+      "Voltage"
+    ],
+    [
+      "1e74c2bc-637a-422a-831e-fab1291cbb0a",
+      "Current"
+    ],
+    [
+      "cde5a840-cd97-4154-b488-bad27326129c",
+      "Temperature"
     ]
   ],
   "text_variables": {}
