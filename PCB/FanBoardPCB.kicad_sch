@@ -2093,6 +2093,16 @@
 		)
 		(uuid "f80497e5-d11c-4392-a9f4-ed35f253107c")
 	)
+	(text "r\n"
+		(exclude_from_sim no)
+		(at 64.008 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2b85a4af-8a5b-4c28-bb33-41f79a481e31")
+	)
 	(label "FanOut3"
 		(at 189.23 119.38 0)
 		(fields_autoplaced yes)
