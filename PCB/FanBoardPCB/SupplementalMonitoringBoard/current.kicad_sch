@@ -808,7 +808,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 106.68) (xy 140.97 106.68)
+			(xy 129.54 106.68) (xy 149.86 106.68)
 		)
 		(stroke
 			(width 0)
@@ -855,16 +855,6 @@
 			(type default)
 		)
 		(uuid "735fd76e-ce8f-4f80-850d-85d70b1426ac")
-	)
-	(wire
-		(pts
-			(xy 148.59 106.68) (xy 149.86 106.68)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "86f1ddbe-2300-4a0e-9ed2-0ba2658f8cb8")
 	)
 	(wire
 		(pts
@@ -979,17 +969,6 @@
 		)
 		(uuid "0ec51d9b-3975-4116-89a0-228ebd202979")
 	)
-	(text "unity-gain stable op amp"
-		(exclude_from_sim no)
-		(at 139.192 77.47 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.1588)
-			)
-		)
-		(uuid "4ff4dc3b-89a4-41a1-91e8-7b050b0a85d2")
-	)
 	(text "decoupling capacitor"
 		(exclude_from_sim no)
 		(at 188.468 118.618 0)
@@ -1000,6 +979,16 @@
 			)
 		)
 		(uuid "87649219-e6fd-4688-8056-fa77982545f8")
+	)
+	(text "very small value\n"
+		(exclude_from_sim no)
+		(at 144.272 109.474 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "8821a59b-e1e5-4a1b-ad58-8edf79a36433")
 	)
 	(text "Current"
 		(exclude_from_sim no)
@@ -1726,7 +1715,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" ".8"
 			(at 121.92 99.0599 0)
 			(effects
 				(font
@@ -1772,74 +1761,6 @@
 			(project "SupplementalMonitoringBoard"
 				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/1e74c2bc-637a-422a-831e-fab1291cbb0a"
 					(reference "R4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 144.78 106.68 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "90852697-a354-4b78-834e-f4d273514b4c")
-		(property "Reference" "R14"
-			(at 144.78 100.33 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 144.78 102.87 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 144.78 108.458 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 144.78 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 144.78 106.68 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3d9987e9-762b-45da-8e1d-4b0a88eb95e5")
-		)
-		(pin "2"
-			(uuid "0d655caa-2918-4354-a06c-83d66d0a8ef9")
-		)
-		(instances
-			(project "SupplementalMonitoringBoard"
-				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/1e74c2bc-637a-422a-831e-fab1291cbb0a"
-					(reference "R14")
 					(unit 1)
 				)
 			)

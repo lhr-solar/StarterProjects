@@ -842,7 +842,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 116.84) (xy 151.13 116.84)
+			(xy 129.54 118.11) (xy 151.13 118.11)
 		)
 		(stroke
 			(width 0)
@@ -852,7 +852,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 106.68) (xy 129.54 116.84)
+			(xy 129.54 106.68) (xy 129.54 118.11)
 		)
 		(stroke
 			(width 0)
@@ -872,7 +872,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 116.84) (xy 151.13 104.14)
+			(xy 151.13 118.11) (xy 151.13 104.14)
 		)
 		(stroke
 			(width 0)
@@ -1483,74 +1483,6 @@
 			(project "SupplementalMonitoringBoard"
 				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/c3517b11-42d4-41ac-8608-60dda8052ca3"
 					(reference "#PWR014")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 172.72 60.96 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "a12dd3ac-aaa9-42a8-8bdd-6d9c878a3ec4")
-		(property "Reference" "R7"
-			(at 172.72 54.61 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "R"
-			(at 172.72 57.15 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 172.72 59.182 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 172.72 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 172.72 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "65ed7873-fb3a-4fb1-b2e6-1b9db95c1d83")
-		)
-		(pin "2"
-			(uuid "2ba49bd2-0db2-4594-8232-d4bc8c0833b4")
-		)
-		(instances
-			(project "SupplementalMonitoringBoard"
-				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/c3517b11-42d4-41ac-8608-60dda8052ca3"
-					(reference "R7")
 					(unit 1)
 				)
 			)

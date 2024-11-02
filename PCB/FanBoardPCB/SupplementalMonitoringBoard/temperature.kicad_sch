@@ -5,7 +5,7 @@
 	(uuid "1f752bcc-540a-4dd6-a9e1-55eea156e30d")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Amplifier_Operational:OPA842xDBV"
+		(symbol "Amplifier_Current:INA180B1"
 			(pin_names
 				(offset 0.127)
 			)
@@ -13,7 +13,7 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -1.27 6.35 0)
+				(at 3.81 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -21,8 +21,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "OPA842xDBV"
-				(at -1.27 3.81 0)
+			(property "Value" "INA180B1"
+				(at 3.81 -2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -31,17 +31,7 @@
 				)
 			)
 			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at -2.54 -5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa842.pdf"
-				(at 0 5.08 0)
+				(at 1.27 1.27 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -49,7 +39,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "200MHz, Low Distortion, Unity-Gain Stable, Voltage Feedback Operational Amplifier, SOT23-5"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina180.pdf"
+				(at 3.81 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Current Sense Amplifier, 1 Circuit, Rail-to-Rail, 26V, Gain 20 V/V, SOT-23-5"
 				(at 0 0 0)
 				(effects
 					(font
@@ -58,7 +57,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "single opamp"
+			(property "ki_keywords" "current monitor shunt sensor"
 				(at 0 0 0)
 				(effects
 					(font
@@ -76,10 +75,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "OPA842xDBV_0_1"
+			(symbol "INA180B1_0_1"
 				(polyline
 					(pts
-						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+						(xy 5.08 0) (xy -5.08 5.08) (xy -5.08 -5.08) (xy 5.08 0)
 					)
 					(stroke
 						(width 0.254)
@@ -89,10 +88,30 @@
 						(type background)
 					)
 				)
+			)
+			(symbol "INA180B1_1_1"
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin power_in line
 					(at -2.54 -7.62 90)
 					(length 3.81)
-					(name "V-"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -100,6 +119,42 @@
 						)
 					)
 					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -118,62 +173,6 @@
 						)
 					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-			(symbol "OPA842xDBV_1_1"
-				(pin output line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name "~"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -966,6 +965,16 @@
 	)
 	(wire
 		(pts
+			(xy 121.92 91.44) (xy 123.19 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3463db8f-3775-4628-915d-250e6936866e")
+	)
+	(wire
+		(pts
 			(xy 130.81 91.44) (xy 143.51 91.44)
 		)
 		(stroke
@@ -1174,7 +1183,7 @@
 		)
 		(uuid "ff04d466-50ba-4034-b4e3-a3b24572e232")
 	)
-	(text "differential amplifier"
+	(text "non inverting amplifier"
 		(exclude_from_sim no)
 		(at 149.86 75.946 0)
 		(effects
@@ -1208,6 +1217,16 @@
 		)
 		(uuid "a6f88a4b-cf64-4d92-aa70-7dc82f68f283")
 	)
+	(text "very small value\n"
+		(exclude_from_sim no)
+		(at 155.702 111.506 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "be05cdb2-39cb-4a5a-9a43-8d710b477668")
+	)
 	(text "Temperature"
 		(exclude_from_sim no)
 		(at 140.462 44.704 0)
@@ -1222,7 +1241,7 @@
 		(uuid "c8378ad5-2947-4a93-82d4-2d3679526f89")
 	)
 	(label "Thermistor"
-		(at 123.19 91.44 180)
+		(at 121.92 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1639,7 +1658,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "Thermistor"
+		(property "Value" "1k"
 			(at 35.56 87.6299 0)
 			(effects
 				(font
@@ -1775,7 +1794,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "R"
+		(property "Value" "1k"
 			(at 34.29 102.8699 0)
 			(effects
 				(font
@@ -2027,6 +2046,83 @@
 			(project "SupplementalMonitoringBoard"
 				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/cde5a840-cd97-4154-b488-bad27326129c"
 					(reference "#PWR026")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Amplifier_Current:INA180B1")
+		(at 151.13 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "88b289a0-3fb5-4a94-ae0e-bc4ef29190d2")
+		(property "Reference" "U3"
+			(at 162.56 87.6614 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "INA180B1"
+			(at 162.56 90.2014 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 152.4 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ina180.pdf"
+			(at 154.94 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Current Sense Amplifier, 1 Circuit, Rail-to-Rail, 26V, Gain 20 V/V, SOT-23-5"
+			(at 151.13 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7bea1481-99c7-419d-82d8-f104d927cfa7")
+		)
+		(pin "2"
+			(uuid "16210704-578f-4f03-92ce-76d92fbf447a")
+		)
+		(pin "4"
+			(uuid "bc3a4ca9-e3c2-49d8-bd97-7db644f61731")
+		)
+		(pin "5"
+			(uuid "a2761364-93e1-4d33-920b-025727e41e68")
+		)
+		(pin "3"
+			(uuid "63f125eb-795a-46f5-ab0b-123a09abcd00")
+		)
+		(instances
+			(project ""
+				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/cde5a840-cd97-4154-b488-bad27326129c"
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -2558,84 +2654,6 @@
 			(project "SupplementalMonitoringBoard"
 				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/cde5a840-cd97-4154-b488-bad27326129c"
 					(reference "#PWR024")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Amplifier_Operational:OPA842xDBV")
-		(at 151.13 93.98 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "ee6b00e9-ec81-4eb5-9aed-bac5c48fcd6f")
-		(property "Reference" "U3"
-			(at 163.83 87.6614 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "OPA842xDBV"
-			(at 163.83 90.2014 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 148.59 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/opa842.pdf"
-			(at 151.13 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "200MHz, Low Distortion, Unity-Gain Stable, Voltage Feedback Operational Amplifier, SOT23-5"
-			(at 151.13 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2fdb06c4-0cfa-456f-9871-c757fbd46e13")
-		)
-		(pin "3"
-			(uuid "20954352-14d8-4af6-94e7-9eafb8751e2e")
-		)
-		(pin "1"
-			(uuid "a3a2dc13-3534-4bd5-b308-f4e2e0be352d")
-		)
-		(pin "5"
-			(uuid "0547768e-77da-4144-ac56-222acf6f9ce7")
-		)
-		(pin "4"
-			(uuid "94c7f313-5f5f-4b1e-b242-77ccfea4394b")
-		)
-		(instances
-			(project "SupplementalMonitoringBoard"
-				(path "/aa0415d0-3287-4bc4-9a8e-766ada9ace2f/cde5a840-cd97-4154-b488-bad27326129c"
-					(reference "U3")
 					(unit 1)
 				)
 			)
