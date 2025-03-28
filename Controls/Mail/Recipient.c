@@ -10,6 +10,11 @@
  */
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	
+	if (err != OS_ERR_NONE){
+		printf ("[Mailman depositLetter()] Error Code:%d\n", err);  // if there's an error, print the error code stored in the err variable
+		return;
+	}
 }
 
 /**
@@ -18,6 +23,11 @@ void readMail(void) {
 void Task_Recipient(void* p_arg) {
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 	while(1){
+		readMail();
+
+		if (err != OS_ERR_NONE){
+			printf("Mailman depositLetter()} Error Code:%d\n", err);
+		}
 		
 	}
 }

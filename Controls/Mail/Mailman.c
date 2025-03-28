@@ -24,7 +24,7 @@ void depositLetter(void) {
 	for (int i = 0; i < 256; i++) { // if index is less than 256 (max) 
 		mailbox[i] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random() % 26]; // mailbox[i] will get a new random letter
 	} // each time the program runs
-	mailbox[255] = '\0'; // the end of the string is null terminated
+	mailbox[256] = '\0'; // the end of the string is null terminated
 
 	if (err != OS_ERR_NONE) {
 		printf("[Mailman depositLetter()] Error Code:%d\n", err);  // if there's an error, print the error code stored in the err variable
