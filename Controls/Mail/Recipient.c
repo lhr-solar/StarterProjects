@@ -18,12 +18,9 @@ void readMail(void) {
 	
 	if (err != OS_ERR_NONE){ // if there is an error
 			printf ("[readMail()] Error Code:%d\n", err);  // print the error code stored in the err variable
-			return;
-		}
+			return;		}
 	
-		printf("Incoming Message: \n");
-		printf("%d\n", mailbox);
-		printf("Finished!\n");
+		printf("Incoming Message:\n %d\n\n\nFinished!\n", mailbox);
 }
 
 /**
