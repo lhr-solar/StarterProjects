@@ -34,6 +34,10 @@ void depositLetter(void) {
 	printf("Finished!\n");
 }
 
+
+
+
+
 /**
  * @brief Calls depositLetter. Delay for THREE seconds using 
  * OSTimeDlyHMSM(). Loop.
@@ -42,7 +46,7 @@ void Task_Mailman(void* p_arg) { // void bc we have an input that we don't know 
 	OS_ERR err;	// Make sure to check for errors and print the error code if not OS_ERR_NONE
 
 	while (1) {
-		printf("Success! Running Task_Mailman...\n"); // err is initially 0 so as long as there's no errors, print success message to indicate Task_Mailman is executing
+		printf("Success! You have 1 incoming message!\n"); // err is initially 0 so as long as there's no errors, print success message to indicate Task_Mailman is executing
 		
 		depositLetter();  // call deposit letter to put message in mailbox
 		OSTimeDlyHMSM(0, 0, 3, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 3 sec. (hrs, mins, seconds, milliseconds)
