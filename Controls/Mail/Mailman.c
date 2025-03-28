@@ -31,7 +31,7 @@ void depositLetter(void) {
 		return;
 	} 
 
-	printf("Finished!\n\n");
+	printf("Finished!\n");
 }
 
 /**
