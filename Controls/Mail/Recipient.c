@@ -6,13 +6,15 @@
 
 
 /**
- * @brief Print the mail in mailbox. Use an OSTimeDlyHMSM() to wait for TWO seconds.
- */
+* @brief Print the mail in mailbox. Use an OSTimeDlyHMSM() to wait for TWO seconds. 
+*/
+
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	OSTimeDly (0,0,10,0, OS_OPT_TIME_HMSM_STRICT, &err);
+	OS_TICK   dly;
 
-	// delay for 0 hrs 0 mins 10 secs and 0 ms
+	OSTimeDly (dly, OS_OPT_TIME_HMSM_STRICT, &err);
+
 	// strict delay
 	// pointer to error variable
 	
