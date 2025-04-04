@@ -11,6 +11,15 @@
  */
 void Customer1_checkout(char** name, int* cost) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+
+	*name = menu[3]; // name points to whatever the 4th item is 
+	*cost = costs[3]; // cost now holds value of the 4th item
+
+	revenue += (*cost);
+
+	printf("Customer: %s\n",*name);
+	printf("Total cost : %d\n", *cost);
+	printf("Current Revenue : %d\n", revenue);
 }
 
 /**
@@ -23,7 +32,31 @@ void Task_Customer_1(void* p_arg) {
 	// Use these values as parameters for Customer1_checkout
 	char* name;
 	int cost;
-	while(1){
-		
+	while(1){ 
+		OSMutexPend (&RegisterOccupied_Mutex, 0, OS_OPT_PEND_BLOCKING, NULL, &err); 
+		// 0 in timeout loc because we want to block until mutex is available rather than for a set amount of time
+		// null in timestamp location bc its not necessary 
+
+		if (err!=OS_ERR_NONE){
+			printf("Error waiting for register: %d\n", err);
+			return;
+		}
+
+		Customer2_checkout(&name, &cost);
+
+		OSMutexPost (&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
+
+		if (err!= OS_ERR_NONE){
+			printf ("Error posting register: %d\n", err);
+			return;
+		}
+
+		OSTimeDlyHMSM(0, 0, 4, 0, OS_OPT_TIME_HMSM_STRICT, &err);
+
+		if (err!=OS_ERR_NONE){
+			printf ("Error in delay: %d\n", err);
+			return;
+		}
+
 	}
 }
