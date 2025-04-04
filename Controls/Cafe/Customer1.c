@@ -17,7 +17,7 @@ void Customer1_checkout(char** name, int* cost) {
 
 	revenue += (*cost);
 
-	printf("Customer: %s\n",*name);
+	printf("Customer 1: %s\n",*name);
 	printf("Total cost : %d\n", *cost);
 	printf("Current Revenue : %d\n", revenue);
 }
