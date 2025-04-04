@@ -11,9 +11,9 @@
 
 void readMail(void) {
 	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
-	OS_TICK   dly;
 
-	OSTimeDly (dly, OS_OPT_TIME_HMSM_STRICT, &err);
+	OSTimeDlyHMSM(0, 0, 2, 0, OS_OPT_TIME_HMSM_STRICT, &err); // Delay for only 2 sec.
+
 
 	// strict delay
 	// pointer to error variable
