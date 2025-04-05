@@ -1,4 +1,6 @@
 #include "Mail.h"
+#include <stdio.h>
+
 
 
 
@@ -22,7 +24,7 @@ void depositLetter(void) {
 
 	// Populate the mailbox
 	for (int i = 0; i < 256; i++) { // if index is less than 256 (max) 
-		mailbox[i] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[random() % 26]; // mailbox[i] will get a new random letter
+		mailbox[i] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"[rand() % 26]; // mailbox[i] will get a new random letter
 	} // each time the program runs
 	mailbox[255] = '\0'; // the end of the string is null terminated
 

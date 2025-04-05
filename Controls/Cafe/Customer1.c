@@ -1,4 +1,6 @@
 #include "Cafe.h"
+#include <stdio.h>
+
 
 /**
  * Customer 1 wants to buy something!

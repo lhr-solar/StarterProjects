@@ -1,4 +1,5 @@
 #include "Cafe.h"
+#include <stdio.h>
 
 /**
  * Customer 2 wants to buy something!
@@ -41,7 +42,7 @@ void Task_Customer_2(void* p_arg) {
 			return;
 		}
 
-		Customer1_checkout(&name, &cost);
+		Customer2_checkout(&name, &cost);
 
 		OSMutexPost (&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
 

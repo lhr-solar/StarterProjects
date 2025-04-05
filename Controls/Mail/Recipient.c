@@ -1,4 +1,5 @@
 #include "Mail.h"
+#include <stdio.h>
 
 /**
  * The recipient will read mail from the mailbox.
@@ -20,7 +21,7 @@ void readMail(void) {
 			printf ("Failed to read mail. Error Code:%d\n", err);  // print the error code stored in the err variable
 			return;		}
 	
-		printf("Letter contents: \n %d\n\n\n", mailbox);
+		printf("Letter contents: \n %s\n\n\n", mailbox);
 }
 
 /**
