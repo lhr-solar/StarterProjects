@@ -20,10 +20,9 @@ int main(void){
 	OS_CPU_SysTickInit();
 	
 	// Create any semaphores/mutexes and initialize any global variables here
-	
+	OSSemCreate (&MailboxFlag_Sem4, "Semaphore for Mailbox", 0, &err);
 
 	// Initialize both tasks here
-	
 
 	OSStart(&err);	// Start the OS
 
