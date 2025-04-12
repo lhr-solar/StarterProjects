@@ -11,7 +11,7 @@
  * revenue and print the current business revenue.
  */
 void Customer2_checkout(char** name, int* cost) {
-	OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
+	//OS_ERR err; // Make sure to check for errors and print the error code if not OS_ERR_NONE
 	*name = menu[0]; // name points to whatever the 4th item is 
 	*cost = costs[0]; // cost now holds value of the 4th item
 
