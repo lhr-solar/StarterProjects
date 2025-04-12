@@ -44,7 +44,7 @@ void Task_Customer_1(void* p_arg) {
 			return;
 		}
 
-		Customer2_checkout(&name, &cost);
+		Customer1_checkout(&name, &cost);
 
 		OSMutexPost (&RegisterOccupied_Mutex, OS_OPT_POST_NONE, &err);
 
