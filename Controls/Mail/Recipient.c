@@ -1,6 +1,6 @@
 #include "Mail.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * The recipient will read mail from the mailbox.
  */

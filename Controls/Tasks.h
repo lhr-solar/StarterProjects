@@ -25,6 +25,7 @@ void Task_Customer_2(void* p_arg);
 #define TASK_RECIPIENT_STACK_SIZE 256
 #define TASK_CUST_1_STACK_SIZE 256
 #define TASK_CUST_2_STACK_SIZE 256
+#define TASK_STACK_LIMIT 128
 
 // Task Control Blocks (TCBs) contain information relevant to a specific thread, including stack pointers, flags, etc.
 extern OS_TCB Mailman_TCB;
