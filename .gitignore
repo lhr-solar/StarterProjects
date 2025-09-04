@@ -1,3 +1,5 @@
 *.o
 *.out
 Controls/Objects
+.cache
+build
