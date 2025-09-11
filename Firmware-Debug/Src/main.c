@@ -1,20 +1,39 @@
 #include "UART.h"
 
-int main() {
+void init() {
+  HAL_Init();
+  SystemClock_Config();
+}
+
+void TxTask(void *argument) {
+  husart2->Instance = USART2;
+  husart2->Init.BaudRate = 115200;
+  husart2->Init.WordLength = UART_WORDLENGTH_8B;
+  husart2->Init.StopBits = UART_STOPBITS_1;
+  husart2->Init.Parity = UART_PARITY_NONE;
+  husart2->Init.Mode = UART_MODE_TX_RX;
+  husart2->Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  husart2->Init.OverSampling = UART_OVERSAMPLING_16;
+
+  uart_init(husart2);
+
   while (1) {
+    // Send UART here
+    uart_send(husart2, (const uint8_t *)"Hello World!", 13, portMAX_DELAY);
   }
 }
 
-void HAL_UART_MspGPIOInit(UART_HandleTypeDef *huart) {
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
+StaticTask_t txTaskBuffer;
+StackType_t txTaskStack[configMINIMAL_STACK_SIZE];
 
-  __HAL_RCC_GPIOA_CLK_ENABLE();
+int main() {
+  init();
 
-  GPIO_InitStruct.Pin = GPIO_PIN_2 | GPIO_PIN_3;
-  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
-  GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
+  xTaskCreateStatic(TxTask, "TX", configMINIMAL_STACK_SIZE, NULL,
+                    tskIDLE_PRIORITY + 2, txTaskStack, &txTaskBuffer);
 
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  vTaskStartScheduler();
+
+  while (1) {
+  }
 }

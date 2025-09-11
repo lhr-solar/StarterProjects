@@ -5,7 +5,6 @@ The goal of this project is to teach you to write a bit of embedded firmware to 
 First, follow these [installation instructions](https://lhr-solar.github.io/Embedded-Sharepoint/Installation/) to get your environment set up for embedded development. Make sure you clone the Embedded-Sharepoint.
 
 A few prerequisites:
-- Mess around in your Linux shell. Here's a [basic list of commands](https://www.w3schools.com/bash/bash_commands.php). We'll be using this to compile and flash code.
 
 ## Questions
 
@@ -16,6 +15,30 @@ An embedded system just refers to a circuit board with a microcontroller made fo
 ### What's a firmware?
 
 Firmware refers to code that is run at a low level.
+
+### What's a C?
+
+C is the language we use to write code for most low-level systems. Here's a few tutorials that you may find interest in working through on your own time!
+
+- [Beej's Guide to C Programming](https://beej.us/guide/bgc/html/split/)
+- [Cprogramming.com](https://www.cprogramming.com/tutorial/c-tutorial.html)
+- [C Programming: A Modern Approach](http://knking.com/books/c2/index.html)
+
+If you're coming from a different programming language, the sorts of things you may not be used to include pointers and structures, so you may just want to look at those sections. These are mainly provided if you're someone who learns by reading textbooks, but I've never really been that way, so you could just jump in and learn on-the-go.
+
+### What's a GDB?
+
+GDB is the GNU debugger, and is a tool to step through, pause, and print expression values from your code. Whether it's running on your computer or running on a board, there's a way to run GDB.
+
+Note that it is HIGHLY INTRUSIVE, which really just means that it can screw up any timing-related functionalities.
+
+### What's a Linux? What's a shell?
+
+Linux is the operating system we typically use to code for our embedded systems. It comes with an interface called a shell, which is also known as the command prompt or the terminal. Once you know how to use it, it's a powerful tool.
+
+After installation, try messing around in your Linux shell. Here's a [basic list of commands](https://www.w3schools.com/bash/bash_commands.php). We'll be using this to compile and flash code.
+
+If someone tells you to run `rm -rf *` to delete the French language pack, do NOT do so. It will delete every file on your system.
 
 ### What's a UART/USART?
 
@@ -49,9 +72,13 @@ Every pin on your microcontroller is considered a "general purpose input/output"
 
 The Hardware Abstraction Layer is a library of code that we use to interface with different peripherals, provided to us by STMicroelectronics (the same company that makes our microcontrollers).
 
+### What's an RTOS?
+
+An RTOS, or Real-Time Operating System, is a library of code that acts as a scheduler. On our boards, we often have to run several tasks periodically, but we only have one microcontroller (one core) to run the code, so having an RTOS enables us to schedule these tasks to run at specific intervals in "parallel".
+
 ### What's a BSP?
 
-The BSP is a library we've developed on top of the HAL to facilitate interrupt and queue-based transactions of data. If the HAL lets you transmit one byte at a time, the BSP lets you queue up transmits to be sent by a interrupt.
+The BSP is a library we've developed on top of the HAL to facilitate interrupt and queue-based transactions of data. If the HAL lets you transmit one byte at a time, the BSP lets you queue up transmits to be sent by a background interrupt loop. It integrates cleanly into our RTOS and allows for deferred sends/receives of data.
 
 ### What's a STM32CubeMX?
 
@@ -78,17 +105,10 @@ Also notice that the Embedded-Sharepoint exists in this repository already. A re
 
 Read through the file called Makefile. You're not going to understand most of this right now, but you can think of a Makefile as a script that compiles your code ([it's a little more complex than that](makefiletutorial.com)). Notice the variables PROJECT_C_SOURCES, PROJECT_C_INCLUDES, PROJECT_BUILD_DIR, and BUILD_MAKEFILE_DIR. These are four variables that specify where the source files, the header files, the build directory, and the main makefile directory. These variables are passed to the main makefile located at `Embedded-Sharepoint/Makefile`, which does the heavy lifting of building your code.
 
-Create a file called `main.c` in the Src directory. Add the following lines to your code:
-```
-int main(){
-  while(1){
-  }
-}
-```
-```
-```
+Open the file called `main.c` in the Src directory. Read through some of the code, and try to get a basic understanding of what it's doing currently.
 
-The function "main" is always the entry point of your program. We add an infinite while-loop because in an embedded system, there's never an "end point" for your code since the entire time it is on, it should be running something.
+- Our entry point, `int main()`, calls a function `void init()` which handles all initializations necessary for the main program to actually run. This includes initializing the HAL with `HAL_Init()`, initializing the system clocks with `SystemClock_Config()`, and will also include some UART initialization eventually.
+- Next, our main function sets up and initializes the Real-Time Operating System with `xTaskCreateStatic` and `vTaskStartScheduler`.
 
 Now to compile, run the following command:
 `make PROJECT_TARGET=<microcontroller-part-number>`
@@ -139,13 +159,43 @@ Open up STM32CubeMX for this next section.
   This configures GPIO pins 2 and 3 on port A for alternate function (AF) 7, which is USART2. It also sets the pullup/pulldown resistor to NOPULL and the speed to VERY_HIGH.
 
 9. Copy the GPIO_InitStruct, the GPIO clock enable, and all the GPIO configuration options listed above from your generated code to your test file in a new function called `void HAL_UART_MspGPIOInit(UART_HandleTypeDef *huart)` in your `main.c`. Note the GPIO in the function name.
-- *Editor's note: what's essentially being done here is called a weak function override. In Embedded-Sharepoint/bsp/Src/UART.c, you'll see a function of the same name with the prefix __weak. This function has some default behavior that we are meant to redefine, in this case to initialize the GPIO pins for the UART peripheral. Since UART.c is a generic UART driver, it has to support all different pin combinations that the user might need, which is why this MspGPIOInit is necessary as an initialization step.*
+- What's essentially being done here is called a weak function override. In Embedded-Sharepoint/bsp/Src/UART.c, you'll see a function of the same name with the prefix __weak. This function has some default behavior that we are meant to redefine, in this case to initialize the GPIO pins for the UART peripheral. Since UART.c is a generic UART driver, it has to support all different pin combinations that the user might need, which is why this MspGPIOInit is necessary as an initialization step.
 
 10. If you try compiling at this point with `make`, you should get an error regarding `UART_HandleTypeDef`. This is because `main.c` is not aware about the existence of a structure called "UART_HandleTypeDef" because it does not know where it is defined. Thus, we're going to need to *include* the file that contains the definition of UART_HandleTypeDef, which is defined in the HAL. Add `#include "UART.h"` to the top of the file.
-- *Editor's note: the include directive tells the compiler to paste the contents of the specified header file into the current file. This means all definitions made in a header file (function definitions, structure definitions, type definitions, enums) will be pasted before the usage of those definitions, so UART_HandleTypeDef can now be used.*
+- The include directive tells the compiler to paste the contents of the specified header file into the current file. This means all definitions made in a header file (function definitions, structure definitions, type definitions, enums) will be pasted before the usage of those definitions, so UART_HandleTypeDef can now be used.
+- The UART_HandleTypeDef is just a structure containing a set of variables that correspond to a specific UART peripheral. It actually exists in the STM HAL, but is imported when you include "UART.h".
+
+11. Go to your generated code again and go to `main.c`. We're going to copy in the generated configuration of the UART peripheral as well. Look for a method called `MX_<uart-peripheral-name>_UART_Init` (for example, MX_USART2_UART_Init). This contains the configuration of the UART structure itself. Copy paste this into your main method before the while loop. Change the name of the structure to correspond to one of the following: huart4, huart5, husart1, husart2, husart3.
 
 Now that we're done with initialization, we'll move on to the main loop of sending bytes over UART.
 
 ## Main Loop and BSP UART
+
+1. Including UART.h is not just defining the `UART_HandleTypeDef`. It includes all necessary functions for our BSP UART module. Take a moment to open up the file Embedded-Sharepoint/bsp/Inc/UART.h and browse what behavior is defined. You'll notice methods uart_init, uart_deinit, uart_send, and uart_recv.
+
+2. Use uart_init to initialize the BSP_UART module. You should pass in the correct UART_HandleTypeDef. Note that this has to be run in a Task after the OS has been started up (see TxTask).
+
+3. Use uart_send to send a UART message of your choosing. Do this in the loop.
+- The first argument should again be the UART_HandleTypeDef that you initialized previously. 
+- The second argument is a uint8_t * (a byte pointer) that points to a sequence of bytes to send. For this, you can just type in the string you want to send and C will know to put it in a variable somewhere in memory. For example, "Hello World!". You may need to cast this to a (const uint8_t *).
+- The third argument is the length of the data you want to send. How many characters are there in the string? Don't forget that C strings include a "null-terminator" at the end, which increases the length by one.
+- The fourth argument is the number of ticks you want to delay while the data is put in the queue. This exists because the queue might already be full, so you may want to specify how long to wait before just moving on without enqueuing the data. 0 means don't wait at all, and the macro `portMAX_DELAY` means wait forever until space is available in the queue.
+
+======
+
+*What is BSP_UART doing internally?*
+
+*BSP UART takes in the passed-in message and puts it in a queue. It then triggers an interrupt to pop from the queue in a first-come, first-served manner and place the message in the peripheral. If there are more messages in the queue, the interrupt re-triggers itself. The next time the interrupt triggers, it will be as soon as the byte is done sending from the peripheral. This runs as a sort of background routine, popping from the queue as soon as the peripheral is ready. This means that the UART peripheral is kept busy until all messages have been popped from the queue.*
+
+======
+
+4. [Add a delay](https://www.freertos.org/Documentation/02-Kernel/04-API-references/02-Task-control/01-vTaskDelay) to the loop to allow time between each of the UART messages. Make it 500ms or so. Know that our processor typically runs at 80MHz, which means there are 80 million ticks per second.
+
+5. Compile your code and ensure that it succeeds. If not, the compiler should tell you what the error is. Go fix it!
+
+## Flashing
+
+
+
 
 
