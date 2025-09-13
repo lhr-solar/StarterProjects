@@ -42,24 +42,29 @@ If someone tells you to run `rm -rf *` to delete the French language pack, do NO
 
 ### What's a UART/USART?
 
+![uart_hardware](assets/uart_hardware.png)
+
+![uart_bits](assets/uart_bits.png)
+
 UART (universal asynchronous receive/transmit) and USART (universal synchronous/asynchronous receive/transmit) are two protocols. A protocol is simply a defined way to communicate some data across wires. Both of these protocols have a transmit (TX) wire and a receive (RX) wire. USART has an optional clock wire (it's "synchronous" mode), but this is typically for a faster data transfer speed, so we'll only use asynchronous mode for right now.
 
 UART enables device-to-device communication by connecting the transmit line of one device to the receive line of another. See [this article](https://www.analog.com/en/resources/analog-dialogue/articles/uart-a-hardware-communication-protocol.html) for more information on UART.
 
-### What's a serial? What's a peripheral?
+### What's a serial? 
 
 Serial communications typically refer to a protocol like UART (Universal Asynchronous Receive/Transmit). It's a way to send bits over a wire. Your computer can read these bits when they're translated to USB (we have a USB<->UART chip on most of our boards).
 
+### What's a peripheral?
+
 A peripheral is a unit of hardware that serves a specific purpose. Typically, these units are built into the microcontroller. For example, a UART peripheral allows the user to configure it to spit out the UART protocol, same for I2C, SPI, CAN (these are all different protocols we use on the car).
+
+### What's a microcontroller?
+
+Look at the Nucleo you should have in your hands (or many of our circuit boards, really). The big black square in the middle is a microcontroller. A microcontroller is a chip that has memory and can run code. You can think of it as a small computer on a single chip.
 
 ### What's an STM32 Nucleo?
 
 The STM32 series of microcontrollers are what we use on all of our circuit boards. An STM32 Nucleo is a development board, which means before your cool little circuit board comes in you can test-run code on there. It's kind of like an Arduino, with all of the pins of the microcontroller broken out to headers (the little spiky metal bits).
-
-### What's a microcontroller?
-
-Look at the Nucleo you should have in your hands. The big black square in the middle is a microcontroller. A microcontroller is a chip that has memory and can run code. You can think of it as a small computer on a single chip.
-
 
 ### What's a pinout?
 
@@ -77,6 +82,9 @@ The Hardware Abstraction Layer is a library of code that we use to interface wit
 
 An RTOS, or Real-Time Operating System, is a library of code that acts as a scheduler. On our boards, we often have to run several tasks periodically, but we only have one microcontroller (one core) to run the code, so having an RTOS enables us to schedule these tasks to run at specific intervals in "parallel".
 
+> i like saying it's like your computer's OS except in your computer OS when you open a tab and you take a long time it doesnt matter, but in an embedded context if it takes a long time for your code to notice the driver pressed break then that is no bueno <- that's the real time aspect of it
+-Lakshay Gupta
+
 ### What's a BSP?
 
 The BSP is a library we've developed on top of the HAL to facilitate interrupt and queue-based transactions of data. If the HAL lets you transmit one byte at a time, the BSP lets you queue up transmits to be sent by a background interrupt loop. It integrates cleanly into our RTOS and allows for deferred sends/receives of data.
@@ -88,6 +96,8 @@ The BSP is a library we've developed on top of the HAL to facilitate interrupt a
 ## Starter Project
 
 You should have been given a Nucleo with a specific part number, e.g. NUCLEO-F446RE. This part number should be written on the board. Google "<part-number> user manual" and open the user manual for your Nucleo.
+
+First, we will clone this repository. Make sure you've set up an SSH key associated with your git account (see [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)). Run the command `git clone git@github.com:lhr-solar/StarterProjects.git --recurse-submodules`.
 
 ### Nucleo User Manual
 
@@ -127,16 +137,27 @@ Open up STM32CubeMX for this next section.
 
 1. Click "Access to MCU Selector". Find your microcontroller part number in the provided table. Double click it and a new screen should pop up with a microcontroller on the right side.
 
+![stmcube_1](assets/stmcube_1.png)
+![stmcube_2](assets/stmcube_2.png)
+
 2. Look on the left and you will see a sidebar of dropdowns (System Core, Analog, Timers, etc.). Open up the Connectivity dropdown and select the appropriate UART or USART peripheral depending on the number you found before.
+
+![stmcube_3](assets/stmcube_3.png)
 
 3. Click the dropdown in the middle and select "Asynchronous". This will enable the UART/USART peripheral in asynchronous mode. The pins on the microcontroller that this peripheral is connected to are highlighted in green on the right.
 
+![stmcube_4](assets/stmcube_4.png)
+
 4. See and note the parameter settings at the bottom. The important ones are the baud rate (115200 bits per second), the word length (8 bits), parity (none) and the number of stop bits (1).
+
+![stmcube_5](assets/stmcube_5.png)
 
 5. Click the project manager tab at the top. 
 - Project location: browse for a directory that you want to clone the code into (separate from your Embedded Sharepoint clone location). 
-- Application structure: select basic 
+- Application structure: select Basic 
 - Toolchain/IDE: select Makefile
+
+![stmcube_6](assets/stmcube_6.png)
 
 6. Click "Generate Code" at the top. If a "missing firmware package" error appears, ignore it and hit continue. Open the folder that the code is generated into.
 
@@ -193,7 +214,7 @@ Now that we're done with initialization, we'll move on to the main loop of sendi
 
 ======
 
-4. [Add a delay](https://www.freertos.org/Documentation/02-Kernel/04-API-references/02-Task-control/01-vTaskDelay) to the loop to allow time between each of the UART messages. Make it 500ms or so. Know that our processor typically runs at 80MHz, which means there are 80 million ticks per second.
+4. [Add a delay](https://www.freertos.org/Documentation/02-Kernel/04-API-references/02-Task-control/01-vTaskDelay) to the loop to allow time between each of the UART messages. Make it 500ms or so. Know that our processor typically runs at 80MHz, which means there are 80 million ticks per second. (hint: try the macro `pdMS_TO_TICKS`)
 
 5. Compile your code and ensure that it succeeds. If not, the compiler should tell you what the error is. Go fix it!
 
