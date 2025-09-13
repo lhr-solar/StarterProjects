@@ -60,6 +60,7 @@ The STM32 series of microcontrollers are what we use on all of our circuit board
 
 Look at the Nucleo you should have in your hands. The big black square in the middle is a microcontroller. A microcontroller is a chip that has memory and can run code. You can think of it as a small computer on a single chip.
 
+
 ### What's a pinout?
 
 See how your Nucleo has small little pieces of metal surrounding the black square? These are the pins of the microcontroller. There is circuitry connecting them to the large spiky pieces of metal on the Nucleo. The specific pins that are "exposed" to the outside world is called a pinout.
@@ -91,13 +92,16 @@ You should have been given a Nucleo with a specific part number, e.g. NUCLEO-F44
 ### Nucleo User Manual
 
 1. Scroll down to the "Hardware Layout and Configuration" section and find a section called "UART communication"/"USART communication". This should have a paragraph related to which pins the UART/USART interface is on (for the NUCLEO-F446RE, it's on PA2/PA3) and the UART/USART peripheral number (for the NUCLEO-F446RE, it's USART2).
-2. Next, scroll to the "Extension connectors" section and find your specific Nucleo's diagram. These diagrams indicate which pins on the microcontroller are connected to which pins on the "Morpho connector" (a **pinout**).
+
+2. Next, scroll to the section "LEDs". It will have a little section called "User LEDs" which will tell you which pin the LED on the board is connected to (it might also tell you to refer to a table to figure it out). Remember this pin number, it's the one we're going to use to blink an LED.
+
+3. Next, scroll to the "Extension connectors" section and find your specific Nucleo's diagram. These diagrams indicate which pins on the microcontroller are connected to which pins on the "Morpho connector" (a **pinout**).
 
 Your microcontroller has a specific part number as well. You should be able to figure this out with some investigation. (hint: check the user manual and note the suffix after "NUCLEO-"). The part number should start with "STM32".
 
-Next, we're going to create our test file.
+Next, we're going to open our test file.
 
-### Test File Creation
+### Test File
 
 Notice that there is a Src directory in the Firmware-Debug folder in this starter project. This is going to store your "source code", or the files that contain actual lines of code your microcontroller will run. 
 
@@ -115,7 +119,7 @@ Now to compile, run the following command:
 
 The microcontroller part number should be the one you found for your Nucleo in the previous section, lowercase (e.g. stm32f446ret). It should be the exact part number.
 
-If successful, you should see a bunch of compile commands (CC <source file> -> <object file>) executed followed by a final linking step (LD <final .elf file>). 
+If successful, you should see a bunch of compile commands (CC <source file> -> <object file>) executed followed by a final linking step (LD <final .elf file>). The .elf file created in the `build` directory is an "executable and loadable format", which contains a bunch of metadata as well as the program code. The .bin file is a binary, or the raw bytes of the program instructions that will be "flashed" or uploaded to the microcontroller memory.
 
 Open up STM32CubeMX for this next section.
 
@@ -177,7 +181,7 @@ Now that we're done with initialization, we'll move on to the main loop of sendi
 
 3. Use uart_send to send a UART message of your choosing. Do this in the loop.
 - The first argument should again be the UART_HandleTypeDef that you initialized previously. 
-- The second argument is a uint8_t * (a byte pointer) that points to a sequence of bytes to send. For this, you can just type in the string you want to send and C will know to put it in a variable somewhere in memory. For example, "Hello World!". You may need to cast this to a (const uint8_t *).
+- The second argument is a uint8_t * (a byte pointer) that points to a sequence of bytes to send. For this, you can just type in the string you want to send and C will know to put it in a variable somewhere in memory. For example, "Hello World!". You may need to cast this to a (const uint8_t *). You may also want to add a "\n" character to the end of your string as a [line break](https://en.wikipedia.org/wiki/Newline).
 - The third argument is the length of the data you want to send. How many characters are there in the string? Don't forget that C strings include a "null-terminator" at the end, which increases the length by one.
 - The fourth argument is the number of ticks you want to delay while the data is put in the queue. This exists because the queue might already be full, so you may want to specify how long to wait before just moving on without enqueuing the data. 0 means don't wait at all, and the macro `portMAX_DELAY` means wait forever until space is available in the queue.
 
@@ -193,9 +197,110 @@ Now that we're done with initialization, we'll move on to the main loop of sendi
 
 5. Compile your code and ensure that it succeeds. If not, the compiler should tell you what the error is. Go fix it!
 
+Next, let's add the LED flashing code.
+
+## LED
+
+1. In TxTask, create a new `GPIO_InitStruct` called `led_init`. Similar to the code you just generated for UART, we're going to initialize the pin. Make sure you do this before the while loop.
+
+2. Set the pin number to `GPIO_PIN_Y`, whichever pin the LED was on.
+
+3. Set the pin mode to GPIO_MODE_OUTPUT_PP (PP stands for push-pull).
+
+4. Set the Pull field to GPIO_NOPULL. This specifies that there's no [pull-up or pull-down resistor](https://electronics.stackexchange.com/questions/481332/what-does-pull-up-resistor-and-pull-down-resistor-mean-how-do-i-implement-them) on the pin.
+
+5. Set the Alternate field to 0. The configuration isn't going to use this field anyways since we didn't set the Mode to Alternate Function mode.
+
+6. Now that you've set the fields of the struct, call `__HAL_RCC_GPIOX_CLK_ENABLE();`, with X replaced by whichever port your LED is on for your Nucleo.
+
+7. Finally, call `HAL_GPIO_Init(GPIOX, &led_init);`. This will lock in your configuration via the HAL and set the registers to configure the GPIO peripheral properly.
+
+8. In your while loop, call `HAL_GPIO_TogglePin(GPIOX, GPIO_PIN_Y);`. This will read the current value from the pin, invert it (the !), and then set its value to that inverted value. This should blink the LED. You can mess with the delay value to blink it at different rates.
+
 ## Flashing
 
+*Flashing* a microcontroller means uploading code to its internal memory. To do this, we have configured the flash Makefile target. 
+
+1. Make sure your Nucleo is plugged in. 
+
+2. Run `st-info --probe`. This should let you verify that your microprocessor is detected.
+
+3. Run `make flash` to flash your board with the built code. The .bin file generated in your `build` directory should be flashed to 0x8000000. You should see a few calls to `st-flash` which is what the target actually runs to flash your code.
 
 
+## Debugging with GDB
 
+*Debugging* your code is the process of finding and eliminating bugs in your code. We're going to use a tool called GDB, or the GNU debugger, to be able to step through specific instructions and print variables and expressions.
+
+1. In one open terminal, navigate to the StarterProjects/Firmware-Debug directory and run the following command: `openocd -f Embedded-Sharepoint/openocd-stm32f4x.cfg`. This starts a debug server with openocd, the "Open On-Chip Debugger". Openocd connects to the ST-LINK, which is a second processor (tinier black square) that sits on your Nucleo in order to control the execution of the main processor.
+
+2. In another open terminal, run `gdb-multiarch build/<elf-file>.elf`. The .elf file should be under StarterProjects/Firmware-Debug/build. It will be named the specific microcontroller name you are working on (e.g. stm32f446ret). You should see a copyright message, a bunch of links for bug reporting and the GDB manual, and then the message "Reading symbols from build/<elf-file>.elf"
+
+*Note: GDB has its own set of commands separate from the shell in order to run, navigate through, and print from your program. You can use a GDB cheatsheet like [this one](https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf) for reference through this section.*
+
+4. Type `target extended-remote :3333`. This will attach your GDB instance to the currently running GDB server (if you look closely at the openocd terminal, it is running on port 3333). This should show you where your code is currently located.
+
+5. Put a breakpoint at `main()` with `break main` or `b main`.
+
+6. Restart your code with the `run` or `r` command. Now, your GDB should tell you that it's stopped at Breakpoint 1, which is at your main function.
+
+7. "Step over" a couple lines of code with the command `n`. Hitting `<ENTER>` in GDB will execute the most recently executed command, so you don't need to type `n` in over and over again.
+- You'll see that when you hit `n` on `vTaskStartScheduler`, your program is "halted". That's because `vTaskStartScheduler` never actually returns from the function, as it runs the RTOS scheduler. Now, the `TxTask` where you had put your UART initializations and UART send should be running.
+
+8. Type in `Ctrl-C` to send the `SIGINT` signal to GDB, effectively telling it to pause. This signal can also be used in the terminal to terminate programs, but serves a similar but different purpose here.
+
+9. Restart your code, then include another breakpoint at `TxTask`. You'll see that the first breakpoint continues to exist. Use the `continue` or `c` command to continue your code from the first breakpoint at `main` to the second breakpoint at `TxTask`.
+
+10. Step until all of the `UART_HandleTypeDef` fields have been set. Use the `print` or `p` command to print the `UART_HandleTypeDef` (e.g. `p husart2`). This should print out a memory address since those handles are actually pointers to handles. Then, print out the dereferenced version of the structure with `p *<handle-name>` ([the * is the dereference operator in C](https://www.youtube.com/watch?v=5VnDaHBi8dM)).
+
+11. Once you get to a function definition, you can *step into* the function using `step` or `s`. Try it out with `uart_send` or `HAL_GPIO_TogglePin`.
+
+12. You can also set a breakpoint at a specific file and line number. If you really feel like it, put a breakpoint in `uart_send` and step through it. (e.g. `b main.c:21`)
+
+Good job. You've learned to use GDB to step through code on the microcontroller. Kill your GDB server with Ctrl-C and you can quit GDB with `quit` or `q`.
+
+## Serial Monitor
+
+1. Download [PuTTY](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) and open it.
+
+2. Select the "Serial" bullet in the middle. UART is a serial communication protocol (you send bits over a wire one by one).
+
+3. Set the device or "serial line" to the Nucleo's COM port number. To do this, open up device manager and look for the section called "Ports (COM and LPT)". Find the STLINK Virtual COM port, note down its COM number (COMX where X is some number) and put that into PuTTY.
+- If you're on Mac, god save you (yelp "HELP I HAVE A MAC!").
+
+4. Set the speed to 115200, the same speed we initialized UART with.
+
+5. Hit the Open button at the bottom.
+
+If everything is configured properly, you should see a printout to PuTTY of your chosen string (e.g. "Hello World!").
+
+## Logic Analyzer
+
+1. Grab a logic analyzer from someone. The company Saleae makes really nice ones, but we like to buy shitty $12 ones from Amazon.
+
+2. Download the software [Saleae Logic 2](https://www.saleae.com/pages/downloads). While that's downloading, plug the logic analyzer into your computer with a Mini-USB cable.
+
+3. Grab some jumper wires and plug one into the pin labeled "GND" on your logic analyzer. This is the ground reference and the logic analyzer needs this to be able to tell what's a high, 3.3V signal and what's a low, 0V signal. Plug the other end into a pin labeled "GND" on your Nucleo.
+
+4. Use another jumper wire to connect CH0 to the pin used for outputting to the LED. You can find out which pin this is on the Nucleo by using the diagram in the user manual we mentioned earlier.
+
+5. Open up the Logic software that is now downloaded. It should tell you it's connected and come up with a graph of each channel. Hit the play button.
+
+6. Make sure the code on your Nucleo is running, and you should see the LED blink at the same frequency as the graph in the Logic software.
+
+Good job. You've learned how to analyze a signal on a logic analyzer. This is a handy tool to have while debugging, so I recommend stealing or buying one.
+
+## Pushing and Opening a Pull Request
+
+We're done with the starter project! In order to proceed, we're first going to push our code.
+
+1. Navigate to the StarterProjects directory and run `git checkout -b <name>`. This will create a new branch off of your currently checked out branch, which should be `main`.
+
+2. Run `git add -A`. This will add all new files and changes to files to what's known as "the staging area".
+
+3. Run `git commit -m "<name>'s starter project"` to create what's known as a "commit", or a set of changes to a piece of code. The -m option allows you to specify a message, with the contents of the quotes being that message.
+
+4. Run `git push` to push your code to the new branch. The first time you do this, `git` will get mad at you because your new branch does not exist on GitHub. To fix this, run `git push -u origin`, which will specify to git to create the branch on GitHub.
+
+5. Follow the steps in [this guide](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) to create your actual pull request. A pull request is a request for the repository maintainer to "pull in" your changes. Typically, reviews and requests to change your code will happen here before it's merged into main, but for now, consider this your submission of your starter project.
 
