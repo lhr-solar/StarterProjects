@@ -1,3 +1,6 @@
 [submodule "Controls/uCOS-III-Simulator"]
 	path = Controls/uCOS-III-Simulator
 	url = https://github.com/lhr-solar/uCOS-III-Simulator.git
+[submodule "Firmware-Debug/Embedded-Sharepoint"]
+	path = Firmware-Debug/Embedded-Sharepoint
+	url = https://github.com/lhr-solar/Embedded-Sharepoint.git

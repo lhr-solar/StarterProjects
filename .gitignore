@@ -1,3 +1,6 @@
 *.o
 *.out
 Controls/Objects
+.cache
+build
+.DS_Store
