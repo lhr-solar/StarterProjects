@@ -171,14 +171,12 @@ Open up STM32CubeMX for this next section.
 
 - GPIO Initialization:
 ```
-```
   GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_3;
   GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_VERY_HIGH;
   GPIO_InitStruct.Alternate = GPIO_AF7_USART2;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-```
 ```
   
   This configures GPIO pins 2 and 3 on port A for alternate function (AF) 7, which is USART2. It also sets the pullup/pulldown resistor to NOPULL and the speed to VERY_HIGH.
