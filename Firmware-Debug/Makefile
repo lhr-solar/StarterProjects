@@ -1,5 +1,5 @@
 # default project configuration
-PROJECT_TARGET ?= stm32f446ret
+PROJECT_TARGET ?= stm32l476rgt
 BEAR_ENABLE ?= 1
 VERBOSE ?= 0
 
